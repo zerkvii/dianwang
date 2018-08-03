@@ -84,7 +84,3 @@ fabric.properties
 Venv/
 app/__init__.py
 app/__init__.pyc
-app/static/
-app/templates/
-requirements.txt
-manage.py
