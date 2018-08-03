@@ -82,5 +82,3 @@ fabric.properties
 .idea/modules.xml
 .idea/workspace.xml
 Venv/
-app/__init__.py
-app/__init__.pyc
