@@ -1,0 +1,127 @@
+{% extends 'base/layout.html' %}
+{% block content %}
+    {##}
+    {#    <div class="alert alert-info">#}
+    {#        <a class="close" data-dismiss="alert" href="#">x</a>#}
+    {#        <h4 class="alert-heading">Information</h4>#}
+    {#        The profile template would be used to display an individual member's information.#}
+    {#    </div>#}
+
+    <div class="row">
+
+        <div class="span2 profileicon">
+
+            <i class="icon icon-user"></i>
+
+            <p><strong>注册日期</strong> 2018-8-4</p>
+            <p><strong>邮件地址</strong> <a href="">3101615756@qq.com</a></p>
+
+        </div>
+
+        <div class="span8">
+
+            <div class="row">
+
+                <div class="span4">
+
+                    <div class="slate">
+
+                        <div class="page-header">
+                            <h2>通信地址</h2>
+                        </div>
+
+                        <p>电话:13037140838</p>
+                        <p>手机:13037140838</p>
+                        <p>传真:027-59214386</p>
+                        <p>微信号:whlongdian</p>
+                        <p>公司地址：武汉市江夏区藏龙岛光谷8号工坊1栋1单元7楼</p>
+                    </div>
+
+                </div>
+
+                {#                <div class="span4">#}
+                {##}
+                {#                    <div class="slate">#}
+                {##}
+                {#                        <div class="page-header">#}
+                {#                            <h2>Delivery Address</h2>#}
+                {#                        </div>#}
+                {#                        <p>Joe Bloggs</p>#}
+                {#                        <p>1 Long Road</p>#}
+                {#                        <p>Small Town</p>#}
+                {#                        <p>Big City</p>#}
+                {#                        <p>Country</p>#}
+                {#                        <p>ZIP/Postal Code</p>#}
+                {##}
+                {#                    </div>#}
+                {##}
+                {#                </div>#}
+
+            </div>
+
+            <div class="row">
+
+                <div class="span8">
+
+                    <div class="slate">
+
+                        <div class="page-header">
+                            <h2>最近备案信息</h2>
+                        </div>
+
+                        <table class="orders-table table">
+                            <tbody>
+                            <tr>
+                                <th>编号</th>
+                                <th>审批状态</th>
+                                <th>日期</th>
+                            </tr>
+{#                            {% for record in records %}#}
+                                <tr>
+                                    <td><a href="">#12345</a>
+                                    </td>
+                                    <td><span class="label label-info">审批通过</span></td>
+                                    <td>2018-8-4 17:52:55</td>
+                                </tr>
+{#                            {% endfor %}#}
+                            {#                            <tr>#}
+                            {#                                <td><a href="">#12345 - Joe Bloggs</a> <span class="label label-info">Paid</span></td>#}
+                            {#                                <td>$112.00</td>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td><a href="">#12345 - Joe Bloggs</a> <span#}
+                            {#                                        class="label label-success">Dispatched</span></td>#}
+                            {#                                <td>$112.00</td>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td><a href="">#12345 - Joe Bloggs</a> <span#}
+                            {#                                        class="label label-important">Refunded</span></td>#}
+                            {#                                <td>$112.00</td>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td><a href="">#12345 - Joe Bloggs</a> <span class="label">Awaiting Payment</span></td>#}
+                            {#                                <td>$112.00</td>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td><a href="">#12345 - Joe Bloggs</a> <span class="label label-inverse">Failed</span>#}
+                            {#                                </td>#}
+                            {#                                <td>$112.00</td>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td><a href="">#12345 - Joe Bloggs</a> <span#}
+                            {#                                        class="label label-warning">Cancelled</span></td>#}
+                            {#                                <td>$112.00</td>#}
+                            {#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td><a href="">#12345 - Joe Bloggs</a> <span class="label label-info">Paid</span></td>#}
+                            {#                                <td>$112.00</td>#}
+                            {#                            </tr>#}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

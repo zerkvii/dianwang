@@ -1,10 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+
+    <meta charset="utf-8">
+    <title>日志管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://fonts.googleapis.com/css?family=Oxygen|Marck+Script" rel="stylesheet" type="text/css">
+    <link href="/static/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/dateepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="/static/editor/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+    <link href="/static/editor/css/style.min.css" rel="stylesheet"/>
+    <link href="/static/editor/css/style-responsive.min.css" rel="stylesheet"/>
+    <link href="/static/editor/css/retina.css" rel="stylesheet"/>
+    <link href="/static/assets/css/admin.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+
+    <link href="/static/assets/css/custom.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
 </head>
 <body>
-$END$
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="span2">
+
+            <div class="main-left-col">
+
+                {#			<h1><i class="icon-wrench icon-large"></i>后台</h1>#}
+
+                <ul class="side-nav">
+
+                    <li class="active">
+                        <a href="{{ url_for('main.user_manage') }}"><i class="icon-home"></i>主页</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="collapse" data-target="#website-dropdown" href="#"><i
+                                class="icon-sitemap"></i>备案管理<b class="caret"></b></a>
+                        <ul id="website-dropdown" class="collapse">
+                            <li><a href="{{ url_for('main.record_info') }}" target="zcontainer">查看备案</a></li>
+                            <li><a href="{{ url_for('main.add_info') }}">新增备案</a></li>
+                            <li><a href="listing.html">修改备案</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="collapse" data-target="#store-dropdown" href="#"><i
+                                class="icon-envelope"></i>通知<b class="caret"></b></a>
+                        <ul id="store-dropdown" class="collapse">
+                            <li><a href="listing.html">通过信息</a></li>
+                            <li><a href="orders.html">失败信息</a></li>
+                            <li><a href="listing.html">历史信息</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="collapse" data-target="#help-dropdown" href="#"><i
+                                class="icon-info-sign"></i> 帮助 <b class="caret"></b></a>
+                        <ul id="help-dropdown" class="collapse">
+                            <li><a href="#">常见问题</a></li>
+                            <li class="active"><a href="#">关于</a></li>
+                            <li><a href="#">维护</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div> <!-- end main-left-col -->
+
+        </div> <!-- end span2 -->
+
+        <div class="span10">
+
+            <div class="secondary-masthead">
+
+                <ul class="nav nav-pills pull-right">
+                    {#                    <li>#}
+                    {#                        <a href="#"><i class="icon-globe"></i> 浏览信息</a>#}
+                    {#                    </li>#}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> 用户名
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">个人信息</a></li>
+                            <li class="active"><a href="#">账户设置</a></li>
+                            <li class="divider"></li>
+                            <li><a href="">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#">厂商备案</a> <span class="divider">/</span>
+                    </li>
+                    <li class="active">管理面板</li>
+                </ul>
+
+            </div>
+
+            <div class="main-area dashboard">
+                {% block content %}
+                {% endblock %}
+                <div class="row">
+
+                    <div class="span10 footer">
+
+                        <p> 电表厂商服务系统 &copy;2018</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> <!-- end span10 -->
+
+    </div> <!-- end row -->
+
+</div> <!-- end container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/assets/js/jquery.min.js"></script>
+<script src="/static/assets/js/bootstrap.js"></script>
+<script src="/static/assets/js/excanvas.min.js"></script>
+<script src="/static/assets/js/jquery.flot.min.js"></script>
+<script src="/static/assets/js/jquery.flot.resize.js"></script>
+<script src="/static/dateepicker/js/bootstrap-datepicker.js"></script>
+<script src="/static/dateepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="/static/editor/js/wizard.min.js"></script>
+
+<script>
+    $('.input-daterange').datepicker({
+        language: "zh-CN",
+        orientation: "bottom auto",
+        calendarWeeks: true,
+        autoclose: true,
+        todayHighlight: true,
+        toggleActive: true
+    });
+</script>
 </body>
 </html>

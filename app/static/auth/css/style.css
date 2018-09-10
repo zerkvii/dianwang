@@ -177,3 +177,8 @@ input, textarea {
 }
 
 /*# sourceMappingURL=style.css.map */
+.btn-block:hover, .btn-block:focus, .btn-block:active{
+  color: #ffffff;
+  background: #47d1d1 !important;
+  outline: none;
+}

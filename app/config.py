@@ -13,7 +13,12 @@ class Config:
     MAIL_USE_TLS = False
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME') or 'ZERKVII'
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') or 'uchbkqerldjeecig'
-
-
-if __name__ == '__main__':
-    print(basedir)
+    RECAPTCHA_ENABLED = True
+    RECAPTCHA_SITE_KEY = "6Ldiq2gUAAAAANfr7yU1ygZoAYUkkY-CWMcWotEv"
+    RECAPTCHA_SECRET_KEY = "6Ldiq2gUAAAAAA9c_eAsYHPqrgiSD8tDVAz2swOM"
+    # RECAPTCHA_THEME = "dark"
+    RECAPTCHA_TYPE = 'image'
+    ENV = "DEBUG"
+    DEBUG=True
+    # RECAPTCHA_SIZE = "compact"
+    # RECAPTCHA_RTABINDEX = 10

@@ -4,7 +4,6 @@ from app.models import *
 from flask_migrate import Migrate, MigrateCommand
 
 app = create_app()
-app.debug = True
 migrate = Migrate(app, db)
 manager = Manager(app)
 
@@ -23,6 +22,6 @@ def create_db():
     db.create_all()
 
 
-if __name__ == '__main__':
-    # app.run()
-    manager.run()
+# if __name__ == '__main__':
+#     # app.run()
+#     manager.run()

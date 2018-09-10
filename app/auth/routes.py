@@ -5,13 +5,15 @@ from .forms import RegistrationForm, LoginForm
 from app import bcrypt, db
 from app.models import User
 from . import auth
+from app import recaptcha
 
 
 @auth.route('/')
 def index():
     return render_template('index.html')
 
-@auth.route("/admin/register", methods=['GET', 'POST'])
+
+@auth.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
     # if form.validate_on_submit():
@@ -20,15 +22,16 @@ def register():
     #     db.session.add(user)
     #     db.session.commit()
     #     return redirect(url_for('auth.login'))
-    return render_template('auth/register.html', title='注册', form=form)
+    return render_template('auth/register.html', title='register', form=form)
 
 
-@auth.route("/login", methods=['GET', 'POST'])
+@auth.route('/login', methods=['GET', 'POST'])
 def login():
-    # if current_user.is_authenticated:
-    #     return redirect(url_for('main.home'))
+    if current_user.is_authenticated:
+        return redirect(url_for('main.home'))
     form = LoginForm()
-    # if form.validate_on_submit():
+    if form.validate_on_submit():
+        print form.username.data
     #     user = User.query.filter_by(username=form.username.data).first()
     #     if user and bcrypt.check_password_hash(user.password, form.password.data):
     #         login_user(user, remember=form.remember.data)
@@ -39,11 +42,16 @@ def login():
     #             return redirect(url_for('main.home'))
     #     else:
     #         flash('登录失败，请检查账号或者密码', 'danger')
-    return render_template('auth/login.html', title='登录', form=form)
+
+    return render_template('auth/login.html', title='login', form=form)
+
+
+@auth.route('/forgot', methods=['GET', 'POST'])
+def forgot():
+    return render_template('auth/forgot.html', title='forgot')
 
 
 @auth.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('main.home'))
-

@@ -8,13 +8,16 @@ from app.models import User
 
 
 class RegistrationForm(FlaskForm):
-    username = StringField(validators=[DataRequired(message='输入不为空'), Length(min=2, max=22, message='长度2-22')])
+    username = StringField(
+        validators=[DataRequired(message='输入不为空'), Length(min=2, max=22, message='长度2-22')])
     email = StringField(
         validators=[DataRequired(message='输入不为空'), Email(message='邮箱格式不合法')])
-    password = PasswordField(validators=[DataRequired(message='输入不为空'),
-                                         Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message='密码必须包含大小写字母数字'),
+    password = PasswordField(
+        validators=[DataRequired(message='输入不为空'),
+                                         Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message='密码必须包含字母'),
                                          Length(6, 20, message='长度为6-20')])
-    confirm_password = PasswordField(validators=[DataRequired(message='输入不为空'), EqualTo('password', message='两次输入不一致')])
+    confirm_password = PasswordField(
+        validators=[DataRequired(message='输入不为空'), EqualTo('password', message='两次输入不一致')])
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
@@ -25,12 +28,14 @@ class RegistrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user:
             raise ValidationError('此邮箱已存在')
+    submit=SubmitField()
 
 
 class LoginForm(FlaskForm):
     username = StringField(validators=[DataRequired(message='输入不为空')])
     password = PasswordField(validators=[DataRequired(message='输入不为空')])
-    submit = SubmitField('登录')
+    remember = BooleanField()
+    submit = SubmitField()
 
 
 class UpdateAccountForm(FlaskForm):
