@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding=utf-8 -*-
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
@@ -9,31 +9,32 @@ from app.models import User
 
 class RegistrationForm(FlaskForm):
     username = StringField(
-        validators=[DataRequired(message='输入不为空'), Length(min=2, max=22, message='长度2-22')])
+        validators=[DataRequired(message=u'输入不为空'), Length(min=2, max=22, message=u'长度2-22')])
     email = StringField(
-        validators=[DataRequired(message='输入不为空'), Email(message='邮箱格式不合法')])
+        validators=[DataRequired(message=u'输入不为空'), Email(message=u'邮箱格式不合法')])
     password = PasswordField(
-        validators=[DataRequired(message='输入不为空'),
-                                         Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message='密码必须包含字母'),
-                                         Length(6, 20, message='长度为6-20')])
+        validators=[DataRequired(message=u'输入不为空'),
+                    Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message=u'密码必须包含字母'),
+                    Length(6, 20, message=u'长度为6-20')])
     confirm_password = PasswordField(
-        validators=[DataRequired(message='输入不为空'), EqualTo('password', message='两次输入不一致')])
+        validators=[DataRequired(message=u'输入不为空'), EqualTo('password', message=u'两次输入不一致')])
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
         if user:
-            raise ValidationError('此用户名已存在')
+            raise ValidationError(u'此用户名已存在')
 
     def validate_email(self, email):
         user = User.query.filter_by(email=email.data).first()
         if user:
-            raise ValidationError('此邮箱已存在')
-    submit=SubmitField()
+            raise ValidationError(u'此邮箱已存在')
+
+    submit = SubmitField()
 
 
 class LoginForm(FlaskForm):
-    username = StringField(validators=[DataRequired(message='输入不为空')])
-    password = PasswordField(validators=[DataRequired(message='输入不为空')])
+    username = StringField(validators=[DataRequired(message=u'输入不为空')])
+    password = PasswordField(validators=[DataRequired(message=u'输入不为空')])
     remember = BooleanField()
     submit = SubmitField()
 

@@ -1,3 +1,4 @@
+# coding=utf-8
 from flask import Flask
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
@@ -12,6 +13,7 @@ recaptcha = ReCaptcha()
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
 login_manager.login_message_category = 'info'
+login_manager.login_message = 'plz login to access'
 
 
 def create_app():
@@ -26,4 +28,5 @@ def create_app():
     from .main import main as main_blueprint
     app.register_blueprint(auth_blueprint)
     app.register_blueprint(main_blueprint)
+
     return app

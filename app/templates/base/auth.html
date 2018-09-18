@@ -3,12 +3,16 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html> <!--<![endif]-->
 <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title }}</title>
+
 
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -42,6 +46,7 @@
 
 <body class="style-3">
 <canvas id="canvas" style="z-index: -1;position: absolute"></canvas>
+
 {% block content %}
 {% endblock %}
 
@@ -206,6 +211,27 @@
     function randomIntFromInterval(mn, mx) {
         return ~~(Math.random() * (mx - mn + 1) + mn);
     }</script>
+
+
+{#visible#}
+<script >
+    // 这里使用最原始的js语法实现，可对应换成jquery语法进行逻辑控制
+    var demoImg = document.getElementById("demo_img");
+    var demoInput = document.getElementById("password");
+
+    //隐藏text block，显示password block
+    function hideShowPsw() {
+        if (demoInput.type == "password") {
+            demoInput.type = "text";
+            demo_img.src = "/static/auth/images/invisible.png";
+        } else {
+            demoInput.type = "password";
+            demo_img.src = "/static/auth/images/visible.png";
+        }
+    }
+</script>
+
+{#autohide#}
 
 </body>
 </html>

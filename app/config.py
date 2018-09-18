@@ -19,6 +19,7 @@ class Config:
     # RECAPTCHA_THEME = "dark"
     RECAPTCHA_TYPE = 'image'
     ENV = "DEBUG"
-    DEBUG=True
+    DEBUG = True
+    JSON_AS_ASCII=False
     # RECAPTCHA_SIZE = "compact"
     # RECAPTCHA_RTABINDEX = 10

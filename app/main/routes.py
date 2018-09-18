@@ -1,9 +1,11 @@
 from flask import render_template, request
+from flask_login import login_required
 from app.models import  User
 from . import main
 
 
 @main.route('/user_manage', methods=['GET', 'POST'])
+@login_required
 def user_manage():
     return render_template('backend/user_manage.html')
 
