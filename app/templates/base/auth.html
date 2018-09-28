@@ -5,14 +5,13 @@
 <!--[if gt IE 8]><!-->
 <html> <!--<![endif]-->
 <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ title }}</title>
-
 
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -23,6 +22,7 @@
     <link rel="stylesheet" href="/static/auth/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/auth/css/animate.css">
     <link rel="stylesheet" href="/static/auth/css/style.css">
+    <link rel="stylesheet" href="/static/css/split.css">
 
 
     <!-- Modernizr JS -->
@@ -60,7 +60,6 @@
 <script src="/static/auth/js/jquery.waypoints.min.js"></script>
 <!-- Main JS -->
 <script src="/static/auth/js/main.js"></script>
-<canvas id="canvas"></canvas>
 
 <script>
     var canvas = document.getElementById("canvas");
@@ -214,7 +213,7 @@
 
 
 {#visible#}
-<script >
+<script>
     // 这里使用最原始的js语法实现，可对应换成jquery语法进行逻辑控制
     var demoImg = document.getElementById("demo_img");
     var demoInput = document.getElementById("password");
@@ -232,7 +231,12 @@
 </script>
 
 {#autohide#}
+<script>
+    setTimeout(function () {
+        $('#myModal').css("display","none")
+    }, 1500);
 
+</script>
 </body>
 </html>
 

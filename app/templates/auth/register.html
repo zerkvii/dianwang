@@ -12,6 +12,20 @@
                         <span>电表备案系统注册面板</span>
                     </div>
                     <div class="form-group">
+                        <label for="corpname" class="sr-only">CorpName</label>
+                        {{ form.csrf_token }}
+                        {% if form.corpname.errors %}
+                            {{ form.corpname(class="form-control",id="corpname",placeholder="公司名") }}
+                            <div class="error-display">
+                                {% for error in form.corpname.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.corpname(class="form-control",id="corpname",placeholder="公司名") }}
+                        {% endif %}
+                    </div>
+                    <div class="form-group">
                         <label for="username" class="sr-only">Name</label>
                         {{ form.csrf_token }}
                         {% if form.username.errors %}

@@ -8,6 +8,7 @@ from app.models import User
 
 
 class RegistrationForm(FlaskForm):
+    corpname = StringField(validators=[DataRequired(message=u'输入不为空')])
     username = StringField(
         validators=[DataRequired(message=u'输入不为空'), Length(min=2, max=22, message=u'长度2-22')])
     email = StringField(
@@ -18,6 +19,11 @@ class RegistrationForm(FlaskForm):
                     Length(6, 20, message=u'长度为6-20')])
     confirm_password = PasswordField(
         validators=[DataRequired(message=u'输入不为空'), EqualTo('password', message=u'两次输入不一致')])
+
+    def validate_corpname(self, corpname):
+        corpname = User.query.filter_by(corpname=corpname.data).first()
+        if corpname:
+            raise ValidationError(u'此公司已经注册')
 
     def validate_username(self, username):
         user = User.query.filter_by(username=username.data).first()
