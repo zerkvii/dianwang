@@ -125,7 +125,7 @@
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="#">个人资料</a></li>
+                                <li><a href="{{ url_for('main.user_settings') }}">个人资料</a></li>
                                 <li><a href="#">帮助</a></li>
                                 <li><a href="{{ url_for('auth.logout') }}"><i class="fa fa-sign-out pull-right"></i> 退出</a>
                                 </li>
@@ -262,7 +262,38 @@
         $('#myModal').modal('hide')
     }, 1500);
 </script>
+<script>
+    // 这里使用最原始的js语法实现，可对应换成jquery语法进行逻辑控制
+    var demoImg = document.getElementById("demo_img");
+    var demoInput = document.getElementById("password");
 
+    //隐藏text block，显示password block
+    function hideShowPsw() {
+        if (demoInput.type == "password") {
+            demoInput.type = "text";
+            demo_img.src = "/static/auth/images/invisible.png";
+        } else {
+            demoInput.type = "password";
+            demo_img.src = "/static/auth/images/visible.png";
+        }
+    }
+</script>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                $('#imagePreview').hide();
+                $('#imagePreview').fadeIn(650);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 
+    $("#imageUpload").change(function () {
+        readURL(this);
+    });
+</script>
 </body>
 </html>

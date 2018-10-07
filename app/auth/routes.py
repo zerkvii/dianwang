@@ -15,12 +15,13 @@ def index():
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
-        flash(u'已经登录，返回主界面','alert')
+        flash(u'已经登录，返回主界面', 'alert')
         return redirect(url_for('main.user_manage'))
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_pwd = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-        user = User(corpname=form.corpname.data,username=form.username.data, email=form.email.data, password=hashed_pwd)
+        user = User(corpname=form.corpname.data, username=form.username.data, email=form.email.data,
+                    password=hashed_pwd)
         db.session.add(user)
         db.session.commit()
         flash(u'注册成功，现在可以登录', 'success')
@@ -32,11 +33,12 @@ def register():
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        flash(u'已经登录，返回主界面','alert')
+        flash(u'已经登录，返回主界面', 'alert')
         return redirect(url_for('main.user_manage'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
+        user = User.query.filter_by(username=form.username.data).first() or User.query.filter_by(
+            email=form.username.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
@@ -59,7 +61,6 @@ def forgot():
 def logout():
     logout_user()
     return redirect(url_for('auth.login'))
-
 
 # @login_manager.user_loader
 # def load_user(user_id):

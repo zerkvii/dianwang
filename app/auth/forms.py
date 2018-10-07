@@ -19,7 +19,7 @@ class RegistrationForm(FlaskForm):
                     Length(6, 20, message=u'长度为6-20')])
     confirm_password = PasswordField(
         validators=[DataRequired(message=u'输入不为空'), EqualTo('password', message=u'两次输入不一致')])
-
+    submit = SubmitField()
     def validate_corpname(self, corpname):
         corpname = User.query.filter_by(corpname=corpname.data).first()
         if corpname:
@@ -35,7 +35,7 @@ class RegistrationForm(FlaskForm):
         if user:
             raise ValidationError(u'此邮箱已存在')
 
-    submit = SubmitField()
+
 
 
 class LoginForm(FlaskForm):

@@ -12,7 +12,8 @@
                             {% for category, message in messages %}
 
                                 <div class="form-group">
-                                    <div id="mymodal" class="alert alert-{{ category }}" role="{{ category }}"> {{ message }}</div>
+                                    <div id="mymodal" class="alert alert-{{ category }}"
+                                         role="{{ category }}"> {{ message }}</div>
                                 </div>
                             {% endfor %}
                         {% endif %}
@@ -27,6 +28,7 @@
                     </div>
                     <div class="form-group">
                         <label for="username" class="sr-only">username</label>
+                        {{ form.csrf_token }}
                         {% if form.username.errors %}
                             {{ form.username(class="form-control",id="username",placeholder="用户名/邮箱") }}
                             <div class="error-display">

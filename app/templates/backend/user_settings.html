@@ -1,0 +1,136 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>用户设置
+                <small>信息面板</small>
+            </h2>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+            <form class="form-horizontal form-label-left" novalidate="" method="POST" action="">
+
+                <span class="section">编辑资料</span>
+                <div class="item form-group row">
+                    <div class="sd left-sd"></div>
+                    <div class="sd mid-sd">
+                        <div class="avatar-upload ">
+                            <div class="avatar-edit">
+                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"/>
+                                <label for="imageUpload"></label>
+                            </div>
+                            <div class="avatar-preview">
+                                <div id="imagePreview" style="background-image: url(/static/auth/images/user/{{ current_user.picture }})">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sd right-sd"></div>
+                </div>
+                <div class="item form-group">
+                    <label for="corpname" class="control-label col-md-3 col-sm-3 col-xs-12">公司名称 <span
+                            class="required"></span></label>
+                    {{ form.csrf_token }}
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.corpname.errors %}
+                            {{ form.corpname(class="form-control col-md-7 col-xs-12",id="corpname",placeholder=current_user.corpname,type="text") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.corpname.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.corpname(class="form-control col-md-7 col-xs-12",id="corpname",placeholder=current_user.corpname,type="text") }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="item form-group">
+                    <label for="username" class="control-label col-md-3 col-sm-3 col-xs-12">用户名 <span
+                            class="required"></span></label>
+                    {{ form.csrf_token }}
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.username.errors %}
+                            {{ form.username(class="form-control col-md-7 col-xs-12",id="username",placeholder=current_user.username,type="text") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.username.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.username(class="form-control col-md-7 col-xs-12",id="username",placeholder=current_user.username,type="text") }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="item form-group">
+                    <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">电子邮件 <span
+                            class="required"></span></label>
+                    {{ form.csrf_token }}
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.email.errors %}
+                            {{ form.email(class="form-control col-md-7 col-xs-12",id="email",placeholder=current_user.email,type="text") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.email(class="form-control col-md-7 col-xs-12",id="email",placeholder=current_user.email,type="text") }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="item form-group">
+                    <label for="password" class="control-label col-md-3 col-sm-3 col-xs-12">密码 <span
+                            class="required"></span></label>
+                    {{ form.csrf_token }}
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.password.errors %}
+                            <img id="demo_img" onclick="hideShowPsw()" src="/static/auth/images/visible.png">
+                            {{ form.password(class="form-control col-md-7 col-xs-12",id="password",placeholder="******",type="password") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.password.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <img id="demo_img" onclick="hideShowPsw()" src="/static/auth/images/visible.png">
+                            {{ form.password(class="form-control col-md-7 col-xs-12",id="password",placeholder="******",type="password") }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="item form-group">
+                    <label for="re-password" class="control-label col-md-3 col-sm-3 col-xs-12">确认密码 <span
+                            class="required"></span></label>
+                    {{ form.csrf_token }}
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.confirm_password.errors %}
+                            {{ form.confirm_password(class="form-control col-md-7 col-xs-12",id="confirm_password",placeholder="",type="password") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.confirm_password.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.confirm_password(class="form-control col-md-7 col-xs-12",id="confirm_password",placeholder="",type="password") }}
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-3">
+                        {#                        <button type="submit" class="btn btn-primary">取消</button>#}
+                        {{ form.submit(class="btn btn-block",value="提交",type="submit") }}
+                        {#                        <button id="send" type="submit" class="btn btn-success">提交</button>#}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
