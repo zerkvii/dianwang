@@ -1,9 +1,9 @@
 # coding=utf-8
-from flask import render_template, request,redirect,url_for,flash
+from flask import render_template, request, redirect, url_for, flash, current_app
 from flask_login import login_required, current_user
-from app.models import User
+from ..utils.save_profile_image import save_picture
 from app import bcrypt, db
-from .forms import UpdateAccountForm
+from .forms import UpdateAccountForm, TestForm
 from . import main
 
 
@@ -29,13 +29,29 @@ def add_info():
 @login_required
 def user_settings():
     form = UpdateAccountForm()
+    form.corpname.data = current_user.corpname
+    form.username.data = current_user.username
+    form.email.data = current_user.corpname
     if form.validate_on_submit():
-        current_user.corpname=form.corpname.data
+        current_user.corpname = form.corpname.data
         current_user.username = form.username.data
         current_user.email = form.email.data
-        current_user.password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        current_user.password=
+        if form.image.data:
+            print(current_app.root_path)
+            current_user.image = save_picture(form.image.data)
         db.session.add(current_user._get_current_object())
         db.session.commit()
         flash(u'修改已完成', 'alert')
         return redirect(url_for('main.user_manage'))
     return render_template('backend/user_settings.html', form=form)
+
+
+@main.route('/test', methods=['GET', 'POST'])
+@login_required
+def test():
+    form = TestForm()
+    if form.validate_on_submit():
+        print(form.picture.data)
+        return redirect(test)
+    return render_template('backend/test.html', form=form)

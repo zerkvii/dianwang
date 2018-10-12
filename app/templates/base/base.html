@@ -126,7 +126,9 @@
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
                                 <li><a href="{{ url_for('main.user_settings') }}">个人资料</a></li>
-                                <li><a href="#">帮助</a></li>
+                                <li><a href="{{ url_for('auth.logout') }}">个人资料</a></li>
+
+                                <li><a href="{{ url_for('auth.logout') }}">帮助</a></li>
                                 <li><a href="{{ url_for('auth.logout') }}"><i class="fa fa-sign-out pull-right"></i> 退出</a>
                                 </li>
                             </ul>
@@ -271,10 +273,10 @@
     function hideShowPsw() {
         if (demoInput.type == "password") {
             demoInput.type = "text";
-            demo_img.src = "/static/auth/images/invisible.png";
+            demo_img.src = "/static/auth/images/visible.png";
         } else {
             demoInput.type = "password";
-            demo_img.src = "/static/auth/images/visible.png";
+            demo_img.src = "/static/auth/images/invisible.png";
         }
     }
 </script>

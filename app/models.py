@@ -1,5 +1,4 @@
 from . import db, login_manager
-from datetime import datetime
 from flask_login import UserMixin
 from .utils.date_util import get_current_time
 

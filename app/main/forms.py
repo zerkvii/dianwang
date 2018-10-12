@@ -5,19 +5,24 @@ from flask_login import current_user
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, widgets
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp, ValidationError
 from app.models import User
+from app import bcrypt
 
 
 class UpdateAccountForm(FlaskForm):
     corpname = StringField(u'公司名称', validators=[DataRequired(message=u'输入不为空')])
     username = StringField(u'用户名', validators=[DataRequired(message=u'输入不为空'), Length(min=2, max=22, message='长度2-22')])
     email = StringField(u'邮箱', validators=[DataRequired(message=u'输入不为空'), Email(message=u'邮箱格式不合法')])
-    picture = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])
+    image = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])
     password = PasswordField(
         validators=[DataRequired(message=u'输入不为空'),
                     Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message=u'密码必须包含字母'),
                     Length(6, 20, message=u'长度为6-20')])
+    new_password = PasswordField(
+        validators=[DataRequired(message=u'输入不为空'),
+                    Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message=u'密码必须包含字母'),
+                    Length(6, 20, message=u'长度为6-20')])
     confirm_password = PasswordField(
-        validators=[DataRequired(message=u'输入不为空'), EqualTo('password', message=u'两次输入不一致')])
+        validators=[DataRequired(message=u'输入不为空'), EqualTo('new_password', message=u'两次输入不一致')])
 
     def validate_corpname(self, corpname):
         if corpname.data != current_user.corpname:
@@ -37,4 +42,15 @@ class UpdateAccountForm(FlaskForm):
             if user:
                 raise ValidationError(u'此邮箱已存在')
 
+    def validate_password(self, password):
+        if bcrypt.check_password_hash(current_user.password, password.data):
+            pass
+        else:
+            raise ValidationError(u'密码错误')
+
+    submit = SubmitField()
+
+
+class TestForm(FlaskForm):
+    picture = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])
     submit = SubmitField()
