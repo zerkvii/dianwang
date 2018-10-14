@@ -31,12 +31,12 @@ def user_settings():
     form = UpdateAccountForm()
     form.corpname.data = current_user.corpname
     form.username.data = current_user.username
-    form.email.data = current_user.corpname
+    form.email.data = current_user.email
     if form.validate_on_submit():
         current_user.corpname = form.corpname.data
         current_user.username = form.username.data
         current_user.email = form.email.data
-        current_user.password=
+        # current_user.password=/
         if form.image.data:
             print(current_app.root_path)
             current_user.image = save_picture(form.image.data)

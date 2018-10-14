@@ -9,8 +9,10 @@
       <excludeFolder url="file://$MODULE_DIR$/FLASK_ENV" />
       <excludeFolder url="file://$MODULE_DIR$/Venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (dianwang) (1)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.7 (flask_env)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="R User Library" level="project" />
+    <orderEntry type="library" name="R Skeletons" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

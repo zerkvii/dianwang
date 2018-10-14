@@ -10,7 +10,7 @@ def save_picture(form_picture):
     picture_fn = random_hex + f_ext
     picture_path = current_app.root_path+'/static/auth/images/user/'+picture_fn
     print(picture_path)
-    output_size = (180, 180)
+    output_size = (500, 500)
     i = Image.open(form_picture)
     i.thumbnail(output_size)
     i.save(picture_path)
