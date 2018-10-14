@@ -55,3 +55,7 @@ def test():
         print(form.picture.data)
         return redirect(test)
     return render_template('backend/test.html', form=form)
+
+
+def print():
+    print('mac')
