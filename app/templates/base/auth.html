@@ -44,12 +44,12 @@
 
 </head>
 
-<body class="style-3">
+<body class="style-3" style="overflow-y: auto;">
 <canvas id="canvas" style="z-index: -1;position: absolute"></canvas>
-
+<div class="my_scrollable">
 {% block content %}
 {% endblock %}
-
+</div>
 <!-- jQuery -->
 <script src="/static/auth/js/jquery.min.js"></script>
 <!-- Bootstrap -->

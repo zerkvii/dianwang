@@ -1,11 +1,12 @@
 # coding=utf-8
+from flask_login import current_user
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
-from flask_login import current_user
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, widgets
-from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp, ValidationError
-from app.models import User
+from wtforms import StringField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError, EqualTo
+
 from app import bcrypt
+from app.models import User
 
 
 class UpdateAccountForm(FlaskForm):
@@ -17,12 +18,14 @@ class UpdateAccountForm(FlaskForm):
         validators=[DataRequired(message=u'输入不为空'),
                     Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message=u'密码必须包含字母'),
                     Length(6, 20, message=u'长度为6-20')])
-    new_password = PasswordField(
-        validators=[DataRequired(message=u'输入不为空'),
-                    Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message=u'密码必须包含字母'),
-                    Length(6, 20, message=u'长度为6-20')])
-    confirm_password = PasswordField(
-        validators=[DataRequired(message=u'输入不为空'), EqualTo('new_password', message=u'两次输入不一致')])
+    # new_password = PasswordField(
+    #     validators=[DataRequired(message=u'输入不为空'),
+    #                 Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message=u'密码必须包含字母'),
+    #                 Length(6, 20, message=u'长度为6-20')])
+    # confirm_password = PasswordField(
+    #     validators=[DataRequired(message=u'输入不为空'), EqualTo('new_password', message=u'两次输入不一致')])
+    new_password = PasswordField()
+    confirm_password = PasswordField(validators=[EqualTo('new_password', message=u'两次输入不一致')])
 
     def validate_corpname(self, corpname):
         if corpname.data != current_user.corpname:
@@ -47,6 +50,12 @@ class UpdateAccountForm(FlaskForm):
             pass
         else:
             raise ValidationError(u'密码错误')
+
+    def validate_new_password(self, new_password):
+        if new_password.data.strip() != '':
+            if len(new_password.data) <= 6:
+                raise ValidationError(u'新密码长度应大于6位')
+
 
     submit = SubmitField()
 

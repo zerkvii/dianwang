@@ -1,10 +1,11 @@
 # coding=utf-8
-from flask import render_template, request, redirect, url_for, flash, current_app
+from flask import render_template, redirect, url_for, flash
 from flask_login import login_required, current_user
-from ..utils.save_profile_image import save_picture
+
 from app import bcrypt, db
-from .forms import UpdateAccountForm, TestForm
 from . import main
+from .forms import UpdateAccountForm, TestForm
+from ..utils.save_profile_image import save_picture
 
 
 @main.route('/user_manage', methods=['GET', 'POST'])
@@ -36,9 +37,9 @@ def user_settings():
         current_user.corpname = form.corpname.data
         current_user.username = form.username.data
         current_user.email = form.email.data
-        # current_user.password=/
+        if len(form.new_password.data.strip()) > 0:
+            current_user.password = bcrypt.generate_password_hash(form.new_password.data).decode('utf-8')
         if form.image.data:
-            print(current_app.root_path)
             current_user.image = save_picture(form.image.data)
         db.session.add(current_user._get_current_object())
         db.session.commit()
@@ -57,5 +58,7 @@ def test():
     return render_template('backend/test.html', form=form)
 
 
-def print():
-    print('mac')
+@main.route('/user_help', methods=['GET', 'POST'])
+@login_required
+def user_help():
+    return render_template('backend/user_help.html')
