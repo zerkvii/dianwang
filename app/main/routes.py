@@ -4,7 +4,7 @@ from flask_login import login_required, current_user
 
 from app import bcrypt, db
 from . import main
-from .forms import UpdateAccountForm, TestForm
+from .forms import UpdateAccountForm
 from ..utils.save_profile_image import save_picture
 
 
@@ -14,16 +14,22 @@ def user_manage():
     return render_template('backend/user_manage.html')
 
 
-@main.route('/record_info', methods=['GET', 'POST'])
+@main.route('/check_info', methods=['GET', 'POST'])
 @login_required
-def record_info():
-    return render_template('backend/record_info.html')
+def check_info():
+    return render_template('backend/check_info.html')
 
 
 @main.route('/add_info', methods=['GET', 'POST'])
 @login_required
 def add_info():
     return render_template('backend/add_info.html')
+
+
+@main.route('/modify_info', methods=['GET', 'POST'])
+@login_required
+def modify_info():
+    return render_template('backend/modify_info.html')
 
 
 @main.route('/user_settings', methods=['GET', 'POST'])
@@ -48,14 +54,21 @@ def user_settings():
     return render_template('backend/user_settings.html', form=form)
 
 
-@main.route('/test', methods=['GET', 'POST'])
+@main.route('/user_messages', methods=['GET', 'POST'])
 @login_required
-def test():
-    form = TestForm()
-    if form.validate_on_submit():
-        print(form.picture.data)
-        return redirect(test)
-    return render_template('backend/test.html', form=form)
+def user_messages():
+    return render_template('backend/user_messages.html')
+
+
+
+# @main.route('/test', methods=['GET', 'POST'])
+# @login_required
+# def test():
+#     form = TestForm()
+#     if form.validate_on_submit():
+#         print(form.picture.data)
+#         return redirect(test)
+#     return render_template('backend/test.html', form=form)
 
 
 @main.route('/user_help', methods=['GET', 'POST'])

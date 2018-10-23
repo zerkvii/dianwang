@@ -50,19 +50,16 @@
                             </li>
                             <li><a><i class="fa fa-table"></i>备案信息<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="#">查看备案</a></li>
+                                    <li><a href="{{ url_for('main.check_info') }}">查看备案</a></li>
                                     <li><a href="{{ url_for('main.add_info') }}">新增备案</a></li>
-                                    <li><a href="#">修改备案</a></li>
+                                    <li><a href="{{ url_for('main.modify_info') }}">修改备案</a></li>
 
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-envelope"></i>消息<span class="fa fa-star"></span></a>
+                            <li><a href="{{ url_for('main.user_messages') }}"><i class="fa fa-envelope"></i>消息<span class="fa fa-star"></span></a>
 
-                            <li><a><i class="fa fa-info-circle"></i>帮助信息<span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="#">关于系统</a></li>
-                                    <li><a href="#">说明</a></li>
-                                </ul>
+                            <li><a href="{{ url_for('main.user_help') }}"><i class="fa fa-info-circle"></i>帮助信息<span class="fa fa-chevron-down"></span></a>
+
                             </li>
                         </ul>
                     </div>
