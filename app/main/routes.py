@@ -14,18 +14,22 @@ def user_manage():
     return render_template('backend/user_manage.html')
 
 
+# 查看备案
 @main.route('/check_info', methods=['GET', 'POST'])
 @login_required
 def check_info():
     return render_template('backend/check_info.html')
 
 
+# 增加备案
 @main.route('/add_info', methods=['GET', 'POST'])
 @login_required
 def add_info():
+    # form = RecordForm()
     return render_template('backend/add_info.html')
 
 
+# 修改备案
 @main.route('/modify_info', methods=['GET', 'POST'])
 @login_required
 def modify_info():
@@ -58,7 +62,6 @@ def user_settings():
 @login_required
 def user_messages():
     return render_template('backend/user_messages.html')
-
 
 
 # @main.route('/test', methods=['GET', 'POST'])

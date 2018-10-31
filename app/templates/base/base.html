@@ -46,7 +46,7 @@
                     <div class="menu_section">
                         <h3>菜单</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-home"></i>主页概览<span class="fa fa-star"></span></a>
+                            <li><a href="{{ url_for('main.user_manage') }}"><i class="fa fa-home"></i>主页概览<span class="fa fa-star"></span></a>
                             </li>
                             <li><a><i class="fa fa-table"></i>备案信息<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
@@ -56,9 +56,11 @@
 
                                 </ul>
                             </li>
-                            <li><a href="{{ url_for('main.user_messages') }}"><i class="fa fa-envelope"></i>消息<span class="fa fa-star"></span></a>
+                            <li><a href="{{ url_for('main.user_messages') }}"><i class="fa fa-envelope"></i>消息<span
+                                    class="fa fa-star"></span></a>
 
-                            <li><a href="{{ url_for('main.user_help') }}"><i class="fa fa-info-circle"></i>帮助信息<span class="fa fa-chevron-down"></span></a>
+                            <li><a href="{{ url_for('main.user_help') }}"><i class="fa fa-info-circle"></i>帮助信息<span
+                                    class="fa fa-chevron-down"></span></a>
 
                             </li>
                         </ul>
@@ -218,8 +220,26 @@
 <!-- bootstrap-daterangepicker -->
 <script src="/static/backend/vendors/moment/min/moment.min.js"></script>
 <script src="/static/backend/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
+<!-- smart-Wizard -->
+<script src="/static/backend/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
 <!-- Custom Theme Scripts -->
+<script src="/static/backend/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="/static/backend/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="/static/backend/vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="/static/backend/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="/static/backend/vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="/static/backend/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="/static/backend/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="/static/backend/vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="/static/backend/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="/static/backend/vendors/starrr/dist/starrr.js"></script>
 <script src="/static/backend/build/js/custom.min.js"></script>
 <script type="text/javascript">
     $(function () {

@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from .config import Config
 from flask_recaptcha import ReCaptcha
+from flask_pagedown import PageDown
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -23,6 +24,7 @@ def create_app():
     bcrypt.init_app(app)
     login_manager.init_app(app)
     recaptcha.init_app(app)
+    # pagedown = PageDown(app)
 
     from .auth import auth as auth_blueprint
     from .main import main as main_blueprint
