@@ -51,6 +51,7 @@ def user_settings():
             current_user.password = bcrypt.generate_password_hash(form.new_password.data).decode('utf-8')
         if form.image.data:
             current_user.image = save_picture(form.image.data)
+            print(form.image.data)
         db.session.add(current_user._get_current_object())
         db.session.commit()
         flash(u'修改已完成', 'alert')

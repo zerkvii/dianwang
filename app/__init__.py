@@ -5,7 +5,6 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from .config import Config
 from flask_recaptcha import ReCaptcha
-from flask_pagedown import PageDown
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()

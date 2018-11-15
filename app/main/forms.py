@@ -4,10 +4,12 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField, SelectField, DateField
 from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError, EqualTo
-from flask_pagedown.fields import PageDownField
 
 from app import bcrypt
 from app.models import User
+
+
+# from flask_pagedown.fields import PageDownField
 
 
 class UpdateAccountForm(FlaskForm):
@@ -64,10 +66,10 @@ class RecordForm(FlaskForm):
     corpname = StringField(u'公司名称', validators=[DataRequired(message=u'输入不为空')])
     agent = StringField(u'申报人姓名', validators=[DataRequired(message=u'输入不为空')])
     record_title = StringField(u'备案标题', validators=[DataRequired(message=u'输入不为空')])
-    record_type = SelectField(u'备案类型', choices=[('cpp', 'C++'), ('py', 'Python'), ('text', 'Plain Text')])
+    record_type = SelectField(u'备案类型', choices=[u'第一类', u'第二类'])
     record_batch_time = DateField(u'生产时间', format='%Y-%m-%d', validators=[DataRequired(message=u'请输入批次')])
     record_batch_serial = SelectField(u'生产批次', choices=[u'第一批', u'第二批', u'第三批'])
-
+    record_file_name = StringField(u'文件名', validators=[DataRequired(message=u'输入文件名')])
 
 class TestForm(FlaskForm):
     picture = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])
