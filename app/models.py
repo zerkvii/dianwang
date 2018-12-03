@@ -107,3 +107,5 @@ class Log(db.Model):
     __tablename__ = 'logs'
     id = db.Column(db.Integer, primary_key=True)
     time = db.Column(db.String(128), default=get_current_time)
+
+
