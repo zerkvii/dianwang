@@ -25,6 +25,12 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(30), unique=True, nullable=False)
     # 邮件
     email = db.Column(db.String(120), unique=True, nullable=False)
+    # 厂商地址
+    address = db.Column(db.String(120), default='未更改')
+    # 官网地址
+    official_web = db.Column(db.String(128), default='https://www.official.com')
+    # 联系电话
+    contact_number = db.Column(db.String(36), default='0000-0000000')
     # logo
     image = db.Column(db.String(128), nullable=False, default='default.png')
     # 密码
@@ -107,5 +113,3 @@ class Log(db.Model):
     __tablename__ = 'logs'
     id = db.Column(db.Integer, primary_key=True)
     time = db.Column(db.String(128), default=get_current_time)
-
-

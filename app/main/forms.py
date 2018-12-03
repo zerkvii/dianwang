@@ -17,6 +17,11 @@ class UpdateAccountForm(FlaskForm):
     username = StringField(u'用户名', validators=[DataRequired(message=u'输入不为空'), Length(min=2, max=22, message='长度2-22')])
     email = StringField(u'邮箱', validators=[DataRequired(message=u'输入不为空'), Email(message=u'邮箱格式不合法')])
     image = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])
+    contact_number = StringField(u'联系电话',
+                                 validators=[DataRequired(message=u'输入不为空')])
+
+    address = StringField(u'地址', validators=[DataRequired(message=u'输入不为空')])
+    official_web = StringField(u'官网', validators=[DataRequired(message=u'输入不为空')])
     password = PasswordField(
         validators=[DataRequired(message=u'输入不为空'),
                     Regexp('^[a-zA-Z][a-zA-Z0-9]+$', message=u'密码必须包含字母'),

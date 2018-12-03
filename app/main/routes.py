@@ -43,10 +43,17 @@ def user_settings():
     form.corpname.data = current_user.corpname
     form.username.data = current_user.username
     form.email.data = current_user.email
+    form.address.data = current_user.address
+    form.contact_number.data = current_user.contact_number
+    form.official_web.data = current_user.official_web
     if form.validate_on_submit():
         current_user.corpname = form.corpname.data
         current_user.username = form.username.data
         current_user.email = form.email.data
+        current_user.address = form.address.data
+        current_user.contact_number = form.contact_number.data
+        current_user.official_web = form.official_web.data
+        # print(form.official_web.data)
         if len(form.new_password.data.strip()) > 0:
             current_user.password = bcrypt.generate_password_hash(form.new_password.data).decode('utf-8')
         if form.image.data:

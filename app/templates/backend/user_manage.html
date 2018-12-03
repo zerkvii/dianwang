@@ -40,11 +40,11 @@
                         <div class="profile_img">
                             <div id="crop-avatar">
                                 <!-- Current avatar -->
-                                <img class="img-responsive avatar-view" src="/static/backend/images/lf.jpg" alt="Avatar"
+                                <img class="img-responsive avatar-view" src="/static/auth/images/user/{{ current_user.image }}" alt="Avatar"
                                      title="Change the avatar">
                             </div>
                         </div>
-                        <h3>泰丰电表</h3>
+                        <h3>{{ current_user.corpname }}</h3>
 
                         <ul class="list-unstyled user_data">
                             <li><i class="fa fa-map-marker user-profile-icon"></i> 浙江温州市龙湾区沙城镇沧宁东片工业区

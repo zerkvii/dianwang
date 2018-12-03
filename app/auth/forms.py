@@ -1,9 +1,10 @@
 # -*- coding=utf-8 -*-
+from flask_login import current_user
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
-from flask_login import current_user
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, widgets
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp, ValidationError
+
 from app.models import User
 
 
@@ -20,6 +21,7 @@ class RegistrationForm(FlaskForm):
     confirm_password = PasswordField(
         validators=[DataRequired(message=u'输入不为空'), EqualTo('password', message=u'两次输入不一致')])
     submit = SubmitField()
+
     def validate_corpname(self, corpname):
         corpname = User.query.filter_by(corpname=corpname.data).first()
         if corpname:
@@ -36,8 +38,6 @@ class RegistrationForm(FlaskForm):
             raise ValidationError(u'此邮箱已存在')
 
 
-
-
 class LoginForm(FlaskForm):
     username = StringField(validators=[DataRequired(message=u'输入不为空')])
     password = PasswordField(validators=[DataRequired(message=u'输入不为空')])
@@ -46,9 +46,9 @@ class LoginForm(FlaskForm):
 
 
 class UpdateAccountForm(FlaskForm):
-    username = StringField('用户名', validators=[DataRequired(message='输入不为空'), Length(min=2, max=22, message='长度2-22')])
-    email = StringField('邮箱', validators=[DataRequired(message='输入不为空'), Email(message='邮箱格式不合法')])
-    picture = FileField('上传照片 ', validators=[FileAllowed(['jpg', 'png'], message='请选择jpg或者png格式文件')])
+    username = StringField(u'用户名', validators=[DataRequired(message=u'输入不为空'), Length(min=2, max=22, message='长度2-22')])
+    email = StringField(u'邮箱', validators=[DataRequired(message=u'输入不为空'), Email(message=u'邮箱格式不合法')])
+    picture = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])
     submit = SubmitField('更新')
 
     def validate_username(self, username):

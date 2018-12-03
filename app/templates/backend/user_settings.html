@@ -90,6 +90,60 @@
                         {% endif %}
                     </div>
                 </div>
+                 <div class="item form-group">
+                    <label for="address" class="control-label col-md-4 col-sm-4 col-xs-12">地址 <span
+                            class="required"></span></label>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.address.errors %}
+                            {{ form.address(class="form-control col-md-7 col-xs-12",id="address",type="text") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.address.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.address(class="form-control col-md-7 col-xs-12",id="address",type="text") }}
+                        {% endif %}
+                    </div>
+                </div>
+              <div class="item form-group">
+                    <label for="contact_number" class="control-label col-md-4 col-sm-4 col-xs-12">联系电话 <span
+                            class="required"></span></label>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.contact_number.errors %}
+                            {{ form.contact_number(class="form-control col-md-7 col-xs-12",id="contact_number",type="text") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.contact_number.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.contact_number(class="form-control col-md-7 col-xs-12",id="contact_number",type="text") }}
+                        {% endif %}
+                    </div>
+                </div>
+               <div class="item form-group">
+                    <label for="official_web" class="control-label col-md-4 col-sm-4 col-xs-12">官网地址 <span
+                            class="required"></span></label>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        {% if form.official_web.errors %}
+                            {{ form.official_web(class="form-control col-md-7 col-xs-12",id="official_web",type="text") }}
+                            <div class="error-display col-md-7 col-xs-12"
+                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                {% for error in form.official_web.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.official_web(class="form-control col-md-7 col-xs-12",id="official_web",type="text") }}
+                        {% endif %}
+                    </div>
+                </div>
                 <div class="item form-group">
                     <label for="password" class="control-label col-md-4 col-sm-4 col-xs-12">原密码 <span
                             class="required"></span></label>
