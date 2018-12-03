@@ -19,7 +19,6 @@ class UpdateAccountForm(FlaskForm):
     image = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])
     contact_number = StringField(u'联系电话',
                                  validators=[DataRequired(message=u'输入不为空')])
-
     address = StringField(u'地址', validators=[DataRequired(message=u'输入不为空')])
     official_web = StringField(u'官网', validators=[DataRequired(message=u'输入不为空')])
     password = PasswordField(
@@ -37,7 +36,7 @@ class UpdateAccountForm(FlaskForm):
 
     def validate_corpname(self, corpname):
         if corpname.data != current_user.corpname:
-            user = User.query.filter_by(username=corpname.data).first()
+            user = User.query.filter_by(corpname=corpname.data).first()
             if user:
                 raise ValidationError(u'此公司已经注册')
 
@@ -75,6 +74,7 @@ class RecordForm(FlaskForm):
     record_batch_time = DateField(u'生产时间', format='%Y-%m-%d', validators=[DataRequired(message=u'请输入批次')])
     record_batch_serial = SelectField(u'生产批次', choices=[u'第一批', u'第二批', u'第三批'])
     record_file_name = StringField(u'文件名', validators=[DataRequired(message=u'输入文件名')])
+
 
 class TestForm(FlaskForm):
     picture = FileField(u'上传照片 ', validators=[FileAllowed(['jpg', 'png'], message=u'请选择jpg或者png格式文件')])

@@ -1,5 +1,5 @@
 # coding=utf-8
-from flask import render_template, redirect, url_for, flash
+from flask import render_template, redirect, url_for, flash, request
 from flask_login import login_required, current_user
 
 from app import bcrypt, db
@@ -39,13 +39,17 @@ def modify_info():
 @main.route('/user_settings', methods=['GET', 'POST'])
 @login_required
 def user_settings():
-    form = UpdateAccountForm()
-    form.corpname.data = current_user.corpname
-    form.username.data = current_user.username
-    form.email.data = current_user.email
-    form.address.data = current_user.address
-    form.contact_number.data = current_user.contact_number
-    form.official_web.data = current_user.official_web
+    if request.method == 'GET':
+        form = UpdateAccountForm()
+        form.corpname.data = current_user.corpname
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+        form.address.data = current_user.address
+        form.contact_number.data = current_user.contact_number
+        form.official_web.data = current_user.official_web
+    # form.process()
+    else:
+        form = UpdateAccountForm()
     if form.validate_on_submit():
         current_user.corpname = form.corpname.data
         current_user.username = form.username.data
@@ -53,7 +57,8 @@ def user_settings():
         current_user.address = form.address.data
         current_user.contact_number = form.contact_number.data
         current_user.official_web = form.official_web.data
-        # print(form.official_web.data)
+        print(form.official_web.data)
+        print(form.corpname.data)
         if len(form.new_password.data.strip()) > 0:
             current_user.password = bcrypt.generate_password_hash(form.new_password.data).decode('utf-8')
         if form.image.data:
