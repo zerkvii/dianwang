@@ -47,16 +47,16 @@
                         <h3>{{ current_user.corpname }}</h3>
 
                         <ul class="list-unstyled user_data">
-                            <li><i class="fa fa-map-marker user-profile-icon"></i> 浙江温州市龙湾区沙城镇沧宁东片工业区
+                            <li><i class="fa fa-map-marker user-profile-icon"></i> {{ current_user.address }}
                             </li>
 
                             <li>
-                                <i class="fa fa-phone user-profile-icon"></i> 0577-86833099
+                                <i class="fa fa-phone user-profile-icon"></i> {{ current_user.contact_number }}
                             </li>
 
                             <li class="m-top-xs">
                                 <i class="fa fa-external-link user-profile-icon"></i>
-                                <a href="http://www.tfele.com/" target="_blank">企业官网</a>
+                                <a href="{{ current_user.official_web }}" target="_blank">企业官网</a>
                             </li>
                         </ul>
 

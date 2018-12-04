@@ -1,10 +1,10 @@
 # coding=utf-8
 from flask import render_template, redirect, url_for, flash, request
 from flask_login import login_required, current_user
-
+from app.utils.date_util import get_current_time
 from app import bcrypt, db
 from . import main
-from .forms import UpdateAccountForm
+from .forms import UpdateAccountForm, RecordForm
 from ..utils.save_profile_image import save_picture
 
 
@@ -25,8 +25,17 @@ def check_info():
 @main.route('/add_info', methods=['GET', 'POST'])
 @login_required
 def add_info():
-    # form = RecordForm()
-    return render_template('backend/add_info.html')
+    if request.method == 'GET':
+        form = RecordForm()
+        form.corpname.data = current_user.corpname
+        form.request_date.data = get_current_time()
+        form.agent.data = current_user.username
+    else:
+        form = RecordForm()
+    if form.validate_on_submit():
+        flash(u'修改已完成', 'alert')
+        return redirect(url_for('main.user_manage'))
+    return render_template('backend/add_info.html', form=form)
 
 
 # 修改备案
@@ -47,7 +56,6 @@ def user_settings():
         form.address.data = current_user.address
         form.contact_number.data = current_user.contact_number
         form.official_web.data = current_user.official_web
-    # form.process()
     else:
         form = UpdateAccountForm()
     if form.validate_on_submit():
@@ -57,13 +65,10 @@ def user_settings():
         current_user.address = form.address.data
         current_user.contact_number = form.contact_number.data
         current_user.official_web = form.official_web.data
-        print(form.official_web.data)
-        print(form.corpname.data)
         if len(form.new_password.data.strip()) > 0:
             current_user.password = bcrypt.generate_password_hash(form.new_password.data).decode('utf-8')
         if form.image.data:
             current_user.image = save_picture(form.image.data)
-            print(form.image.data)
         db.session.add(current_user._get_current_object())
         db.session.commit()
         flash(u'修改已完成', 'alert')

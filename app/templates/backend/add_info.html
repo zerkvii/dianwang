@@ -92,139 +92,128 @@
                             <form class="form-horizontal form-label-left">
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="first-name">
                                         申报单位<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id="first-name" required="required"
-                                               class="form-control col-md-7 col-xs-12">
+                                        {#                                        <input type="text" id="first-name" required="required"#}
+                                        {#                                               class="form-control col-md-7 col-xs-12">#}
+                                        {% if form.corpname.errors %}
+                                            {{ form.corpname(class="form-control col-md-7 col-xs-12",id="corpname",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.corpname.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.corpname(class="form-control col-md-7 col-xs-12",id="corpname",type="text") }}
+                                        {% endif %}
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
                                         申报人<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id="last-name" name="last-name" required="required"
-                                               class="form-control col-md-7 col-xs-12">
+                                        {#                                        <input type="text" id="last-name" name="last-name" required="required"#}
+                                        {#                                               class="form-control col-md-7 col-xs-12">#}
+                                        {% if form.agent.errors %}
+                                            {{ form.agent(class="form-control col-md-7 col-xs-12",id="agent",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.agent.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.agent(class="form-control col-md-7 col-xs-12",id="agent",type="text") }}
+                                        {% endif %}
                                     </div>
                                 </div>
-
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
+                                        联系电话<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {#                                        <input type="text" id="last-name" name="last-name" required="required"#}
+                                        {#                                               class="form-control col-md-7 col-xs-12">#}
+                                        {% if form.contact_number.errors %}
+                                            {{ form.contact_number(class="form-control col-md-7 col-xs-12",id="contact_number",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.contact_number.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.contact_number(class="form-control col-md-7 col-xs-12",id="contact_number",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
+                                        申请时间<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {#                                        <input type="text" id="last-name" name="last-name" required="required"#}
+                                        {#                                               class="form-control col-md-7 col-xs-12">#}
+                                        {% if form.request_date.errors %}
+                                            {{ form.request_date(class="form-control col-md-7 col-xs-12",id="request_date",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.request_date.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.request_date(class="form-control col-md-7 col-xs-12",id="request_date",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </form>
 
                         </div>
                         <div id="step-2">
                             <form class="form-horizontal form-label-left">
-
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">
-                                        备案标题<span class="required"></span>
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
+                                        备案类型<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id="first-name" required="required"
-                                               class="form-control col-md-7 col-xs-12">
+                                        {% if form.record_type.errors %}
+                                            {{ form.record_type(class="form-control col-md-7 col-xs-12",id="record_type",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.record_type.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.record_type()}}
+                                        {% endif %}
                                     </div>
                                 </div>
-
-                                    <label for="heard" class="col-md-3 col-sm-3 col-xs-12">Heard us by *:</label>
-                                    <select id="heard" class="form-control col-md-6 col-sm-6 col-xs-12" required>
-                                        <option value="">Choose..</option>
-                                        <option value="press">Press</option>
-                                        <option value="net">Internet</option>
-                                        <option value="mouth">Word of mouth</option>
-                                    </select>
+                                {#                                <div class="form-group">#}
+                                {#                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">#}
+                                {#                                        备案标题<span class="required"></span>#}
+                                {#                                    </label>#}
+                                {#                                    <div class="col-md-6 col-sm-6 col-xs-12">#}
+                                {#                                        <input type="text" id="first-name" required="required"#}
+                                {#                                               class="form-control col-md-7 col-xs-12">#}
+                                {#                                    </div>#}
+                                {#                                </div>#}
+                                {##}
+                                {#                                <label for="heard" class="col-md-3 col-sm-3 col-xs-12">Heard us by *:</label>#}
+                                {#                                <select id="heard" class="form-control col-md-6 col-sm-6 col-xs-12" required>#}
+                                {#                                    <option value="">Choose..</option>#}
+                                {#                                    <option value="press">Press</option>#}
+                                {#                                    <option value="net">Internet</option>#}
+                                {#                                    <option value="mouth">Word of mouth</option>#}
+                                {#                                </select>#}
 
 
                             </form>
-                            <div class="x_title">
-                                <h2>描述信息
-                                </h2>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-                                <div id="alerts"></div>
-                                <div class="btn-toolbar editor" data-role="editor-toolbar"
-                                     data-target="#editor-one">
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown"
-                                           title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                        </ul>
-                                    </div>
-
-                                    <div class="btn-group">
-                                        <a class="btn dropdown-toggle" data-toggle="dropdown"
-                                           title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b
-                                                class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a data-edit="fontSize 5">
-                                                    <p style="font-size:17px">Huge</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a data-edit="fontSize 3">
-                                                    <p style="font-size:14px">Normal</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a data-edit="fontSize 1">
-                                                    <p style="font-size:11px">Small</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i
-                                                class="fa fa-bold"></i></a>
-                                        <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i
-                                                class="fa fa-italic"></i></a>
-                                        <a class="btn" data-edit="strikethrough" title="Strikethrough"><i
-                                                class="fa fa-strikethrough"></i></a>
-                                        <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i
-                                                class="fa fa-underline"></i></a>
-                                    </div>
-
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="insertunorderedlist"
-                                           title="Bullet list"><i class="fa fa-list-ul"></i></a>
-                                        <a class="btn" data-edit="insertorderedlist" title="Number list"><i
-                                                class="fa fa-list-ol"></i></a>
-                                        <a class="btn" data-edit="outdent"
-                                           title="Reduce indent (Shift+Tab)"><i
-                                                class="fa fa-dedent"></i></a>
-                                        <a class="btn" data-edit="indent" title="Indent (Tab)"><i
-                                                class="fa fa-indent"></i></a>
-                                    </div>
-
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="justifyleft"
-                                           title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
-                                        <a class="btn" data-edit="justifycenter"
-                                           title="Center (Ctrl/Cmd+E)"><i
-                                                class="fa fa-align-center"></i></a>
-                                        <a class="btn" data-edit="justifyright"
-                                           title="Align Right (Ctrl/Cmd+R)"><i
-                                                class="fa fa-align-right"></i></a>
-                                        <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i
-                                                class="fa fa-align-justify"></i></a>
-                                    </div>
-
-                                    <div class="btn-group">
-                                        <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i
-                                                class="fa fa-undo"></i></a>
-                                        <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i
-                                                class="fa fa-repeat"></i></a>
-                                    </div>
-                                </div>
-
-                                <div id="editor-one" class="editor-wrapper"></div>
-
-                                <textarea name="descr" id="descr" style="display:none;"></textarea>
-
-                                <br/>
-                            </div>
 
                         </div>
                         <div id="step-3">

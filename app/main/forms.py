@@ -2,7 +2,7 @@
 from flask_login import current_user
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
-from wtforms import StringField, PasswordField, SubmitField, SelectField, DateField
+from wtforms import StringField, PasswordField, SubmitField, SelectField, DateField, RadioField
 from wtforms.validators import DataRequired, Length, Email, Regexp, ValidationError, EqualTo
 
 from app import bcrypt
@@ -67,10 +67,45 @@ class UpdateAccountForm(FlaskForm):
 
 
 class RecordForm(FlaskForm):
+    # 厂商字段
     corpname = StringField(u'公司名称', validators=[DataRequired(message=u'输入不为空')])
+    # 申请人
     agent = StringField(u'申报人姓名', validators=[DataRequired(message=u'输入不为空')])
+    # 申请人联系电话
+    contact_number = StringField(u'联系电话', validators=[DataRequired(message=u'输入不为空')])
+    # 电表型号
+    EM_model_number = StringField(u'电表型号', validators=[DataRequired(message=u'输入不为空')])
+    # 软件版本号
+    software_version = StringField(u'软件版本号', validators=[DataRequired(message=u'输入不为空')])
+    # 电压规格
+    voltage = StringField(u'电压', validators=[DataRequired(message=u'输入不为空')])
+    # 电流规格
+    amper = StringField(u'电流', validators=[DataRequired(message=u'输入不为空')])
+    # mcu型号
+    MCU_type = StringField(u'mcu', validators=[DataRequired(message=u'输入不为空')])
+    # 软件代码起始地址
+    software_start_address = StringField(u'软件代码起始地址', validators=[DataRequired(message=u'输入不为空')])
+    # 软件代码结束地址
+    software_end_address = StringField(u'软件代码结束地址', validators=[DataRequired(message=u'输入不为空')])
+    # 保护区1
+    protect_start_address1 = StringField(u'保护区1起始地址', validators=[DataRequired(message=u'输入不为空')])
+    protect_end_address1 = StringField(u'保护区1结束地址', validators=[DataRequired(message=u'输入不为空')])
+    # 保护区2
+    protect_start_address2 = StringField(u'保护区2起始地址', validators=[DataRequired(message=u'输入不为空')])
+    protect_end_address2 = StringField(u'保护区2结束地址', validators=[DataRequired(message=u'输入不为空')])
+    # 保留区1
+    reserve_start_address1 = StringField(u'保留区1起始地址', validators=[DataRequired(message=u'输入不为空')])
+    reserve_end_address1 = StringField(u'保留区1结束地址', validators=[DataRequired(message=u'输入不为空')])
+    # 保留区2
+    reserve_start_address2 = StringField(u'保留区2起始地址', validators=[DataRequired(message=u'输入不为空')])
+    reserve_end_address2 = StringField(u'保留区2结束地址', validators=[DataRequired(message=u'输入不为空')])
+    # 数据填充类型
+    data_fill = SelectField(u'数据填充', validators=[DataRequired(message=u'输入不为空')])
+    # 申请备案时间
+    request_date = StringField(u'申报人姓名', validators=[DataRequired(message=u'输入不为空')])
+    # 备案类型
+    record_type = RadioField(u'备案类型', choices=[('1', '国网计量中心'), ('0', '网省计量中心')])
     record_title = StringField(u'备案标题', validators=[DataRequired(message=u'输入不为空')])
-    record_type = SelectField(u'备案类型', choices=[u'第一类', u'第二类'])
     record_batch_time = DateField(u'生产时间', format='%Y-%m-%d', validators=[DataRequired(message=u'请输入批次')])
     record_batch_serial = SelectField(u'生产批次', choices=[u'第一批', u'第二批', u'第三批'])
     record_file_name = StringField(u'文件名', validators=[DataRequired(message=u'输入文件名')])
