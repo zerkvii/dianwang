@@ -96,3 +96,10 @@ def user_messages():
 @login_required
 def user_help():
     return render_template('backend/user_help.html')
+
+
+@main.route('/files_upload', methods=['POST'])
+@login_required
+def files_upload():
+    pass
+

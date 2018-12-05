@@ -17,7 +17,7 @@
     <link href="/static/backend/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="/static/backend/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-
+    <link href="/static/backend/vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
     <!-- bootstrap-progressbar -->
     <link href="/static/backend/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
@@ -46,7 +46,8 @@
                     <div class="menu_section">
                         <h3>菜单</h3>
                         <ul class="nav side-menu">
-                            <li><a href="{{ url_for('main.user_manage') }}"><i class="fa fa-home"></i>主页概览<span class="fa fa-star"></span></a>
+                            <li><a href="{{ url_for('main.user_manage') }}"><i class="fa fa-home"></i>主页概览<span
+                                    class="fa fa-star"></span></a>
                             </li>
                             <li><a><i class="fa fa-table"></i>备案信息<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
@@ -241,6 +242,8 @@
 <!-- starrr -->
 <script src="/static/backend/vendors/starrr/dist/starrr.js"></script>
 <script src="/static/backend/build/js/custom.min.js"></script>
+<!-- Dropzone.js -->
+<script src="/static/backend/vendors/dropzone/dist/min/dropzone.min.js"></script>
 <script type="text/javascript">
     $(function () {
 

@@ -104,7 +104,7 @@ class RecordForm(FlaskForm):
     # 申请备案时间
     request_date = StringField(u'申报人姓名', validators=[DataRequired(message=u'输入不为空')])
     # 备案类型
-    record_type = RadioField(u'备案类型', choices=[('1', '国网计量中心'), ('0', '网省计量中心')])
+    record_type = RadioField(u'备案类型', choices=[('1', '&nbsp;国网计量中心&nbsp;'), ('0', '&nbsp;网省计量中心')])
     record_title = StringField(u'备案标题', validators=[DataRequired(message=u'输入不为空')])
     record_batch_time = DateField(u'生产时间', format='%Y-%m-%d', validators=[DataRequired(message=u'请输入批次')])
     record_batch_serial = SelectField(u'生产批次', choices=[u'第一批', u'第二批', u'第三批'])

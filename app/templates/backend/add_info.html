@@ -82,17 +82,25 @@
                                     <span class="step_no">3</span>
                                     <span class="step_descr">
                                               第三步<br/>
+                                              <small>备案软件相关参数</small>
+                                          </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#step-4">
+                                    <span class="step_no">4</span>
+                                    <span class="step_descr">
+                                              第四步<br/>
                                               <small>上传备案相关文件</small>
                                           </span>
                                 </a>
                             </li>
-
                         </ul>
                         <div id="step-1">
                             <form class="form-horizontal form-label-left">
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="first-name">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
                                         申报单位<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -112,7 +120,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
                                         申报人<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -132,7 +140,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
                                         联系电话<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -152,7 +160,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
                                         申请时间<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -177,12 +185,12 @@
                         <div id="step-2">
                             <form class="form-horizontal form-label-left">
                                 <div class="form-group">
-                                    <label class="control-label col-md-4 col-sm-4 col-xs-12" for="last-name">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
                                         备案类型<span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         {% if form.record_type.errors %}
-                                            {{ form.record_type(class="form-control col-md-7 col-xs-12",id="record_type",type="text") }}
+                                            {{ form.record_type(class="col-md-7 col-xs-12") }}
                                             <div class="error-display col-md-7 col-xs-12"
                                                  style="margin-top: 5px;color: red;opacity: 0.7;">
                                                 {% for error in form.record_type.errors %}
@@ -190,34 +198,298 @@
                                                 {% endfor %}
                                             </div>
                                         {% else %}
-                                            {{ form.record_type()}}
+                                            {{ form.record_type(class="col-md-7 col-xs-12",style="padding-top:7px; color:#495057") }}
                                         {% endif %}
                                     </div>
                                 </div>
-                                {#                                <div class="form-group">#}
-                                {#                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">#}
-                                {#                                        备案标题<span class="required"></span>#}
-                                {#                                    </label>#}
-                                {#                                    <div class="col-md-6 col-sm-6 col-xs-12">#}
-                                {#                                        <input type="text" id="first-name" required="required"#}
-                                {#                                               class="form-control col-md-7 col-xs-12">#}
-                                {#                                    </div>#}
-                                {#                                </div>#}
-                                {##}
-                                {#                                <label for="heard" class="col-md-3 col-sm-3 col-xs-12">Heard us by *:</label>#}
-                                {#                                <select id="heard" class="form-control col-md-6 col-sm-6 col-xs-12" required>#}
-                                {#                                    <option value="">Choose..</option>#}
-                                {#                                    <option value="press">Press</option>#}
-                                {#                                    <option value="net">Internet</option>#}
-                                {#                                    <option value="mouth">Word of mouth</option>#}
-                                {#                                </select>#}
-
-
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        电能表型号<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {#                                        <input type="text" id="last-name" name="last-name" required="required"#}
+                                        {#                                               class="form-control col-md-7 col-xs-12">#}
+                                        {% if form.EM_model_number.errors %}
+                                            {{ form.EM_model_number(class="form-control col-md-7 col-xs-12",id="EM_model_number",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.EM_model_number.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.EM_model_number(class="form-control col-md-7 col-xs-12",id="",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        程序版本号<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {#                                        <input type="text" id="last-name" name="last-name" required="required"#}
+                                        {#                                               class="form-control col-md-7 col-xs-12">#}
+                                        {% if form.software_version.errors %}
+                                            {{ form.software_version(class="form-control col-md-7 col-xs-12",id="software_version",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.software_version.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.software_version(class="form-control col-md-7 col-xs-12",id="",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        MCU型号<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.MCU_type.errors %}
+                                            {{ form.MCU_type(class="form-control col-md-7 col-xs-12",id="MCU_type",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.MCU_type.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.MCU_type(class="form-control col-md-7 col-xs-12",id="MCU_type",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </form>
 
                         </div>
                         <div id="step-3">
-
+                            <form class="form-horizontal form-label-left">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        电压规格<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.voltage.errors %}
+                                            {{ form.voltage(class="form-control col-md-7 col-xs-12",id="voltage",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.voltage.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.voltage(class="form-control col-md-7 col-xs-12",id="voltage",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        电流规格<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.amper.errors %}
+                                            {{ form.amper(class="form-control col-md-7 col-xs-12",id="amper",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.amper.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.amper(class="form-control col-md-7 col-xs-12",id="amper",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        软件代码起始地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.software_start_address.errors %}
+                                            {{ form.software_start_address(class="form-control col-md-7 col-xs-12",id="software_start_address",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.software_start_address.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.software_start_address(class="form-control col-md-7 col-xs-12",id="software_start_address",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        软件代码结束地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.software_end_address.errors %}
+                                            {{ form.software_end_address(class="form-control col-md-7 col-xs-12",id="software_end_address",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.software_end_address.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.software_end_address(class="form-control col-md-7 col-xs-12",id="software_end_address",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保护区1起始地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.protect_start_address1.errors %}
+                                            {{ form.protect_start_address1(class="form-control col-md-7 col-xs-12",id="protect_start_address1",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.protect_start_address1.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.protect_start_address1(class="form-control col-md-7 col-xs-12",id="protect_start_address1",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保护区1结束地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.protect_end_address1.errors %}
+                                            {{ form.protect_end_address1(class="form-control col-md-7 col-xs-12",id="protect_end_address1",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.protect_end_address1.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.protect_end_address1(class="form-control col-md-7 col-xs-12",id="protect_end_address1",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保护区2起始地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.protect_start_address2.errors %}
+                                            {{ form.protect_start_address2(class="form-control col-md-7 col-xs-12",id="protect_start_address2",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.protect_start_address2.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.protect_start_address2(class="form-control col-md-7 col-xs-12",id="protect_start_address2",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保护区2结束地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.protect_end_address2.errors %}
+                                            {{ form.protect_end_address2(class="form-control col-md-7 col-xs-12",id="protect_end_address2",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.protect_end_address2.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.protect_end_address2(class="form-control col-md-7 col-xs-12",id="protect_end_address2",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保留区1起始地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.reserve_start_address1.errors %}
+                                            {{ form.reserve_start_address1(class="form-control col-md-7 col-xs-12",id="reserve_start_address1",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.reserve_start_address1.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.reserve_start_address1(class="form-control col-md-7 col-xs-12",id="reserve_start_address1",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保留区1结束地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.reserve_end_address1.errors %}
+                                            {{ form.reserve_end_address1(class="form-control col-md-7 col-xs-12",id="reserve_end_address1",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.reserve_end_address1.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.reserve_end_address1(class="form-control col-md-7 col-xs-12",id="reserve_end_address1",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保留区2起始地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.reserve_start_address2.errors %}
+                                            {{ form.reserve_start_address2(class="form-control col-md-7 col-xs-12",id="reserve_start_address2",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.reserve_start_address2.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.reserve_start_address2(class="form-control col-md-7 col-xs-12",id="reserve_start_address2",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        保留区2结束地址<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.reserve_end_address2.errors %}
+                                            {{ form.reserve_end_address2(class="form-control col-md-7 col-xs-12",id="reserve_end_address2",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.reserve_end_address2.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.reserve_end_address2(class="form-control col-md-7 col-xs-12",id="reserve_end_address2",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="step-4">
+                            <form action="/file-upload"
+                                  class="dropzone"
+                                  id="my-awesome-dropzone"></form>
+                            <p>点击选择上传的备案文件或目录</p>
+                            <form class="form-horizontal form-label-left dropzone" action="{{ url_for('main.files_upload') }}" method="post" enctype="multipart/form-data">
+                            </form>
                         </div>
                     </div>
                     <!-- End SmartWizard Content -->
