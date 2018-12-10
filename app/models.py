@@ -109,7 +109,7 @@ class Record(db.Model):
 # edited_time = db.Column(db.Integer, nullable=False, default=0)
 
 
-class Log(db.Model):
-    __tablename__ = 'logs'
-    id = db.Column(db.Integer, primary_key=True)
-    time = db.Column(db.String(128), default=get_current_time)
+class Test_field(db.Model):
+    __tablename__='test'
+    id=db.Column(db.Integer,primary_key=True)
+    text=db.Column(db.TEXT)

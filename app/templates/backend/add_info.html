@@ -484,11 +484,52 @@
                             </form>
                         </div>
                         <div id="step-4">
-                            <form action="/file-upload"
-                                  class="dropzone"
-                                  id="my-awesome-dropzone"></form>
-                            <p>点击选择上传的备案文件或目录</p>
-                            <form class="form-horizontal form-label-left dropzone" action="{{ url_for('main.files_upload') }}" method="post" enctype="multipart/form-data">
+                            {#                            <p>点击选择上传的备案文件或目录</p>#}
+                            {#                            <form class="form-horizontal form-label-left dropzone" action="{{ url_for('main.files_upload') }}" method="post" enctype="multipart/form-data">#}
+                            {#                            </form>#}
+                            <form class="form-horizontal form-label-float">
+                                 <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                       数据填充 <span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.data_fill.errors %}
+                                            {{ form.data_fill(class="form-control col-md-7 col-xs-12",id="data_fill",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.record_remark.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.record_remark(class="form-control col-md-7 col-xs-12",id="remark",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4 col-sm-4 col-xs-12">选择文件上传</label>
+                                        <input type="file" class="col-md-7 col-xs-12" id="inputFile">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4 col-sm-4 col-xs-12">
+                                        备注信息<span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        {% if form.record_remark.errors %}
+                                            {{ form.record_remark(class="form-control col-md-7 col-xs-12",id="remark",type="text") }}
+                                            <div class="error-display col-md-7 col-xs-12"
+                                                 style="margin-top: 5px;color: red;opacity: 0.7;">
+                                                {% for error in form.data_fill.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.data_fill(class="form-control col-md-7 col-xs-12",id="data_fill",type="text") }}
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>

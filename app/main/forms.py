@@ -109,6 +109,7 @@ class RecordForm(FlaskForm):
     record_batch_time = DateField(u'生产时间', format='%Y-%m-%d', validators=[DataRequired(message=u'请输入批次')])
     record_batch_serial = SelectField(u'生产批次', choices=[u'第一批', u'第二批', u'第三批'])
     record_file_name = StringField(u'文件名', validators=[DataRequired(message=u'输入文件名')])
+    record_remark = StringField(u'备注信息', validators=[DataRequired(message=u'输入备注')])
 
 
 class TestForm(FlaskForm):
