@@ -43,20 +43,20 @@ class User(db.Model, UserMixin):
     toggle = db.Column(db.Integer, default=0)
     # posted_records = db.relationship('Record', backref='record_applicant', lazy=True)
 
-
-class Staff(db.Model):
-    __tablename__ = 'staffs'
-    id = db.Column(db.Integer, primary_key=True)
-    # 员工序列号
-    staff_number = db.Column(db.String(20), nullable=False)
-    # 密码
-    staff_password = db.Column(db.String(128), nullable=False)
-    # 类型 0 省网 1 国网
-    staff_type = db.Column(db.Integer, nullable=False, default=0)
-    # 注册时间
-    register_time = db.Column(db.String(40), default=get_current_time)
-
-    # examined_records = db.relationship('Record', backref='record_checker', lazy=True)
+#
+# class Staff(db.Model):
+#     __tablename__ = 'staffs'
+#     id = db.Column(db.Integer, primary_key=True)
+#     # 员工序列号
+#     staff_number = db.Column(db.String(20), nullable=False)
+#     # 密码
+#     staff_password = db.Column(db.String(128), nullable=False)
+#     # 类型 0 省网 1 国网
+#     staff_type = db.Column(db.Integer, nullable=False, default=0)
+#     # 注册时间
+#     register_time = db.Column(db.String(40), default=get_current_time)
+#
+#     # examined_records = db.relationship('Record', backref='record_checker', lazy=True)
 
 
 class Record(db.Model):
@@ -111,7 +111,7 @@ class Record(db.Model):
 # edited_time = db.Column(db.Integer, nullable=False, default=0)
 
 
-class Test_field(db.Model):
-    __tablename__ = 'test'
-    id = db.Column(db.Integer, primary_key=True)
-    text = db.Column(db.TEXT)
+# class Test_field(db.Model):
+#     __tablename__ = 'test'
+#     id = db.Column(db.Integer, primary_key=True)
+#     text = db.Column(db.TEXT)
