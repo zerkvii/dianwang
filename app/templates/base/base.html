@@ -317,6 +317,60 @@
         readURL(this);
     });
 </script>
+<script>
+    function hello() {
+         var form = document.getElementById("form-step-1");
+        var elements = new Array();
+        var tagElements = form.getElementsByTagName('input');
+        for (var j = 0; j < tagElements.length; j++) {
+            elements.push(tagElements[j]);
+        }
+        alert("hello" + elements[0].value);
+        ajax()
+    }
+</script>
+<script>
+
+
+    function getFormData($form) {
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function (n, i) {
+            indexed_array[n['name']] = n['value'];
+        });
+
+        return indexed_array;
+    }
+
+    $(function () {
+        $("#btn_login").click(
+            function () {
+                $.ajax({
+                    type: 'POST',
+                    contentType: "application/json",
+                    dataType: 'json',
+                    url: "/login",
+                    {#data: $('#login_form').serialize(),#}
+                    data: JSON.stringify(getFormData($('#login_form'))),
+                    {#success: function (data) {#}
+                    {#    alert(data['success'])#}
+
+                    error: function (xhr, status, error) {
+                        info = $.parseJSON(xhr.responseText);
+                        {#alert(info['information']);#}
+                        swal({
+                            title: "错误",
+                            text: info['information'],
+                            icon: "error",
+                            button: "确定"
+                        },)
+                    }
+                })
+            }
+        )
+    })
+</script>
 
 </body>
 </html>

@@ -100,16 +100,20 @@ class RecordForm(FlaskForm):
     reserve_start_address2 = StringField(u'保留区2起始地址', validators=[DataRequired(message=u'输入不为空')])
     reserve_end_address2 = StringField(u'保留区2结束地址', validators=[DataRequired(message=u'输入不为空')])
     # 数据填充类型
-    data_fill = SelectField(u'数据填充', validators=[DataRequired(message=u'输入不为空')])
+    data_fill = RadioField(u'数据填充', choices=[('1', '&nbsp;FFH&nbsp;'), ('0', '&nbsp;00H')])
     # 申请备案时间
     request_date = StringField(u'申报人姓名', validators=[DataRequired(message=u'输入不为空')])
     # 备案类型
     record_type = RadioField(u'备案类型', choices=[('1', '&nbsp;国网计量中心&nbsp;'), ('0', '&nbsp;网省计量中心')])
-    record_title = StringField(u'备案标题', validators=[DataRequired(message=u'输入不为空')])
-    record_batch_time = DateField(u'生产时间', format='%Y-%m-%d', validators=[DataRequired(message=u'请输入批次')])
-    record_batch_serial = SelectField(u'生产批次', choices=[u'第一批', u'第二批', u'第三批'])
-    record_file_name = StringField(u'文件名', validators=[DataRequired(message=u'输入文件名')])
+    # record_title = StringField(u'备案标题', validators=[DataRequired(message=u'输入不为空')])
+    # record_batch_time = DateField(u'生产时间', format='%Y-%m-%d', validators=[DataRequired(message=u'请输入批次')])
+    # record_batch_serial = SelectField(u'生产批次', choices=[u'第一批', u'第二批', u'第三批'])
+    # record_file_name = StringField(u'文件名', validators=[DataRequired(message=u'输入文件名')])
+    # 备案备注信息
     record_remark = StringField(u'备注信息', validators=[DataRequired(message=u'输入备注')])
+    # 备案文件
+    record_file = FileField(u'上传文件', validators=[DataRequired(message='文件不为空')])
+    submit = SubmitField()
 
 
 class TestForm(FlaskForm):
