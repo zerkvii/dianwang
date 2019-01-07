@@ -20,25 +20,27 @@ class User(db.Model, UserMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     # 厂商名
-    corpname = db.Column(db.String(30), unique=True, nullable=False)
+    # corpname = db.Column(db.String(30), unique=True, nullable=False)
     # 用户名
     username = db.Column(db.String(30), unique=True, nullable=False)
     # 邮件
     email = db.Column(db.String(120), unique=True, nullable=False)
     # 厂商地址
-    address = db.Column(db.String(120), default='未更改')
+    # address = db.Column(db.String(120), default='未更改')
     # 官网地址
-    official_web = db.Column(db.String(128), default='https://www.official.com')
+    # official_web = db.Column(db.String(128), default='https://www.official.com')
     # 联系电话
-    contact_number = db.Column(db.String(36), default='0000-0000000')
+    # contact_number = db.Column(db.String(36), default='0000-0000000')
     # logo
     image = db.Column(db.String(128), nullable=False, default='default.png')
     # 密码
     password = db.Column(db.String(128), nullable=False)
     # 厂商序列号
-    manufacturer_number = db.Column(db.String(4))
+    # manufacturer_number = db.Column(db.String(4))
     # 注册时间
     register_time = db.Column(db.String(40), default=get_current_time)
+    # 类型
+    toggle = db.Column(db.Integer, default=0)
     # posted_records = db.relationship('Record', backref='record_applicant', lazy=True)
 
 
@@ -110,6 +112,6 @@ class Record(db.Model):
 
 
 class Test_field(db.Model):
-    __tablename__='test'
-    id=db.Column(db.Integer,primary_key=True)
-    text=db.Column(db.TEXT)
+    __tablename__ = 'test'
+    id = db.Column(db.Integer, primary_key=True)
+    text = db.Column(db.TEXT)
