@@ -2,23 +2,22 @@
 from flask import render_template, request
 from flask_login import login_required
 
-from app.models import Record
 from . import main
 
 
 @main.route('/backend', methods=['GET', 'POST'])
 @login_required
 def backend():
-    return render_template('split_backend/backend.html')
+    return render_template('split_backend/backend.html', title=u'后台')
 
 
 # 查看备案
 @main.route('/backend/lookup', methods=['GET', 'POST'])
 @login_required
 def lookup():
-    records = Record.query.all()
+    # records = Record.query.all()
     # send recorrds to specified
-    return render_template('split_backend/backend_lookup.html', records=records)
+    return render_template('split_backend/backend_lookup.html')
 
 
 # 增加备案

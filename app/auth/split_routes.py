@@ -1,6 +1,6 @@
 # -*- coding=utf-8 -*-
-from flask import render_template, url_for, redirect, request, jsonify
-from flask_login import logout_user
+from flask import render_template, url_for, redirect, request, jsonify, flash
+from flask_login import logout_user, login_user, current_user
 
 from app import bcrypt, db
 from app.models import User
@@ -9,6 +9,9 @@ from . import auth
 
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
+    if current_user.is_authenticated:
+        flash(u'已经登陆', category='warning')
+        return redirect(url_for('main.backend'))
     if request.method == 'POST':
         register_data = request.get_json()
         username = register_data['username']
@@ -33,25 +36,39 @@ def register():
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        flash(u'已经登陆', category='warning')
+        return redirect(url_for('main.backend'))
     if request.method == 'POST':
+        next_page = request.args.get(u'next')
         login_data = request.get_json()
         username = login_data['username']
         password = login_data['password']
         user = User.query.filter_by(username=username).first() or User.query.filter_by(email=username).first()
         if user and bcrypt.check_password_hash(user.password, password):
-            return redirect(url_for('main.user_manage'))
+            login_user(user)
+            info = {}
+            if next_page:
+                info['next_page'] = '{}'.format(next_page)
+                flash(u'{} 登录成功'.format(user.username), 'success')
+                return jsonify(info), 200
+            else:
+                info['next_page'] = 'backend'
+                flash(u'{} 登录成功'.format(user.username), 'success')
+                return jsonify(info), 200
         else:
             info = {
                 'information': '用户名或密码错误'
             }
             return jsonify(info), 400
         # flash(u'注册成功，现在可以登录', 'success')
-    return render_template('split_auth/login.html', title=u'登录页面')
+    return render_template('pages-login.html', title=u'登录页面')
 
 
 @auth.route('/forgot', methods=['GET', 'POST'])
 def forgot():
-    return render_template('auth/forgot.html', title='forgot')
+    pass
+    # return render_template('forgot.html', title=u'忘记密码')
 
 
 @auth.route('/logout')
