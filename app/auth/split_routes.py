@@ -31,7 +31,7 @@ def register():
             db.session.commit()
             return redirect(url_for('auth.login'))
         # flash(u'注册成功，现在可以登录', 'success')
-    return render_template('split_auth/register.html', title=u'注册页面')
+    return render_template('auth/register.html', title=u'注册页面')
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -62,7 +62,7 @@ def login():
             }
             return jsonify(info), 400
         # flash(u'注册成功，现在可以登录', 'success')
-    return render_template('pages-login.html', title=u'登录页面')
+    return render_template('auth/login.html', title=u'登录页面')
 
 
 @auth.route('/forgot', methods=['GET', 'POST'])
