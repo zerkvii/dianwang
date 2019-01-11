@@ -14,6 +14,7 @@ def register():
         return redirect(url_for('main.backend'))
     if request.method == 'POST':
         register_data = request.get_json()
+        print(register_data)
         username = register_data['username']
         email = register_data['email']
         password = register_data['password']
@@ -31,7 +32,7 @@ def register():
             db.session.commit()
             return redirect(url_for('auth.login'))
         # flash(u'注册成功，现在可以登录', 'success')
-    return render_template('auth/register.html', title=u'注册页面')
+    return render_template('auth/register.html', title=u'备案系统注册')
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -62,7 +63,7 @@ def login():
             }
             return jsonify(info), 400
         # flash(u'注册成功，现在可以登录', 'success')
-    return render_template('auth/login.html', title=u'登录页面')
+    return render_template('auth/login.html', title=u'备案系统登录')
 
 
 @auth.route('/forgot', methods=['GET', 'POST'])
