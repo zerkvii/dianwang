@@ -27,34 +27,37 @@ http {
 
         #nginx后端服务
 
-        #End
+        #end
 		#nginx反向代理
 	 location / {
        proxy_pass http://localhost:5000;
-       proxy_set_header Host $host;
-	   proxy_set_header X-Forwarded-Proto $scheme;
-       proxy_set_header X-Real-IP $remote_addr;
-       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-       client_max_body_size 5M;
+       proxy_set_header host $host;
+	   proxy_set_header x-forwarded-proto $scheme;
+       proxy_set_header x-real-ip $remote_addr;
+       proxy_set_header x-forwarded-for $proxy_add_x_forwarded_for;
+       client_max_body_size 5m;
    }
 		#nginx前端文件指向本地服务
-        location ~ \.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2)$ {
-
-		root    /home/zerk/nginx_files/templates;
+		 location  ~^/assets.+\.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
+    		root    /home/zerk/projects/dianwang/app/assets;
 				expires 7d;
-        }
-        #End
+       }
+        #end
 
-
+		 #nginx前端文件指向本地服务
+         location ~ \.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
+         root    /home/zerk/projects/dianwang/app/templates/auth;
+      	    		expires 7d;
+             }
+        #end
 
 
         #nginx前端文件指向本地服务
-        location ~ \.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt)$ {
-                root    /home/zerk/nginx_files;
-				expires 7d;
-        }
-        #End
-
+         location ~ \.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
+         root    /home/zerk/projects/dianwang/app/templates;
+      	    		expires 7d;
+             }
+        #end
 	}
 	# server_tokens off;
 
