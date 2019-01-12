@@ -29,8 +29,9 @@ def register():
             user = User(username=username, email=email, password=hashed_pwd, toggle=toggle)
             db.session.add(user)
             db.session.commit()
-            return redirect(url_for('auth.login'))
-        # flash(u'注册成功，现在可以登录', 'success')
+            info = {'information': u'成功注册', 'next_page': 'login'}
+            flash(u'注册成功，现在可以登录', 'success')
+            return jsonify(info), 200
     return render_template('auth/register.html', title=u'备案系统注册')
 
 

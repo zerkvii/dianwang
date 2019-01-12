@@ -8,7 +8,7 @@ from . import main
 @main.route('/backend', methods=['GET', 'POST'])
 @login_required
 def backend():
-    return render_template('split_backend/backend.html', title=u'后台')
+    return render_template('backend.html', title=u'后台')
 
 
 # 查看备案
