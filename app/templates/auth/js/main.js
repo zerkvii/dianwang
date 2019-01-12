@@ -44,8 +44,19 @@
             if ($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
                 return false;
             }
-        } else {
-            if ($(input).val().trim() == '') {
+        }
+        else if ($(input).attr('type') == 'username' || $(input).attr('name') == 'username') {
+            if ($(input).val().trim().match(/^[a-zA-Z][0-9a-zA-Z_]{1,10}$/) == null) {
+                return false
+            }
+        }
+       else if ($(input).attr('name') === 'confirm_password') {
+            if ($(input).val().trim() !== $("input[name='password']").val().trim()) {
+                return false;
+            }
+        }
+         else if ($(input).attr('name') === 'password') {
+            if ($(input).val().trim().match(/^[a-zA-Z].{5,20}$/) == null) {
                 return false;
             }
         }
@@ -89,25 +100,25 @@
             e.preventDefault();
 
             if (checkFormData()) {
+
                 $.ajax({
                     type: 'POST',
                     contentType: "application/json",
                     dataType: 'json',
                     url: window.location.search,
                     data: JSON.stringify(getFormData($('#register_form'))),
-                    beforeSend: checkFormData(),
                     success: function (data) {
                         window.location.href = data['next_page'];
-                    },
-                    error: function (xhr) {
-                        let information = $.parseJSON(xhr.responseText);
-                        swal({
-                            title: "错误",
-                            text: information['information'],
-                            icon: "error",
-                            button: "确定"
-                        },)
                     }
+                    // error: function (xhr) {
+                    //     let information = $.parseJSON(xhr.responseText);
+                    //     swal({
+                    //         title: "错误",
+                    //         text: information['information'],
+                    //         icon: "error",
+                    //         button: "确定"
+                    //     },)
+                    // }
                 })
             }
         }

@@ -14,7 +14,6 @@ def register():
         return redirect(url_for('main.backend'))
     if request.method == 'POST':
         register_data = request.get_json()
-        print(register_data)
         username = register_data['username']
         email = register_data['email']
         password = register_data['password']

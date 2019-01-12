@@ -94,7 +94,9 @@
 <!--===============================================================================================-->
 <script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
+<script src="js/swal.js"></script>
 <script src="js/main.js"></script>
+
  <script>
         function getFormData($form) {
             let unindexed_array = $form.serializeArray();
@@ -120,6 +122,7 @@
                             window.location.href = data['next_page'];
                         },
                         error: function (xhr) {
+
                             let information = $.parseJSON(xhr.responseText);
                             swal({
                                 title: "错误",

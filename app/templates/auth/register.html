@@ -56,14 +56,14 @@
                         <option class="input100" value="1">国网中心</option>
                     </select>
 
-                    <span class="focus-input100" data-symbol="&#xf15a;"></span>
+                    <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input m-b-23" data-validate="密码至少为六位">
                     <span class="label-input100">密码</span>
                     <input class="input100" type="password" name="password" placeholder="输入密码">
                     <span class="focus-input100" data-symbol="&#xf191;"></span>
                 </div>
-                <div class="wrap-input100 validate-input" data-validate="两次输入密码不一致">
+                <div class="wrap-input100 validate-input" data-validate="两次输入不一致">
                     <span class="label-input100">确认密码</span>
                     <input class="input100" type="password" name="confirm_password" placeholder="确认密码">
                     <span class="focus-input100" data-symbol="&#xf190;"></span>
@@ -112,7 +112,10 @@
 <!--===============================================================================================-->
 <script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
+<script src="js/swal.js"></script>
+
 <script src="js/main.js"></script>
+
 {#<script>#}
 {#    function getFormData($form) {#}
 {#        let unindexed_array = $form.serializeArray();#}
