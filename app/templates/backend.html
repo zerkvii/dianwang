@@ -10,10 +10,11 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <title>{{ title }}</title>
     <!-- Bootstrap Core CSS -->
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
+    <link href="css/googlefonts.css">
     <link href="../assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <link href="../assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
     <link href="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
@@ -22,7 +23,7 @@
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="css/colors/zcolor.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,9 +57,9 @@
                     <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
-                    <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                    <img src="../assets/images/sg.png" alt="homepage" class="dark-logo" />
                     <!-- Light Logo icon -->
-                    <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                    <img src="../assets/images/sg.png" alt="homepage" class="light-logo" style="width: 70%;height:80%"/>
                 </b>
                     <!--End Logo icon -->
                     <!-- Logo text --><span>
@@ -305,7 +306,7 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li><a href="/logout"><i class="fa fa-power-off"></i> Logout</a></li>
                             </ul>
                         </div>
                     </li>
@@ -1117,6 +1118,24 @@
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="js/socketio.js"></script>
+<script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            const namespace = '/backend'; // change to an empty string to use the global namespace
+            // the socket.io documentation recommends sending an explicit package upon connection
+            // this is specially important when using the global namespace
+            let socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+
+           // socket.on('connect', function(msg) {
+             //   socket.emit('my event', {data: 'I\'m connected!'});
+            //});
+
+            socket.on('event', function(msg){
+                alert(msg)
+            });
+
+        });
+    </script>
 </body>
 
 </html>

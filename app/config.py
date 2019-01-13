@@ -7,7 +7,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'zee.sqlite')
-    SQLALCHEMY_DATABASE_URI='mysql+pymysql://root:12345678@localhost/state_grid'
+    SQLALCHEMY_DATABASE_URI='mysql+pymysql://root:123456@localhost/state_grid'
     # POSTGRES = {
     #     'user': 'postgres',
     #     'pwd': '12345678',

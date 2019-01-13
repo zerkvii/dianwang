@@ -1,4 +1,4 @@
-user mac;
+user www-data;
 worker_processes auto;
 pid /run/nginx.pid;
 include /etc/nginx/modules-enabled/*.conf;
@@ -27,37 +27,33 @@ http {
 
         #nginx后端服务
 
-        #end
+        #End
 		#nginx反向代理
 	 location / {
        proxy_pass http://localhost:5000;
-       proxy_set_header host $host;
-	   proxy_set_header x-forwarded-proto $scheme;
-       proxy_set_header x-real-ip $remote_addr;
-       proxy_set_header x-forwarded-for $proxy_add_x_forwarded_for;
-       client_max_body_size 5m;
+       proxy_set_header X-Real-IP $remote_addr;
+	   proxy_set_header host $http_host;
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	   proxy_set_header X-NginX-Proxy true;
+       proxy_set_header X-Forwarded-Proto $scheme;
+       client_max_body_size 5M;
    }
-		#nginx前端文件指向本地服务
-		 location  ~^/assets.+\.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
-    		root    /home/zerk/projects/dianwang/app/assets;
+   		#nginx前端文件指向本地服务
+		        location ~^/assets.*\.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
+
+		root    /home/zerk/Desktop/dianwang/app;
 				expires 7d;
-       }
-        #end
+        }
+        #End
 
-		 #nginx前端文件指向本地服务
-         location ~ \.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
-         root    /home/zerk/projects/dianwang/app/templates/auth;
-      	    		expires 7d;
-             }
-        #end
+		#nginx前端文件指向本地服务
+        location ~\.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
+		root    /home/zerk/Desktop/dianwang/app/templates;
+	    try_files /$uri  /auth/$uri;
+		     expires 7d;
+        }
 
 
-        #nginx前端文件指向本地服务
-         location ~ \.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
-         root    /home/zerk/projects/dianwang/app/templates;
-      	    		expires 7d;
-             }
-        #end
 	}
 	# server_tokens off;
 
@@ -123,3 +119,4 @@ http {
 #		proxy      on;
 #	}
 #}
+

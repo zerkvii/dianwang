@@ -1,0 +1,469 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sun Jan 13 16:17:06 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x557c491651c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 333504 bytes (325 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x557c491651c0 pid: 15723 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 15723, cores: 2)
+spawned uWSGI worker 2 (pid: 15764, cores: 2)
+spawned uWSGI worker 3 (pid: 15766, cores: 2)
+spawned uWSGI worker 4 (pid: 15768, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sun Jan 13 16:18:57 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (127.0.0.1:5000).
+bind(): Address already in use [core/socket.c line 769]
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sun Jan 13 16:21:29 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (0.0.0.0:5000).
+bind(): Address already in use [core/socket.c line 769]
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sun Jan 13 16:24:06 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x562eec6eb1c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 333504 bytes (325 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x562eec6eb1c0 pid: 17508 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (pid: 17508, cores: 2)
+spawned uWSGI worker 2 (pid: 17549, cores: 2)
+spawned uWSGI worker 3 (pid: 17551, cores: 2)
+spawned uWSGI worker 4 (pid: 17553, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 17553|app: 0|req: 1/1] 127.0.0.1 () {48 vars in 1178 bytes} [Sun Jan 13 16:44:56 2019] GET /login => generated 223 bytes in 30 msecs (HTTP/1.1 302) 5 headers in 532 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 2/2] 127.0.0.1 () {48 vars in 1184 bytes} [Sun Jan 13 16:44:56 2019] GET /backend => generated 81825 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 3/3] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:44:56 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OgRs => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 1/4] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:44:56 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OgSH&sid=485aac529ed1469f840563672af23382 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 1/5] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:44:56 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OgSI&sid=485aac529ed1469f840563672af23382 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 2/6] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:44:57 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OgTO&sid=485aac529ed1469f840563672af23382 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 1/7] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:44:58 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OglY => generated 107 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 2/8] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:44:58 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oglo&sid=7dc7dfa0a5e84fceb093ed1326b7ae98 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 3/9] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:44:58 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oglq&sid=7dc7dfa0a5e84fceb093ed1326b7ae98 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 4/10] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:44:58 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ogm1&sid=7dc7dfa0a5e84fceb093ed1326b7ae98 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 4/11] 127.0.0.1 () {48 vars in 1180 bytes} [Sun Jan 13 16:44:59 2019] GET /login => generated 223 bytes in 11 msecs (HTTP/1.1 302) 5 headers in 532 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 2/12] 127.0.0.1 () {48 vars in 1184 bytes} [Sun Jan 13 16:44:59 2019] GET /backend => generated 81825 bytes in 60 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 5/13] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:44:59 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oh1j => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 5/14] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:44:59 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oh2A&sid=44036e46804449669bb682a3d85656dd => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 6/15] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:44:59 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oh2B&sid=44036e46804449669bb682a3d85656dd => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 6/16] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:44:59 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oh2u&sid=44036e46804449669bb682a3d85656dd => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 3/17] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:00 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OhEl => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 3/18] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:00 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OhE-&sid=81281c76f80946f78455b78770b2f34f => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 7/19] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:45:00 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OhE_&sid=81281c76f80946f78455b78770b2f34f => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 8/20] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:00 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OhFM&sid=81281c76f80946f78455b78770b2f34f => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 7/21] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:01 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OhcG => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 9/22] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:01 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OhcK&sid=a2dedada89f44a7b90e7d53304682b09 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 9/23] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:01 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OhcK.0&sid=a2dedada89f44a7b90e7d53304682b09 => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 4/24] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:01 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OhcP&sid=a2dedada89f44a7b90e7d53304682b09 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 9/25] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:01 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OhcU&sid=a2dedada89f44a7b90e7d53304682b09 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 11/26] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:03 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OhwM => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 12/27] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:03 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OhwZ&sid=fae2658d10564a668b35b73ba78ed415 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 10/28] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:45:03 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ohwb&sid=fae2658d10564a668b35b73ba78ed415 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 5/29] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:03 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ohws&sid=fae2658d10564a668b35b73ba78ed415 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 6/30] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:03 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oi3t => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 4/32] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:03 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oi3z.0&sid=9f062dbcaa554aa1813e780e62493a70 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 13/32] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:03 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oi3z&sid=9f062dbcaa554aa1813e780e62493a70 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 14/33] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:03 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oi46&sid=9f062dbcaa554aa1813e780e62493a70 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 11/34] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:04 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OiNw => generated 107 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 12/35] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:04 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OiOA&sid=9bc6df033449465da14f598d0c51ec8a => generated 2 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 5/36] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:45:04 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OiOB&sid=9bc6df033449465da14f598d0c51ec8a => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 13/37] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:04 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OiOX&sid=9bc6df033449465da14f598d0c51ec8a => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 15/38] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:05 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OicY => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 6/39] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:05 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oicn&sid=c4d3cca1cd6249238b0d8656acb47bc2 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 14/40] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:05 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oic-&sid=c4d3cca1cd6249238b0d8656acb47bc2 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 15/41] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:06 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ois3 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 16/42] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:06 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OisF&sid=9b5000a50f5c40a6842acbb245f7cc14 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 17/43] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:45:06 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OisG&sid=9b5000a50f5c40a6842acbb245f7cc14 => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 7/44] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:06 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OisV&sid=9b5000a50f5c40a6842acbb245f7cc14 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 19/45] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:06 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oise&sid=9b5000a50f5c40a6842acbb245f7cc14 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 19/46] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:06 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OisV.0&sid=9b5000a50f5c40a6842acbb245f7cc14 => generated 0 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 20/47] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:08 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OjAq => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 21/48] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:08 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OjB0&sid=896b3f3fd9594a86878dfa4f668d1e1d => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 8/49] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:08 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OjB0.0&sid=896b3f3fd9594a86878dfa4f668d1e1d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 22/50] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:08 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OjB6&sid=896b3f3fd9594a86878dfa4f668d1e1d => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 23/51] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:08 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OjNa => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 24/52] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:08 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OjNf&sid=a9d0b63622f14276b3ccd45a093dc4b9 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 7/53] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:45:08 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OjNg&sid=a9d0b63622f14276b3ccd45a093dc4b9 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 9/54] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:08 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OjNn&sid=a9d0b63622f14276b3ccd45a093dc4b9 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 10/55] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:10 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OjgS => generated 107 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 25/56] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:10 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ojgf&sid=7b5dd05042ff415fa1d3feb482219195 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 8/57] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:10 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ojgf.0&sid=7b5dd05042ff415fa1d3feb482219195 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 11/58] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:10 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ojgn&sid=7b5dd05042ff415fa1d3feb482219195 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 12/59] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:10 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ojsn => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 13/60] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:10 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ojss&sid=2659d331a7f340b68fa443ae570bd83b => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 9/61] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:10 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ojss.0&sid=2659d331a7f340b68fa443ae570bd83b => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 14/62] 127.0.0.1 () {54 vars in 1427 bytes} [Sun Jan 13 16:45:10 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ojsy&sid=2659d331a7f340b68fa443ae570bd83b => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 26/63] 127.0.0.1 () {48 vars in 1222 bytes} [Sun Jan 13 16:45:11 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ok4d => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 27/64] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:11 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ok4j&sid=8006a91434e0489ea9c1beddc507eb13 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 28/65] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:11 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ok4j.0&sid=8006a91434e0489ea9c1beddc507eb13 => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 29/66] 127.0.0.1 () {54 vars in 1429 bytes} [Sun Jan 13 16:45:11 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ok4r&sid=8006a91434e0489ea9c1beddc507eb13 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 31/67] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:45:11 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ok4s&sid=8006a91434e0489ea9c1beddc507eb13 => generated 39 bytes in 7110 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 32/68] 127.0.0.1 () {52 vars in 1237 bytes} [Sun Jan 13 16:45:18 2019] GET /backend => generated 81825 bytes in 64 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 33/69] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:19 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Om0e => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 34/70] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:19 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Om2y&sid=838e8c16cd264739b98641e47a214eeb => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 35/71] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:19 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Om2z&sid=838e8c16cd264739b98641e47a214eeb => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 15/72] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:20 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Om4A&sid=838e8c16cd264739b98641e47a214eeb => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 10/73] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:20 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Om4B&sid=838e8c16cd264739b98641e47a214eeb => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 36/74] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:20 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Om4q&sid=838e8c16cd264739b98641e47a214eeb => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 11/75] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:21 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OmLz => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 37/76] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:21 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OmMO&sid=3f15bc084e8e4674a70868a8a13cee6d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 38/77] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:21 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OmMP&sid=3f15bc084e8e4674a70868a8a13cee6d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 39/78] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:21 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OmMl&sid=3f15bc084e8e4674a70868a8a13cee6d => generated 11 bytes in 1 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 12/79] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:22 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Omgb => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 40/80] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:22 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Omgn&sid=4a5ba0523f694e1a94da389f63526ebe => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 16/81] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:22 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Omgp&sid=4a5ba0523f694e1a94da389f63526ebe => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 13/82] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:22 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Omh3&sid=4a5ba0523f694e1a94da389f63526ebe => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 41/83] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:23 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OmqN => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 42/84] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:23 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Omqe&sid=3a7cffe08270407fb4ed82a9a453fbb1 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 17/85] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:23 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Omqg&sid=3a7cffe08270407fb4ed82a9a453fbb1 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 43/86] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:23 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Omr1&sid=3a7cffe08270407fb4ed82a9a453fbb1 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 18/87] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:23 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Om_- => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 44/88] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:23 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6On0C&sid=cf47f315d71d4ec7b26bcde70dae8465 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 45/89] 127.0.0.1 () {52 vars in 1353 bytes} [Sun Jan 13 16:45:23 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6On0C.0&sid=cf47f315d71d4ec7b26bcde70dae8465 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 14/90] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:23 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6On0a&sid=cf47f315d71d4ec7b26bcde70dae8465 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 46/91] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:25 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OnMG => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 19/92] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:25 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OnMT&sid=ee81c7f10701446082dc8038e5891882 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 15/93] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:25 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OnMU&sid=ee81c7f10701446082dc8038e5891882 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 16/94] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:25 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OnM-&sid=ee81c7f10701446082dc8038e5891882 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 20/95] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:26 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OnXn => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 47/96] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:26 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OnY3&sid=db7e57a786be4cd4b30f63db220ce695 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 17/97] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:26 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OnY5&sid=db7e57a786be4cd4b30f63db220ce695 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 18/98] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:26 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OnYI&sid=db7e57a786be4cd4b30f63db220ce695 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 48/99] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:27 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Onvk => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 21/100] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:27 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Onvr&sid=1256335175404d4ab88c61a6ca39a83d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 22/101] 127.0.0.1 () {52 vars in 1353 bytes} [Sun Jan 13 16:45:27 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Onvr.0&sid=1256335175404d4ab88c61a6ca39a83d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 49/102] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:27 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Onv_&sid=1256335175404d4ab88c61a6ca39a83d => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 19/103] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:28 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OoFh => generated 107 bytes in 1 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 50/104] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:28 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OoFz&sid=459a17ba54554dddaf82a2de6077dfbd => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 51/105] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:28 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OoF_&sid=459a17ba54554dddaf82a2de6077dfbd => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 20/106] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:28 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OoGY&sid=459a17ba54554dddaf82a2de6077dfbd => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 23/107] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:29 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OoPT => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 52/108] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:29 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OoPh&sid=18ef036b7e964627b940fb4edc4f6e24 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 25/109] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:29 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OoPi&sid=18ef036b7e964627b940fb4edc4f6e24 => generated 0 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 25/110] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:29 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OoPw&sid=18ef036b7e964627b940fb4edc4f6e24 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 26/111] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:31 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OonD => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 27/112] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:31 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OonW&sid=d9090e05269f4a90a9d80c0a205e637c => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 28/113] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:31 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OonZ&sid=d9090e05269f4a90a9d80c0a205e637c => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 21/114] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:31 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ooo2&sid=d9090e05269f4a90a9d80c0a205e637c => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 22/115] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:31 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ooo4&sid=d9090e05269f4a90a9d80c0a205e637c => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 23/116] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:31 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ooof&sid=d9090e05269f4a90a9d80c0a205e637c => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 53/117] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:32 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Op84 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 54/118] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:32 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Op8J&sid=c55f194e688f4f068f461b098575845e => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 29/119] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:32 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Op8K&sid=c55f194e688f4f068f461b098575845e => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 55/120] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:32 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Op8z&sid=c55f194e688f4f068f461b098575845e => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 30/121] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:33 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OpMa => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 56/122] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:33 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OpMn&sid=4aee2a4efb2b482382d6b63d6c90b3ef => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 24/123] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:33 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OpN7&sid=4aee2a4efb2b482382d6b63d6c90b3ef => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 32/124] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:34 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Opiz => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 57/125] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:34 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OpjF&sid=905d6f6c937f420d9f04fb79c4849e7e => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 58/126] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:34 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OpjG&sid=905d6f6c937f420d9f04fb79c4849e7e => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 59/127] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:34 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Opjc&sid=905d6f6c937f420d9f04fb79c4849e7e => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 33/128] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:36 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oq4j => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 34/129] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:36 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oq51&sid=2256ac3a5a4543bd991e4879885217ac => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 60/130] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:36 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oq53&sid=2256ac3a5a4543bd991e4879885217ac => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 35/131] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:36 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oq5h&sid=2256ac3a5a4543bd991e4879885217ac => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 61/132] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:37 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OqJr => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 62/133] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:37 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OqK9&sid=8191530bc3b14805b357f18ec365620b => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 63/134] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:37 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OqKB&sid=8191530bc3b14805b357f18ec365620b => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 25/135] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:37 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OqKO&sid=8191530bc3b14805b357f18ec365620b => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 36/136] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:37 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OqKa&sid=8191530bc3b14805b357f18ec365620b => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 37/137] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:38 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OqeL => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 38/138] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:38 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oqeb&sid=4fd9b24d19484f97ab0282732784cb18 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 26/139] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:38 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oqec&sid=4fd9b24d19484f97ab0282732784cb18 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 27/140] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:38 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oqex&sid=4fd9b24d19484f97ab0282732784cb18 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 39/141] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:39 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oqu9 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 28/142] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:39 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OquV&sid=cc82123ef7d147159b2d036a1159375c => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 29/143] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:45:39 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oquv&sid=cc82123ef7d147159b2d036a1159375c => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 30/144] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:45:40 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Or9- => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 31/145] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:40 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OrAE&sid=50db5d577dcb4c0a9049d3af36c48fc2 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 32/146] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:40 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OrAF&sid=50db5d577dcb4c0a9049d3af36c48fc2 => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 34/147] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:45:40 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OrAW&sid=50db5d577dcb4c0a9049d3af36c48fc2 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 16/148] 127.0.0.1 () {48 vars in 1300 bytes} [Sun Jan 13 16:45:01 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OhcP.0&sid=a2dedada89f44a7b90e7d53304682b09 => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 16/149] 127.0.0.1 () {48 vars in 1296 bytes} [Sun Jan 13 16:45:05 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oico&sid=c4d3cca1cd6249238b0d8656acb47bc2 => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 17/150] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:05 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OxGv&sid=50db5d577dcb4c0a9049d3af36c48fc2 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 18/151] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:05 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OxHW&sid=50db5d577dcb4c0a9049d3af36c48fc2 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 19/152] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:06 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OxWc => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 20/153] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:06 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OxWn&sid=a1474c9236934866b5a022d0e22add8e => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 35/154] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:06 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OxWo&sid=a1474c9236934866b5a022d0e22add8e => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 21/155] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:06 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OxX1&sid=a1474c9236934866b5a022d0e22add8e => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 22/156] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:07 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oxft => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 23/157] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:07 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oxg9&sid=d37bdb9b2540471db115b82ba5895a38 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 24/158] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:07 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OxgD&sid=d37bdb9b2540471db115b82ba5895a38 => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 25/159] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:07 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Oxgb&sid=d37bdb9b2540471db115b82ba5895a38 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 36/160] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:40 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OrAX&sid=50db5d577dcb4c0a9049d3af36c48fc2 => generated 0 bytes in 32032 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 36/161] 127.0.0.1 () {52 vars in 1237 bytes} [Sun Jan 13 16:46:12 2019] GET /backend => generated 81831 bytes in 31 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 27/162] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:13 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OzAL => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 28/163] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:13 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OzC_&sid=0a842038ecb54d6399765f957228ee6f => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 29/164] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:13 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OzD1&sid=0a842038ecb54d6399765f957228ee6f => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 37/165] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:13 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OzDy&sid=0a842038ecb54d6399765f957228ee6f => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 30/166] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:13 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OzER&sid=0a842038ecb54d6399765f957228ee6f => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 38/167] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:14 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OzV7 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 31/168] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:15 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OzVN&sid=aab94da51c60453ca4f4fee23e3354c0 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 32/169] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:15 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OzVT&sid=aab94da51c60453ca4f4fee23e3354c0 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 33/170] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:15 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6OzVi&sid=aab94da51c60453ca4f4fee23e3354c0 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 34/171] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:16 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OzrH => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 35/172] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:16 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ozrc&sid=8486577f713841edb095daea81987c5b => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 36/173] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:16 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ozrf&sid=8486577f713841edb095daea81987c5b => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 39/174] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:16 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Ozrt&sid=8486577f713841edb095daea81987c5b => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 37/175] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:16 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6Ozr_&sid=8486577f713841edb095daea81987c5b => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 40/176] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:17 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-AI => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 38/177] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:17 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-AW&sid=ffb8a61ed77e46968c89413c3aea46cf => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 39/178] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:17 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-Aj&sid=ffb8a61ed77e46968c89413c3aea46cf => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 40/179] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:18 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-Pv => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 41/180] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:18 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-Q0&sid=90de904b0a954a50b962d59f32a90789 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 42/181] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:18 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-Q1&sid=90de904b0a954a50b962d59f32a90789 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 42/182] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:18 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-QB&sid=90de904b0a954a50b962d59f32a90789 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 64/183] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:18 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Olq3&sid=8006a91434e0489ea9c1beddc507eb13 => generated 11 bytes in 60026 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 43/184] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:19 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-fh => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 43/185] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:19 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-g5&sid=d318c59ccde641eab6700c0a29848e11 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 65/186] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:19 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-g7&sid=d318c59ccde641eab6700c0a29848e11 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 44/187] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:19 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-ge&sid=d318c59ccde641eab6700c0a29848e11 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 66/188] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:20 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-uK => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 44/189] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:20 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-uN&sid=a8805288f7e6402097138c4f225864f2 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 45/190] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:20 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-uO&sid=a8805288f7e6402097138c4f225864f2 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 45/191] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:20 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O-uV&sid=a8805288f7e6402097138c4f225864f2 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 46/192] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:22 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_Fw => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 67/193] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:22 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_GB&sid=09413f3f431b4073928499da23c8649d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 68/194] 127.0.0.1 () {52 vars in 1353 bytes} [Sun Jan 13 16:46:22 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_GB.0&sid=09413f3f431b4073928499da23c8649d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 69/195] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:22 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_GX&sid=09413f3f431b4073928499da23c8649d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 70/196] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:22 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_P9 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 71/197] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:22 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_PG&sid=644121855d564a5cb908400c539abcfe => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 72/198] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:22 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_PH&sid=644121855d564a5cb908400c539abcfe => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 46/199] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:22 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_PX&sid=644121855d564a5cb908400c539abcfe => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 73/200] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:22 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_Pj&sid=644121855d564a5cb908400c539abcfe => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 47/201] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:23 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_d5 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 74/202] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:23 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_dF&sid=c389796d577e426da784131d539a9269 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 75/203] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:23 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_dG&sid=c389796d577e426da784131d539a9269 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 47/204] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:23 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_d-&sid=c389796d577e426da784131d539a9269 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 48/205] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:24 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_oT => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 76/206] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:24 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_oj&sid=f74e8feb1a3f4027a955c7ee69e7af51 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 77/207] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:24 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6O_pJ&sid=f74e8feb1a3f4027a955c7ee69e7af51 => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 78/208] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:25 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P05f => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 79/209] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:25 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P05n&sid=4b00bf1945b541e29626e7d6d05297e8 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 80/210] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:25 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P05o&sid=4b00bf1945b541e29626e7d6d05297e8 => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 48/211] 127.0.0.1 () {52 vars in 1237 bytes} [Sun Jan 13 16:46:30 2019] GET /backend => generated 81856 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 49/212] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:32 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P1lo => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 50/213] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:32 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P1oN&sid=83d8ebcd6fe248db99edd364a56e38ce => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 51/214] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:32 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P1oP&sid=83d8ebcd6fe248db99edd364a56e38ce => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 40/215] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:33 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OpMp&sid=4aee2a4efb2b482382d6b63d6c90b3ef => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 81/216] 127.0.0.1 () {52 vars in 1353 bytes} [Sun Jan 13 16:45:37 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OqKO.0&sid=8191530bc3b14805b357f18ec365620b => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 40/217] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:45:39 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6OquW&sid=cc82123ef7d147159b2d036a1159375c => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 82/218] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:25 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P06A&sid=4b00bf1945b541e29626e7d6d05297e8 => generated 39 bytes in 22599 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 82/219] 127.0.0.1 () {52 vars in 1237 bytes} [Sun Jan 13 16:46:48 2019] GET /backend => generated 81831 bytes in 112 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 83/220] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:48 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P5o0 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 84/221] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:49 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P5pJ&sid=a14546204c044171be9711ee556cdd2d => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 85/222] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:49 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P5pK&sid=a14546204c044171be9711ee556cdd2d => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 41/223] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:49 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P5q_&sid=a14546204c044171be9711ee556cdd2d => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17508|app: 0|req: 86/224] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:49 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P5rK&sid=a14546204c044171be9711ee556cdd2d => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 87/225] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:50 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P65H => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 42/226] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:50 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P65V&sid=ed2c1d56944c4e8fa159c51f810752dd => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 43/227] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:50 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P65d&sid=ed2c1d56944c4e8fa159c51f810752dd => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 89/228] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:51 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P6L1 => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 44/229] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:51 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P6LF&sid=d75287ed8720455197709bddf4c1858c => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 45/230] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:46:51 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P6La&sid=d75287ed8720455197709bddf4c1858c => generated 11 bytes in 0 msecs (HTTP/1.1 400) 3 headers in 146 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 46/231] 127.0.0.1 () {52 vars in 1275 bytes} [Sun Jan 13 16:46:52 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P6ZV => generated 107 bytes in 0 msecs (HTTP/1.1 200) 4 headers in 180 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 47/232] 127.0.0.1 () {58 vars in 1482 bytes} [Sun Jan 13 16:46:52 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6P6Zj&sid=46f41b70b9124fbea3014166e1220626 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 48/233] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:52 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P6Zl&sid=46f41b70b9124fbea3014166e1220626 => generated 14 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17553|app: 0|req: 49/234] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:07 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6Oxgc&sid=d37bdb9b2540471db115b82ba5895a38 => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 50/235] 127.0.0.1 () {58 vars in 1480 bytes} [Sun Jan 13 16:47:17 2019] POST /socket.io/?EIO=3&transport=polling&t=MX6PCgM&sid=46f41b70b9124fbea3014166e1220626 => generated 2 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 137 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 50/236] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:52 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P6Z-&sid=46f41b70b9124fbea3014166e1220626 => generated 4 bytes in 24993 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 0)
+[pid: 17549|app: 0|req: 52/237] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:17 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O-AX&sid=ffb8a61ed77e46968c89413c3aea46cf => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17553|app: 0|req: 49/238] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:24 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6O_ov&sid=f74e8feb1a3f4027a955c7ee69e7af51 => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17549|app: 0|req: 52/239] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:32 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P1pE&sid=83d8ebcd6fe248db99edd364a56e38ce => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 90/240] 127.0.0.1 () {52 vars in 1353 bytes} [Sun Jan 13 16:46:50 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P65V.0&sid=ed2c1d56944c4e8fa159c51f810752dd => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 1)
+[pid: 17508|app: 0|req: 90/241] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:46:51 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6P6LH&sid=d75287ed8720455197709bddf4c1858c => generated 11 bytes in 60000 msecs (HTTP/1.1 400) 3 headers in 126 bytes (1 switches on core 0)
+[pid: 17551|app: 0|req: 51/242] 127.0.0.1 () {52 vars in 1349 bytes} [Sun Jan 13 16:47:17 2019] GET /socket.io/?EIO=3&transport=polling&t=MX6PCgg&sid=46f41b70b9124fbea3014166e1220626 => generated 0 bytes in 46463 msecs (HTTP/1.1 200) 3 headers in 131 bytes (1 switches on core 1)
+[pid: 17551|app: 0|req: 52/243] 127.0.0.1 () {52 vars in 1237 bytes} [Sun Jan 13 16:51:03 2019] GET /backend => generated 81831 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 17553|app: 0|req: 50/244] 127.0.0.1 () {52 vars in 1237 bytes} [Sun Jan 13 16:51:39 2019] GET /backend => generated 81831 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip

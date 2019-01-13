@@ -38,7 +38,7 @@ def register():
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        flash(u'已经登陆', category='warning')
+        flash(u'已经登陆', category='info')
         return redirect(url_for('main.backend'))
     if request.method == 'POST':
         next_page = request.args.get(u'next')

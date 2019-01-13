@@ -1,14 +1,22 @@
 # coding=utf-8
 from flask import render_template, request
 from flask_login import login_required
+from flask_socketio import emit
 
 from . import main
+from .. import socketio
+
+
+@socketio.on('event')
+def test_message():
+    emit('my response', {'data': 'info'})
 
 
 @main.route('/backend', methods=['GET', 'POST'])
 @login_required
 def backend():
-    return render_template('backend.html', title=u'后台')
+    socketio.emit('message', {'data': 'T'}, namespace='/backend')
+    return render_template('backend.html', title=u'备案系统管理界面')
 
 
 # 查看备案

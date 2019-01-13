@@ -2,13 +2,16 @@
 from flask import Flask
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
-from flask_sqlalchemy import SQLAlchemy
-from .config import Config
 from flask_recaptcha import ReCaptcha
+from flask_socketio import SocketIO
+from flask_sqlalchemy import SQLAlchemy
+
+from .config import Config
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
 recaptcha = ReCaptcha()
+socketio = SocketIO()
 
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
@@ -23,6 +26,7 @@ def create_app():
     bcrypt.init_app(app)
     login_manager.init_app(app)
     recaptcha.init_app(app)
+    socketio.init_app(app)
     # pagedown = PageDown(app)
 
     from .auth import auth as auth_blueprint
