@@ -14,11 +14,11 @@ function getRandomData() {
     while (data.length < totalPoints) {
         var prev = data.length > 0 ? data[data.length - 1] : 50
             , y = prev + Math.random() * 10 - 5;
-        if (y < 0) {
-            y = 0;
+        if (y < 3) {
+            y = Math.random()*10;
         }
-        else if (y > 100) {
-            y = 100;
+        else if (y > 50) {
+            y = Math.random()*50;
         }
         data.push(y);
     }
@@ -30,7 +30,7 @@ function getRandomData() {
     return res;
 }
 // Set up the control widget
-var updateInterval = 30;
+var updateInterval = 10;
 $("#updateInterval").val(updateInterval).change(function () {
     var v = $(this).val();
     if (v && !isNaN(+v)) {
@@ -50,7 +50,7 @@ var plot = $.plot("#placeholder", [getRandomData()], {
     }
     , yaxis: {
         min: 0
-        , max: 100
+        , max: 60
     }
     , xaxis: {
         show: false
@@ -133,20 +133,20 @@ $(document).ready(function () {
 //Flot Pie Chart
 $(function () {
     var data = [{
-        label: "Series 0"
-        , data: 10
+        label: "数据库已用容量"
+        , data: 20
         , color: "#4f5467"
     , }, {
-        label: "Series 1"
-        , data: 1
+        label: "数据库可用容量"
+        , data: 30
         , color: "#26c6da"
     , }, {
-        label: "Series 2"
-        , data: 3
+        label: "备案系统已用容量"
+        , data: 10
         , color: "#009efb"
     , }, {
-        label: "Series 3"
-        , data: 1
+        label: "备案系统可用容量"
+        , data: 40
         , color: "#7460ee"
     , }];
     var plotObj = $.plot($("#flot-pie-chart"), data, {
