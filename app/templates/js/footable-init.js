@@ -1,10 +1,7 @@
-
 $(window).on('load', function() {
-
 	// Row Toggler
 	// -----------------------------------------------------------------
 	$('#demo-foo-row-toggler').footable();
-
 	// Accordion
 	// -----------------------------------------------------------------
 	$('#demo-foo-accordion').footable().on('footable_row_expanded', function(e) {

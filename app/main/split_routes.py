@@ -15,8 +15,15 @@ def test_message():
 @main.route('/backend', methods=['GET', 'POST'])
 @login_required
 def backend():
-    socketio.emit('message', {'data': 'T'}, namespace='/backend')
+    # socketio.emit('message', {'data': 'T'}, namespace='/backend')
     return render_template('backend.html', title=u'备案系统管理界面')
+
+
+# 备案概览
+@main.route('/backend/overview', methods=['GET', 'POST'])
+@login_required
+def overview():
+    return render_template('backend_overview.html', title=u'备案概览')
 
 
 # 查看备案
@@ -25,7 +32,7 @@ def backend():
 def lookup():
     # records = Record.query.all()
     # send recorrds to specified
-    return render_template('split_backend/backend_lookup.html')
+    return render_template('backend_lookup.html', title=u'查看备案记录')
 
 
 # 增加备案
