@@ -12557,3 +12557,801 @@ spawned uWSGI worker 4 (pid: 14087, cores: 2)
 [pid: 14087|app: 0|req: 9/17] 127.0.0.1 () {54 vars in 1153 bytes} [Tue Jan 15 17:12:59 2019] GET /backend/overview => generated 23100 bytes in 63 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
 [pid: 14083|app: 0|req: 9/18] 127.0.0.1 () {52 vars in 1074 bytes} [Tue Jan 15 17:13:31 2019] GET /backend/overview => generated 23100 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
 [pid: 14087|app: 0|req: 10/19] 127.0.0.1 () {54 vars in 1153 bytes} [Tue Jan 15 17:14:06 2019] GET /backend/overview => generated 23091 bytes in 46 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Jan 15 17:37:31 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x557585a438e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x557585a438e0 pid: 3353 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3353)
+spawned uWSGI worker 1 (pid: 17536, cores: 2)
+spawned uWSGI worker 2 (pid: 17539, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 17542, cores: 2)
+spawned uWSGI worker 4 (pid: 17545, cores: 2)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 10:48:41 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x556638bd2080
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x556638bd2080 pid: 6893 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6893)
+spawned uWSGI worker 1 (pid: 6934, cores: 2)
+spawned uWSGI worker 2 (pid: 6935, cores: 2)
+spawned uWSGI worker 3 (pid: 6936, cores: 2)
+spawned uWSGI worker 4 (pid: 6937, cores: 2)
+Python auto-reloader enabled
+[pid: 6934|app: 0|req: 1/1] 127.0.0.1 () {48 vars in 1033 bytes} [Wed Jan 16 10:48:48 2019] GET /login => generated 223 bytes in 52 msecs (HTTP/1.1 302) 5 headers in 456 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 2/2] 127.0.0.1 () {48 vars in 1108 bytes} [Wed Jan 16 10:48:48 2019] GET /backend => generated 25428 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 343 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 1/3] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 10:48:52 2019] GET /backend/overview => generated 23051 bytes in 99 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 2/4] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 10:48:58 2019] GET /backend => generated 25063 bytes in 43 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 1/5] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 10:49:01 2019] GET /backend/overview => generated 23051 bytes in 44 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6936|app: 0|req: 1/6] 127.0.0.1 () {52 vars in 1131 bytes} [Wed Jan 16 10:54:37 2019] GET /backend/overview => generated 23051 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6935|app: 0|req: 2/7] 127.0.0.1 () {52 vars in 1131 bytes} [Wed Jan 16 10:55:34 2019] GET /backend/overview => generated 23051 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 3/8] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 10:56:20 2019] GET /backend/overview => generated 23051 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 4/9] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:06:24 2019] GET /backend/overview => generated 23051 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 3/10] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 11:06:30 2019] GET /backend => generated 25063 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 4/11] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 11:07:25 2019] GET /backend => generated 25063 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 5/12] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:07:38 2019] GET /backend/overview => generated 23051 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 6/13] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:10:28 2019] GET /backend/overview => generated 25050 bytes in 44 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 5/14] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 11:10:33 2019] GET /backend => generated 25063 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 6/15] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:10:37 2019] GET /backend/overview => generated 25050 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 7/16] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 11:10:39 2019] GET /backend => generated 25063 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 7/17] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:10:40 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 8/18] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:13:55 2019] GET /backend/overview => generated 25050 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 8/19] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:14:42 2019] GET /backend/overview => generated 25050 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 9/20] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:14:58 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6936|app: 0|req: 2/21] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:16:58 2019] GET /backend/overview => generated 25050 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 10/22] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:18:00 2019] GET /backend/overview => generated 25050 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 11/23] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:18:16 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6936|app: 0|req: 3/24] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:19:18 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 12/25] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:20:38 2019] GET /backend/overview => generated 25050 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 9/26] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:20:57 2019] GET /backend/overview => generated 25050 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 13/27] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:21:16 2019] GET /backend/overview => generated 25050 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 10/28] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:21:41 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 11/29] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:26:22 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 12/30] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 11:26:30 2019] GET /backend/overview => generated 25050 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 14/31] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:27:25 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 15/32] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:30:02 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 16/33] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:35:23 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 17/34] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:35:34 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 18/35] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:38:00 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 13/36] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:44:05 2019] GET /backend/overview => generated 25050 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 14/37] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:46:29 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 15/38] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:46:44 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 16/39] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:47:23 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 17/40] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:48:40 2019] GET /backend/overview => generated 25050 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 19/41] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:48:47 2019] GET /backend/overview => generated 25050 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6936|app: 0|req: 4/42] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:48:53 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 18/43] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:48:59 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 3/44] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 11:49:24 2019] GET /backend/overview => generated 25050 bytes in 41 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6935|app: 0|req: 4/45] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 12:09:47 2019] GET /backend/overview => generated 25050 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 19/46] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 12:10:49 2019] GET /backend/overview => generated 25050 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 20/47] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 12:42:02 2019] GET /backend/overview => generated 25050 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 21/48] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:06:42 2019] GET /backend/overview => generated 25050 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 22/49] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:08:24 2019] GET /backend/overview => generated 25050 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 20/50] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:09:00 2019] GET /backend/overview => generated 25050 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 21/51] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:09:24 2019] GET /backend/overview => generated 25050 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 22/52] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:09:37 2019] GET /backend/overview => generated 25050 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 23/53] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:10:29 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6935|app: 0|req: 5/54] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:12:04 2019] GET /backend/overview => generated 25050 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6935|app: 0|req: 6/55] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:12:19 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 7/56] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:13:10 2019] GET /backend/overview => generated 25050 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 23/57] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:13:31 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 24/58] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:13:41 2019] GET /backend/overview => generated 25050 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 24/59] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:19:01 2019] GET /backend/overview => generated 24933 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 8/60] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:20:54 2019] GET /backend/overview => generated 24933 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 9/61] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:21:17 2019] GET /backend/overview => generated 24933 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6935|app: 0|req: 10/62] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:29:33 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 25/63] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:30:39 2019] GET /backend/overview => generated 24933 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 26/64] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:32:03 2019] GET /backend/overview => generated 24933 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 27/65] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:32:15 2019] GET /backend/overview => generated 24933 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6936|app: 0|req: 5/66] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:32:53 2019] GET /backend/overview => generated 24933 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 28/67] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:33:15 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6936|app: 0|req: 6/68] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:43:34 2019] GET /backend/overview => generated 24933 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 29/69] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:43:49 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 30/70] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:43:59 2019] GET /backend/overview => generated 24933 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 31/71] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:46:11 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 25/72] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:47:23 2019] GET /backend/overview => generated 24933 bytes in 172 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 26/73] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:49:23 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 27/74] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:49:32 2019] GET /backend/overview => generated 24933 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 32/75] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:51:15 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 11/76] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:52:17 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6936|app: 0|req: 7/77] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:52:37 2019] GET /backend/overview => generated 24933 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 33/78] 127.0.0.1 () {52 vars in 1140 bytes} [Wed Jan 16 13:53:14 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 34/79] 127.0.0.1 () {52 vars in 1140 bytes} [Wed Jan 16 13:53:20 2019] GET /backend/overview => generated 24933 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 12/80] 127.0.0.1 () {52 vars in 1140 bytes} [Wed Jan 16 13:53:23 2019] GET /backend/overview => generated 24933 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6937|app: 0|req: 35/81] 127.0.0.1 () {52 vars in 1140 bytes} [Wed Jan 16 13:54:16 2019] GET /backend/overview => generated 24933 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6935|app: 0|req: 13/82] 127.0.0.1 () {52 vars in 1140 bytes} [Wed Jan 16 13:54:58 2019] GET /backend/overview => generated 24933 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6937|app: 0|req: 36/83] 127.0.0.1 () {52 vars in 1140 bytes} [Wed Jan 16 13:55:03 2019] GET /backend/overview => generated 24933 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6935|app: 0|req: 14/84] 127.0.0.1 () {52 vars in 1140 bytes} [Wed Jan 16 13:55:18 2019] GET /backend/overview => generated 24933 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 28/85] 127.0.0.1 () {46 vars in 773 bytes} [Wed Jan 16 13:55:33 2019] GET /login?next=%2Fbackend => generated 6864 bytes in 9 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 1)
+[pid: 6936|app: 0|req: 8/86] 127.0.0.1 () {52 vars in 889 bytes} [Wed Jan 16 13:55:38 2019] POST /login?next=%2Fbackend => generated 30 bytes in 238 msecs (HTTP/1.1 200) 4 headers in 408 bytes (1 switches on core 1)
+[pid: 6934|app: 0|req: 29/87] 127.0.0.1 () {50 vars in 1111 bytes} [Wed Jan 16 13:55:38 2019] GET /backend => generated 25431 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 347 bytes (1 switches on core 0)
+[pid: 6935|app: 0|req: 15/88] 127.0.0.1 () {50 vars in 1043 bytes} [Wed Jan 16 13:55:41 2019] GET /backend/overview => generated 24933 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6936|app: 0|req: 9/89] 127.0.0.1 () {52 vars in 1074 bytes} [Wed Jan 16 13:55:52 2019] GET /backend/overview => generated 24933 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 6934|app: 0|req: 30/90] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 13:56:07 2019] GET /backend/overview => generated 24933 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+...brutally killing workers...
+Gracefully killing worker 1 (pid: 6934)...
+Gracefully killing worker 4 (pid: 6937)...
+worker 4 buried after 0 seconds
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 14:51:03 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55e02b0a28e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55e02b0a28e0 pid: 6893 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 6893)
+spawned uWSGI worker 1 (pid: 12170, cores: 2)
+spawned uWSGI worker 2 (pid: 12173, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 12176, cores: 2)
+spawned uWSGI worker 4 (pid: 12178, cores: 2)
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 15:00:39 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x562d1959b080
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x562d1959b080 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 4449, cores: 2)
+spawned uWSGI worker 2 (pid: 4451, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 4454, cores: 2)
+spawned uWSGI worker 4 (pid: 4457, cores: 2)
+[pid: 4457|app: 0|req: 1/1] 127.0.0.1 () {46 vars in 803 bytes} [Wed Jan 16 15:00:50 2019] GET /login => generated 6864 bytes in 40 msecs (HTTP/1.1 200) 2 headers in 81 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 2/2] 127.0.0.1 () {54 vars in 928 bytes} [Wed Jan 16 15:00:57 2019] POST /login => generated 29 bytes in 327 msecs (HTTP/1.1 200) 4 headers in 409 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 1/3] 127.0.0.1 () {50 vars in 1157 bytes} [Wed Jan 16 15:00:57 2019] GET /backend => generated 25431 bytes in 38 msecs (HTTP/1.1 200) 4 headers in 343 bytes (1 switches on core 0)
+[pid: 4449|app: 0|req: 1/4] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:01:04 2019] GET /backend/overview => generated 24933 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 2/5] 127.0.0.1 () {50 vars in 1109 bytes} [Wed Jan 16 15:03:14 2019] GET /backend/overview => generated 24933 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 3/6] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:07:06 2019] GET /backend/lookup => generated 29597 bytes in 27 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 4/7] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:07:07 2019] GET /backend => generated 25063 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 5/8] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:07:09 2019] GET /backend => generated 25063 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 6/9] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:07:10 2019] GET /backend => generated 25063 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 7/10] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:07:11 2019] GET /backend => generated 25063 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 3/11] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:07:12 2019] GET /backend/overview => generated 24933 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 8/12] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:07:19 2019] GET /backend/lookup => generated 29597 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 9/13] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:11:12 2019] GET /backend => generated 25063 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 10/14] 127.0.0.1 () {50 vars in 1107 bytes} [Wed Jan 16 15:11:15 2019] GET /backend/overview => generated 24933 bytes in 55 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 4/15] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 15:11:16 2019] GET /backend => generated 25063 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 11/16] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:11:17 2019] GET /backend => generated 25063 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 5/17] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:11:20 2019] GET /backend => generated 25063 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 6/18] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:11:21 2019] GET /backend => generated 25063 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 1/19] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:11:22 2019] GET /backend/overview => generated 24933 bytes in 56 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 2/20] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:11:23 2019] GET /backend/lookup => generated 29597 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 3/21] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:12:57 2019] GET /backend => generated 25063 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 4/22] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:12:58 2019] GET /backend/overview => generated 24933 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 12/23] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 15:13:10 2019] GET /backend => generated 25063 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 5/24] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:13:23 2019] GET /backend/overview => generated 24933 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 6/25] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 15:13:30 2019] GET /backend => generated 25063 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 13/26] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:13:31 2019] GET /backend => generated 25063 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 14/27] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:13:32 2019] GET /backend => generated 25063 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 15/28] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:13:33 2019] GET /backend => generated 25063 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 16/29] 127.0.0.1 () {52 vars in 1113 bytes} [Wed Jan 16 15:14:28 2019] GET /backend => generated 25063 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 17/30] 127.0.0.1 () {52 vars in 1113 bytes} [Wed Jan 16 15:14:31 2019] GET /backend => generated 25063 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 18/31] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:14:32 2019] GET /backend => generated 25063 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 19/32] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:14:32 2019] GET /backend => generated 25063 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 7/33] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:15:20 2019] GET /backend => generated 25063 bytes in 69 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 8/34] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:15:22 2019] GET /backend => generated 25063 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 7/35] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:15:23 2019] GET /backend => generated 25063 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 9/36] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:15:25 2019] GET /backend => generated 25063 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 8/37] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:15:28 2019] GET /backend => generated 25063 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 10/38] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:15:30 2019] GET /backend/overview => generated 24933 bytes in 53 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 20/39] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:15:31 2019] GET /backend/lookup => generated 29597 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 9/40] 127.0.0.1 () {52 vars in 1136 bytes} [Wed Jan 16 15:16:12 2019] GET /backend/lookup => generated 29597 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 10/41] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:16:13 2019] GET /backend => generated 25072 bytes in 68 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 21/42] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:14 2019] GET /backend => generated 25072 bytes in 52 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4449|app: 0|req: 2/43] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:15 2019] GET /backend => generated 25072 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 22/44] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:16 2019] GET /backend => generated 25072 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 11/45] 127.0.0.1 () {52 vars in 1113 bytes} [Wed Jan 16 15:16:29 2019] GET /backend => generated 25070 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 12/46] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:30 2019] GET /backend => generated 25070 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 23/47] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:31 2019] GET /backend => generated 25070 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 13/48] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:32 2019] GET /backend => generated 25070 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 24/49] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:46 2019] GET /backend => generated 25077 bytes in 53 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 14/50] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 15:16:48 2019] GET /backend/lookup => generated 29597 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 25/51] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:16:49 2019] GET /backend => generated 25077 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 15/52] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:16:50 2019] GET /backend => generated 25077 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 16/53] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:16:52 2019] GET /backend/overview => generated 24933 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 11/54] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:16:54 2019] GET /backend/lookup => generated 29597 bytes in 41 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4449|app: 0|req: 3/55] 127.0.0.1 () {52 vars in 1136 bytes} [Wed Jan 16 15:17:22 2019] GET /backend/lookup => generated 29604 bytes in 49 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 26/56] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:17:24 2019] GET /backend => generated 25077 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 27/57] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:17:25 2019] GET /backend/overview => generated 24933 bytes in 53 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 28/58] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:17:26 2019] GET /backend/lookup => generated 29604 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 29/59] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:17:28 2019] GET /backend => generated 25077 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 30/60] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 15:17:29 2019] GET /backend/lookup => generated 29604 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 31/61] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:21:01 2019] GET /backend => generated 25077 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 32/62] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 15:21:05 2019] GET /backend/lookup => generated 29604 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 33/63] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:37:36 2019] GET /backend => generated 25077 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 34/64] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 15:37:39 2019] GET /backend => generated 25077 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 17/65] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:38:17 2019] GET /backend/overview => generated 24933 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 35/66] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:38:19 2019] GET /backend/lookup => generated 29604 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 18/67] 127.0.0.1 () {50 vars in 1107 bytes} [Wed Jan 16 15:38:20 2019] GET /backend/overview => generated 24933 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 36/68] 127.0.0.1 () {50 vars in 1109 bytes} [Wed Jan 16 15:38:22 2019] GET /backend/overview => generated 24933 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 12/69] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 15:38:32 2019] GET /backend => generated 25077 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 37/70] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:38:33 2019] GET /backend/overview => generated 24933 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 19/71] 127.0.0.1 () {52 vars in 1131 bytes} [Wed Jan 16 15:45:33 2019] GET /backend/overview => generated 24933 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4449|app: 0|req: 4/72] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 15:45:36 2019] GET /backend => generated 25077 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 20/73] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:45:37 2019] GET /backend/overview => generated 24933 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 38/74] 127.0.0.1 () {52 vars in 1131 bytes} [Wed Jan 16 15:51:08 2019] GET /backend/overview => generated 24379 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 21/75] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 15:51:12 2019] GET /backend => generated 25077 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 22/76] 127.0.0.1 () {52 vars in 1122 bytes} [Wed Jan 16 15:52:36 2019] GET /backend => generated 25080 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4449|app: 0|req: 5/77] 127.0.0.1 () {52 vars in 1122 bytes} [Wed Jan 16 15:53:18 2019] GET /backend => generated 25080 bytes in 61 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 23/78] 127.0.0.1 () {52 vars in 1122 bytes} [Wed Jan 16 15:54:24 2019] GET /backend => generated 25080 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 24/79] 127.0.0.1 () {52 vars in 1122 bytes} [Wed Jan 16 15:54:25 2019] GET /backend => generated 25080 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 25/80] 127.0.0.1 () {50 vars in 892 bytes} [Wed Jan 16 15:54:37 2019] GET /backend => generated 251 bytes in 3 msecs (HTTP/1.1 302) 5 headers in 297 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 39/81] 127.0.0.1 () {52 vars in 1047 bytes} [Wed Jan 16 15:54:37 2019] GET /login?next=%2Fbackend => generated 6864 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 260 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 40/82] 127.0.0.1 () {56 vars in 1123 bytes} [Wed Jan 16 15:54:42 2019] POST /login?next=%2Fbackend => generated 30 bytes in 253 msecs (HTTP/1.1 200) 4 headers in 444 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 41/83] 127.0.0.1 () {50 vars in 1208 bytes} [Wed Jan 16 15:54:42 2019] GET /backend => generated 25471 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 343 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 42/84] 127.0.0.1 () {52 vars in 1127 bytes} [Wed Jan 16 15:56:09 2019] GET /backend => generated 25080 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 26/85] 127.0.0.1 () {52 vars in 1127 bytes} [Wed Jan 16 15:56:25 2019] GET /backend => generated 25080 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 13/86] 127.0.0.1 () {48 vars in 1033 bytes} [Wed Jan 16 15:56:26 2019] GET /login => generated 223 bytes in 11 msecs (HTTP/1.1 302) 5 headers in 456 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 27/87] 127.0.0.1 () {48 vars in 1108 bytes} [Wed Jan 16 15:56:26 2019] GET /backend => generated 25445 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 343 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 14/88] 127.0.0.1 () {48 vars in 838 bytes} [Wed Jan 16 15:56:38 2019] GET /backend => generated 251 bytes in 5 msecs (HTTP/1.1 302) 5 headers in 297 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 28/89] 127.0.0.1 () {50 vars in 993 bytes} [Wed Jan 16 15:56:38 2019] GET /login?next=%2Fbackend => generated 6864 bytes in 16 msecs (HTTP/1.1 200) 4 headers in 260 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 15/90] 127.0.0.1 () {56 vars in 1123 bytes} [Wed Jan 16 15:56:43 2019] POST /login?next=%2Fbackend => generated 30 bytes in 220 msecs (HTTP/1.1 200) 4 headers in 444 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 16/91] 127.0.0.1 () {50 vars in 1208 bytes} [Wed Jan 16 15:56:44 2019] GET /backend => generated 25471 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 343 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 29/92] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 15:58:29 2019] GET /backend/lookup => generated 29604 bytes in 46 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 43/93] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:58:31 2019] GET /backend => generated 25080 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4449|app: 0|req: 6/94] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 15:59:39 2019] GET /backend/overview => generated 24379 bytes in 53 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 44/95] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 15:59:40 2019] GET /backend/lookup => generated 29604 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4454|app: 0|req: 30/96] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:59:43 2019] GET /backend => generated 25080 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 31/97] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 15:59:45 2019] GET /backend/lookup => generated 29604 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 45/98] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 15:59:47 2019] GET /backend => generated 25080 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4451|app: 0|req: 17/99] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 15:59:51 2019] GET /backend/lookup => generated 29604 bytes in 54 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 32/100] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 16:00:16 2019] GET /backend => generated 25080 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 4454|app: 0|req: 33/101] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 16:00:19 2019] GET /backend/lookup => generated 29604 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 46/102] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 16:00:20 2019] GET /backend => generated 25080 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4451|app: 0|req: 18/103] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 16:00:25 2019] GET /backend/lookup => generated 29604 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 4457|app: 0|req: 47/104] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 16:00:26 2019] GET /backend => generated 25080 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 4449)...
+Gracefully killing worker 2 (pid: 4451)...
+Gracefully killing worker 3 (pid: 4454)...
+Gracefully killing worker 4 (pid: 4457)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 16:01:11 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5601aaa218e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5601aaa218e0 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 8117, cores: 2)
+spawned uWSGI worker 2 (pid: 8118, cores: 2)
+spawned uWSGI worker 3 (pid: 8119, cores: 2)
+spawned uWSGI worker 4 (pid: 8120, cores: 2)
+Python auto-reloader enabled
+[pid: 8117|app: 0|req: 1/1] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 16:01:57 2019] GET /backend => generated 25080 bytes in 98 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8120|app: 0|req: 1/2] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 16:01:58 2019] GET /backend/overview => generated 24379 bytes in 109 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8120|app: 0|req: 2/3] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 16:02:00 2019] GET /backend/lookup => generated 29604 bytes in 59 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8117|app: 0|req: 2/4] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 16:02:10 2019] GET /backend => generated 25080 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8120|app: 0|req: 3/5] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 16:02:14 2019] GET /backend/lookup => generated 29604 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8117|app: 0|req: 3/6] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 16:02:15 2019] GET /backend => generated 25080 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8120|app: 0|req: 4/7] 127.0.0.1 () {50 vars in 1096 bytes} [Wed Jan 16 16:02:17 2019] GET /backend/lookup => generated 29604 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8120|app: 0|req: 5/8] 127.0.0.1 () {50 vars in 1103 bytes} [Wed Jan 16 16:02:23 2019] GET /backend/lookup => generated 29604 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8117|app: 0|req: 4/9] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 16:02:25 2019] GET /backend => generated 25080 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8120|app: 0|req: 6/10] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 16:02:27 2019] GET /backend/overview => generated 24379 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8118|app: 0|req: 1/11] 127.0.0.1 () {50 vars in 1091 bytes} [Wed Jan 16 16:02:30 2019] GET /backend => generated 25080 bytes in 56 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8118|app: 0|req: 2/12] 127.0.0.1 () {50 vars in 1082 bytes} [Wed Jan 16 16:02:34 2019] GET /backend => generated 25080 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8118|app: 0|req: 3/13] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 16:02:40 2019] GET /backend/overview => generated 24379 bytes in 52 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8118|app: 0|req: 4/14] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 16:02:46 2019] GET /backend/lookup => generated 29604 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8118|app: 0|req: 5/15] 127.0.0.1 () {50 vars in 1103 bytes} [Wed Jan 16 16:02:58 2019] GET /backend/lookup => generated 29604 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8118|app: 0|req: 6/16] 127.0.0.1 () {50 vars in 1107 bytes} [Wed Jan 16 16:03:02 2019] GET /backend/overview => generated 24379 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8118|app: 0|req: 7/17] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 16:03:10 2019] GET /backend/lookup => generated 29604 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8118|app: 0|req: 8/18] 127.0.0.1 () {50 vars in 1107 bytes} [Wed Jan 16 16:03:11 2019] GET /backend/overview => generated 24379 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8120|app: 0|req: 7/19] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 16:03:18 2019] GET /backend/lookup => generated 29604 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8120|app: 0|req: 8/20] 127.0.0.1 () {50 vars in 1089 bytes} [Wed Jan 16 16:03:19 2019] GET /backend => generated 25080 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8117)...
+Gracefully killing worker 2 (pid: 8118)...
+Gracefully killing worker 4 (pid: 8120)...
+Gracefully killing worker 3 (pid: 8119)...
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 16:04:50 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55b203bb88e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b203bb88e0 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 8518, cores: 2)
+spawned uWSGI worker 2 (pid: 8521, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 8524, cores: 2)
+spawned uWSGI worker 4 (pid: 8527, cores: 2)
+[pid: 8527|app: 0|req: 1/1] 127.0.0.1 () {52 vars in 1120 bytes} [Wed Jan 16 16:10:10 2019] GET /backend => generated 25080 bytes in 112 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8527|app: 0|req: 2/2] 127.0.0.1 () {48 vars in 1055 bytes} [Wed Jan 16 16:10:19 2019] GET /backend/approval => generated 21354 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8521|app: 0|req: 1/3] 127.0.0.1 () {50 vars in 1111 bytes} [Wed Jan 16 16:10:19 2019] GET /backend/demo.html => generated 233 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 8527|app: 0|req: 3/4] 127.0.0.1 () {52 vars in 1108 bytes} [Wed Jan 16 16:11:03 2019] GET /backend/approval => generated 21355 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8527|app: 0|req: 4/5] 127.0.0.1 () {54 vars in 1148 bytes} [Wed Jan 16 16:11:03 2019] GET /demo.html => generated 233 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 1)
+[pid: 8524|app: 0|req: 1/6] 127.0.0.1 () {48 vars in 1041 bytes} [Wed Jan 16 16:11:31 2019] GET /demo.html => generated 233 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 8524|app: 0|req: 2/7] 127.0.0.1 () {52 vars in 1108 bytes} [Wed Jan 16 16:11:59 2019] GET /backend/approval => generated 21356 bytes in 47 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8527|app: 0|req: 5/8] 127.0.0.1 () {54 vars in 1164 bytes} [Wed Jan 16 16:12:00 2019] GET /backend/demo.html => generated 233 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 1)
+[pid: 8524|app: 0|req: 3/9] 127.0.0.1 () {48 vars in 1057 bytes} [Wed Jan 16 16:12:07 2019] GET /backend/demo.html => generated 233 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 8521|app: 0|req: 2/10] 127.0.0.1 () {52 vars in 1108 bytes} [Wed Jan 16 16:13:55 2019] GET /backend/approval => generated 21356 bytes in 88 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8527|app: 0|req: 6/11] 127.0.0.1 () {52 vars in 1108 bytes} [Wed Jan 16 16:16:13 2019] GET /backend/approval => generated 21356 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8521|app: 0|req: 3/12] 127.0.0.1 () {54 vars in 1164 bytes} [Wed Jan 16 16:16:13 2019] GET /backend/demo.html => generated 233 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 0)
+[pid: 8527|app: 0|req: 7/13] 127.0.0.1 () {52 vars in 1108 bytes} [Wed Jan 16 16:16:24 2019] GET /backend/approval => generated 21356 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8524|app: 0|req: 4/14] 127.0.0.1 () {54 vars in 1164 bytes} [Wed Jan 16 16:16:24 2019] GET /backend/demo.html => generated 233 bytes in 0 msecs (HTTP/1.1 404) 2 headers in 72 bytes (1 switches on core 1)
+[pid: 8521|app: 0|req: 4/15] 127.0.0.1 () {52 vars in 1108 bytes} [Wed Jan 16 16:17:15 2019] GET /backend/approval => generated 24547 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8527|app: 0|req: 8/16] 127.0.0.1 () {52 vars in 1108 bytes} [Wed Jan 16 16:19:08 2019] GET /backend/approval => generated 24556 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8527|app: 0|req: 9/17] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 16:19:11 2019] GET /backend => generated 25082 bytes in 73 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8527|app: 0|req: 10/18] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 16:19:13 2019] GET /backend/overview => generated 24388 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 8521|app: 0|req: 5/19] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:19:16 2019] GET /backend/lookup => generated 29613 bytes in 55 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8527|app: 0|req: 11/20] 127.0.0.1 () {54 vars in 1160 bytes} [Wed Jan 16 16:19:19 2019] GET /backend/approval => generated 24556 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8524|app: 0|req: 5/21] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 16:19:21 2019] GET /backend => generated 25082 bytes in 52 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 8527|app: 0|req: 12/22] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 16:19:23 2019] GET /backend/approval => generated 24556 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 8518)...
+Gracefully killing worker 3 (pid: 8524)...
+Gracefully killing worker 4 (pid: 8527)...
+Gracefully killing worker 2 (pid: 8521)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 16:22:02 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55f7a483c8e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55f7a483c8e0 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 9997, cores: 2)
+spawned uWSGI worker 2 (pid: 9998, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 10003, cores: 2)
+spawned uWSGI worker 4 (pid: 10004, cores: 2)
+[pid: 10004|app: 0|req: 1/1] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 16:22:42 2019] GET /backend/approval => generated 24561 bytes in 55 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 9998|app: 0|req: 1/2] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:22:44 2019] GET /backend/help => generated 24549 bytes in 78 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10003|app: 0|req: 1/3] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:24:10 2019] GET /backend/help => generated 23773 bytes in 66 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10004|app: 0|req: 2/4] 127.0.0.1 () {54 vars in 1140 bytes} [Wed Jan 16 16:24:17 2019] GET /backend => generated 25087 bytes in 54 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 9998|app: 0|req: 2/5] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 16:24:22 2019] GET /backend/overview => generated 24393 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10003|app: 0|req: 2/6] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 16:25:02 2019] GET /backend/overview => generated 24393 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 9998|app: 0|req: 3/7] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 16:25:13 2019] GET /backend/overview => generated 24399 bytes in 53 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10003|app: 0|req: 3/8] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 16:25:21 2019] GET /backend => generated 25087 bytes in 64 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10003|app: 0|req: 4/9] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 16:25:41 2019] GET /backend => generated 25117 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 9997)...
+Gracefully killing worker 3 (pid: 10003)...
+Gracefully killing worker 2 (pid: 9998)...
+Gracefully killing worker 4 (pid: 10004)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 16:26:14 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x5611677398e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5611677398e0 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 10393, cores: 2)
+spawned uWSGI worker 2 (pid: 10396, cores: 2)
+spawned uWSGI worker 3 (pid: 10397, cores: 2)
+spawned uWSGI worker 4 (pid: 10400, cores: 2)
+Python auto-reloader enabled
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 2 (pid: 10396)...
+Gracefully killing worker 4 (pid: 10400)...
+Gracefully killing worker 3 (pid: 10397)...
+Gracefully killing worker 1 (pid: 10393)...
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 16:26:22 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55a0bf4668e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55a0bf4668e0 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 10462, cores: 2)
+spawned uWSGI worker 2 (pid: 10465, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 10468, cores: 2)
+spawned uWSGI worker 4 (pid: 10471, cores: 2)
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 10462)...
+Gracefully killing worker 2 (pid: 10465)...
+Gracefully killing worker 3 (pid: 10468)...
+Gracefully killing worker 4 (pid: 10471)...
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 16:26:39 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ec51bc58e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55ec51bc58e0 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 10497, cores: 2)
+spawned uWSGI worker 2 (pid: 10499, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 10503, cores: 2)
+spawned uWSGI worker 4 (pid: 10506, cores: 2)
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 2 (pid: 10499)...
+Gracefully killing worker 1 (pid: 10497)...
+Gracefully killing worker 3 (pid: 10503)...
+Gracefully killing worker 4 (pid: 10506)...
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+[uwsgi-python-reloader] module/file ./app/main/split_routes.py has been modified
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/zerk/Desktop/dianwang
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (0.0.0.0:5000)
+running /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 16 16:26:50 2019] ***
+compiled with version: 7.3.0 on 13 January 2019 08:03:11
+os: Linux-4.15.0-43-generic #46-Ubuntu SMP Thu Dec 6 14:45:28 UTC 2018
+nodename: zerk-pc
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zerk/Desktop/dianwang
+detected binary path: /home/zerk/Desktop/dianwang/venv/bin/uwsgi
+your processes number limit is 31493
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 0.0.0.0:5000 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Python main interpreter initialized at 0x55ae6b5a38e0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /home/zerk/Desktop/dianwang/venv/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55ae6b5a38e0 pid: 4408 (default app)
+mountpoint  already configured. skip.
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4408)
+spawned uWSGI worker 1 (pid: 10565, cores: 2)
+spawned uWSGI worker 2 (pid: 10568, cores: 2)
+Python auto-reloader enabled
+spawned uWSGI worker 3 (pid: 10571, cores: 2)
+spawned uWSGI worker 4 (pid: 10574, cores: 2)
+[pid: 10574|app: 0|req: 1/1] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 16:26:53 2019] GET /backend => generated 25081 bytes in 44 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 2/2] 127.0.0.1 () {54 vars in 1145 bytes} [Wed Jan 16 16:26:55 2019] GET /backend/help => generated 23779 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 3/3] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:26:58 2019] GET /backend/approval => generated 24561 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10571|app: 0|req: 1/4] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 16:27:00 2019] GET /backend/overview => generated 24399 bytes in 109 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 4/5] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:27:03 2019] GET /backend/lookup => generated 29612 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 5/6] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:28:33 2019] GET /backend/lookup => generated 29612 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 6/7] 127.0.0.1 () {54 vars in 1156 bytes} [Wed Jan 16 16:28:37 2019] GET /backend/lookup => generated 29612 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 7/8] 127.0.0.1 () {54 vars in 1160 bytes} [Wed Jan 16 16:28:39 2019] GET /backend/overview => generated 24399 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10571|app: 0|req: 2/9] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:28:40 2019] GET /backend/help => generated 23773 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10565|app: 0|req: 1/10] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:28:44 2019] GET /backend/approval => generated 24561 bytes in 86 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 8/11] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:29:05 2019] GET /backend/approval => generated 24567 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 9/12] 127.0.0.1 () {54 vars in 1162 bytes} [Wed Jan 16 16:29:08 2019] GET /backend/approval => generated 24567 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 10/13] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:29:11 2019] GET /backend/lookup => generated 29612 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10568|app: 0|req: 1/14] 127.0.0.1 () {54 vars in 1160 bytes} [Wed Jan 16 16:29:20 2019] GET /backend/overview => generated 24399 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 11/15] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:29:23 2019] GET /backend/lookup => generated 29612 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 12/16] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:30:03 2019] GET /backend/lookup => generated 29618 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 13/17] 127.0.0.1 () {54 vars in 1160 bytes} [Wed Jan 16 16:30:07 2019] GET /backend/approval => generated 24567 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10568|app: 0|req: 2/18] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:30:09 2019] GET /backend/lookup => generated 29618 bytes in 70 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10568|app: 0|req: 3/19] 127.0.0.1 () {54 vars in 1160 bytes} [Wed Jan 16 16:30:12 2019] GET /backend/overview => generated 24399 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 14/20] 127.0.0.1 () {54 vars in 1144 bytes} [Wed Jan 16 16:30:15 2019] GET /backend => generated 25081 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10571|app: 0|req: 3/21] 127.0.0.1 () {54 vars in 1153 bytes} [Wed Jan 16 16:30:18 2019] GET /backend/overview => generated 24399 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10571|app: 0|req: 4/22] 127.0.0.1 () {54 vars in 1158 bytes} [Wed Jan 16 16:30:21 2019] GET /backend/lookup => generated 29618 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 15/23] 127.0.0.1 () {54 vars in 1160 bytes} [Wed Jan 16 16:30:23 2019] GET /backend/approval => generated 24567 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10565|app: 0|req: 2/24] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:30:25 2019] GET /backend/help => generated 23773 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 16/25] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:31:24 2019] GET /backend/help => generated 34108 bytes in 38 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10571|app: 0|req: 5/26] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:32:11 2019] GET /backend/help => generated 33589 bytes in 49 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 17/27] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:32:36 2019] GET /backend/help => generated 33589 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10568|app: 0|req: 4/28] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:33:11 2019] GET /backend/help => generated 31590 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 18/29] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:34:09 2019] GET /backend/help => generated 31583 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 19/30] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:35:21 2019] GET /backend/help => generated 31460 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 20/31] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:40:07 2019] GET /backend/help => generated 30850 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 21/32] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:41:34 2019] GET /backend/help => generated 22285 bytes in 36 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10568|app: 0|req: 5/33] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:41:53 2019] GET /backend/help => generated 22288 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 22/34] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:42:09 2019] GET /backend/help => generated 22293 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10571|app: 0|req: 6/35] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:42:27 2019] GET /backend/help => generated 22298 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 23/36] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:42:40 2019] GET /backend/help => generated 22325 bytes in 26 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 24/37] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:42:48 2019] GET /backend/help => generated 22325 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 25/38] 127.0.0.1 () {54 vars in 1154 bytes} [Wed Jan 16 16:43:14 2019] GET /backend/help => generated 22324 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10571|app: 0|req: 7/39] 127.0.0.1 () {50 vars in 1087 bytes} [Wed Jan 16 16:43:31 2019] GET /backend => generated 25081 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 26/40] 127.0.0.1 () {50 vars in 1100 bytes} [Wed Jan 16 16:43:32 2019] GET /backend/overview => generated 24399 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 27/41] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 16:43:33 2019] GET /backend/lookup => generated 29618 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 28/42] 127.0.0.1 () {50 vars in 1107 bytes} [Wed Jan 16 16:43:34 2019] GET /backend/approval => generated 24567 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10574|app: 0|req: 29/43] 127.0.0.1 () {50 vars in 1101 bytes} [Wed Jan 16 16:43:35 2019] GET /backend/help => generated 22324 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 10574|app: 0|req: 30/44] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 16:43:36 2019] GET /backend/approval => generated 24567 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10568|app: 0|req: 6/45] 127.0.0.1 () {50 vars in 1105 bytes} [Wed Jan 16 16:43:39 2019] GET /backend/lookup => generated 29618 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)
+[pid: 10571|app: 0|req: 8/46] 127.0.0.1 () {50 vars in 1107 bytes} [Wed Jan 16 16:43:40 2019] GET /backend/approval => generated 24567 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 1)

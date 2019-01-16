@@ -11,10 +11,6 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/state_grid.png">
     <title>{{ title }}</title>
-    <!-- Footable CSS -->
-    <link href="../assets/plugins/footable/css/footable.core.css" rel="stylesheet">
-    <link href="../assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
-
     <!-- Bootstrap Core CSS -->
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
@@ -43,7 +39,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <p id="zcontent"></p>
+                <p id="zcontent">内容</p>
             </div>
         </div>
     </div>
@@ -278,175 +274,85 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">备案记录</h4>
-                            <h6 class="card-subtitle"></h6>
-                            <div class="table-responsive">
-                                <table id="demo-foo-addrow" class="table m-t-30 table-hover contact-list"
-                                       data-page-size="10">
-                                    <thead>
-                                    <tr>
-                                        <th>序号</th>
-                                        <th>备案号</th>
-                                        <th>备案种类</th>
-                                        <th>生产厂家</th>
-                                        <th>备案时间</th>
-                                        <th>备案联系人</th>
-                                        <th>电能表型号</th>
-                                        <th>更多信息</th>
-{#                                        <th>Salery</th>#}
-{#                                        <th>Action</th>#}
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>
-                                            <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg"
-                                                                              alt="user" width="40" class="img-circle"/>
-                                                Genelia Deshmukh</a>
-                                        </td>
-                                        <td>g</td>
-                                        <td>+123 456 789</td>
-                                        <td><span class="label label-danger">Designer</span></td>
-                                        <td>23</td>
-                                        <td>12-10-2014</td>
-                                        <td align="center">
-                                            <button type="button"
-                                                    class="btn btn-sm btn-icon btn-pure btn-outline"
-                                                    data-toggle="tooltip" data-original-title="查看详细信息"><i
-                                                    class="ti-more-alt" aria-hidden="true"></i></button>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <tfoot>
-                                    <tr>
-                                        <td colspan="2">
-                                            <button type="button" class="btn btn-info btn-rounded" data-toggle="modal"
-                                                    data-target="#add-contact">Add New Contact
-                                            </button>
-                                        </td>
-                                        <div id="add-contact" class="modal fade in" tabindex="-1" role="dialog"
-                                             aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                                aria-hidden="true">×
-                                                        </button>
-                                                        <h4 class="modal-title" id="myModalLabel">Add New Contact</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <from class="form-horizontal form-material">
-                                                            <div class="form-group">
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control"
-                                                                           placeholder="Type name"></div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control"
-                                                                           placeholder="Email"></div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control"
-                                                                           placeholder="Phone"></div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control"
-                                                                           placeholder="Designation"></div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control"
-                                                                           placeholder="Age"></div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control"
-                                                                           placeholder="Date of joining"></div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <input type="text" class="form-control"
-                                                                           placeholder="Salary"></div>
-                                                                <div class="col-md-12 m-b-20">
-                                                                    <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light">
-                                                                        <span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
-                                                                        <input type="file" class="upload"></div>
-                                                                </div>
-                                                            </div>
-                                                        </from>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-info waves-effect"
-                                                                data-dismiss="modal">Save
-                                                        </button>
-                                                        <button type="button" class="btn btn-default waves-effect"
-                                                                data-dismiss="modal">Cancel
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- /.modal-content -->
-                                            </div>
-                                            <!-- /.modal-dialog -->
+                            <h4 class="card-title">使用指南</h4>
+                            {#                                <h6 class="card-subtitle"><code>minimal-faq</code> to accordion for clean faq</h6>#}
+                            <div id="accordion2" role="tablist" class="minimal-faq" aria-multiselectable="true">
+                                <div class="card m-b-0">
+                                    <div class="card-header" role="tab" id="headingOne11">
+                                        <h5 class="mb-0">
+                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne11"
+                                               aria-expanded="true" aria-controls="collapseOne11">
+                                                <span style="padding-left:10px">1. 概要说明</span>
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne11" class="collapse show" role="tabpanel"
+                                         aria-labelledby="headingOne11">
+                                        <div class="card-body">
+                                            一般使用
                                         </div>
-                                        <td colspan="7">
-                                            <div class="text-right">
-                                                <ul class="pagination"></ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    </tfoot>
-                                </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- ============================================================== -->
-            <!-- End PAge Content -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Right sidebar -->
-            <!-- ============================================================== -->
-            <!-- .right-sidebar -->
-            <div class="right-sidebar">
-                <div class="slimscrollright">
-                    <div class="rpanel-title"> 主题设置 <span><i class="ti-close right-side-toggle"></i></span>
-                    </div>
-                    <div class="r-panel-body">
-                        <ul id="themecolors" class="m-t-20">
-                            <li><b>亮色主题</b></li>
-                            <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
-                            <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
-                            <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
-                            <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme working">4</a></li>
-                            <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
-                            <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
-                            <li class="d-block m-t-30"><b>暗色主题</b></li>
-                            <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a>
-                            </li>
-                            <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
-                            <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>
-                            <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
-                            <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a>
-                            </li>
-                            <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================================================== -->
-            <!-- End Right sidebar -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer text-dark"> © 武汉大学国家网络安全学院 2018-2028</footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right sidebar -->
+<!-- ============================================================== -->
+<!-- .right-sidebar -->
+<div class="right-sidebar">
+    <div class="slimscrollright">
+        <div class="rpanel-title"> 主题设置 <span><i class="ti-close right-side-toggle"></i></span>
+        </div>
+        <div class="r-panel-body">
+            <ul id="themecolors" class="m-t-20">
+                <li><b>亮色主题</b></li>
+                <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
+                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
+                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme working">4</a></li>
+                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
+                <li class="d-block m-t-30"><b>暗色主题</b></li>
+                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a>
+                </li>
+                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
+                <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>
+                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
+                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a>
+                </li>
+                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- End Right sidebar -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+<footer class="footer text-dark"> © 武汉大学国家网络安全学院 2018-2028</footer>
+<!-- ============================================================== -->
+<!-- End footer -->
+<!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
 </div>
 <!-- ============================================================== -->
 <!-- End Wrapper -->
@@ -471,14 +377,42 @@
 <!--Custom JavaScript -->
 <script src="js/custom.min.js"></script>
 <!-- ============================================================== -->
-<!-- Footable -->
-<script src="../assets/plugins/footable/js/footable.all.min.js"></script>
-<script src="../assets/plugins/bootstrap-select/bootstrap-select.min.js"></script>
-<!--FooTable init-->
-<script src="js/footable-init.js"></script>
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<!-- chartist chart -->
+<script src="../assets/plugins/chartist-js/dist/chartist.min.js"></script>
+<script src="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+<!--c3 JavaScript -->
+<script src="../assets/plugins/d3/d3.min.js"></script>
+<script src="../assets/plugins/c3-master/c3.min.js"></script>
+<!-- Chart JS -->
+{#<script src="js/dashboard1.js"></script>#}
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Style switcher -->
+<!-- ============================================================== -->
+<!-- Style switcher -->
+
 <!-- ============================================================== -->
 <script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 <script src="js/socketio.js"></script>
+{#<script type="text/javascript" charset="utf-8">#}
+{#    $(document).ready(function () {#}
+{#        const namespace = '/backend'; // change to an empty string to use the global namespace#}
+{#        // the socket.io documentation recommends sending an explicit package upon connection#}
+{#        // this is specially important when using the global namespace#}
+{#        let socket = io.connect('http://' + document.domain + ':' + location.port + namespace);#}
+{##}
+{#        // socket.on('connect', function(msg) {#}
+{#        //   socket.emit('my event', {data: 'I\'m connected!'});#}
+{#        //});#}
+{##}
+{#        socket.on('event', function (msg) {#}
+{#            alert(msg)#}
+{#        });#}
+{##}
+{#    });#}
+{#</script>#}
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         <script>
@@ -494,5 +428,4 @@
     {% endif %}
 {% endwith %}
 </body>
-
 </html>

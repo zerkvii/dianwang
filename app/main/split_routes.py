@@ -16,7 +16,7 @@ def test_message():
 @login_required
 def backend():
     # socketio.emit('message', {'data': 'T'}, namespace='/backend')
-    return render_template('backend.html', title=u'备案系统管理界面')
+    return render_template('backend.html', title=u'系统信息')
 
 
 # 备案概览
@@ -32,27 +32,27 @@ def overview():
 def lookup():
     # records = Record.query.all()
     # send recorrds to specified
-    return render_template('backend_lookup.html', title=u'查看备案记录')
+    return render_template('backend_lookup.html', title=u'查看备案')
 
 
-# 增加备案
-@main.route('/backend/add', methods=['GET', 'POST'])
+#  审批备案
+@main.route('/backend/approval', methods=['GET', 'POST'])
 @login_required
 def add():
     if request.method == 'POST':
         record_data = request.get_json()
         return render_template('split_backend/backend_lookup.html')
-    return render_template('split_backend/backend_add.html')
+    return render_template('backend_approval.html', title=u'审批备案')
 
 
 # 修改备案
-@main.route('/backend/modify', methods=['GET', 'POST'])
+@main.route('/backend/help', methods=['GET', 'POST'])
 @login_required
 def modify():
     if request.method == 'POST':
         modify_data = request.get_json()
         return
-    return render_template('split_backend/backend_modify.html')
+    return render_template('backend_help.html', title=u'帮助')
 
 
 @main.route('/backend/chinfo', methods=['GET', 'POST'])
