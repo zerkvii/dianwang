@@ -433,7 +433,7 @@ function isArray(obj) {
 /**
  * Event emitter constructor.
  *
- * @api public
+ * @api_1_0 public
  */
 
 function EventEmitter(){};
@@ -441,7 +441,7 @@ function EventEmitter(){};
 /**
  * Adds a listener.
  *
- * @api public
+ * @api_1_0 public
  */
 
 EventEmitter.prototype.on = function (name, fn) {
@@ -465,7 +465,7 @@ EventEmitter.prototype.addListener = EventEmitter.prototype.on;
 /**
  * Adds a volatile listener.
  *
- * @api public
+ * @api_1_0 public
  */
 
 EventEmitter.prototype.once = function (name, fn) {
@@ -485,7 +485,7 @@ EventEmitter.prototype.once = function (name, fn) {
 /**
  * Removes a listener.
  *
- * @api public
+ * @api_1_0 public
  */
 
 EventEmitter.prototype.removeListener = function (name, fn) {
@@ -522,7 +522,7 @@ EventEmitter.prototype.removeListener = function (name, fn) {
 /**
  * Removes all listeners for an event.
  *
- * @api public
+ * @api_1_0 public
  */
 
 EventEmitter.prototype.removeAllListeners = function (name) {
@@ -541,7 +541,7 @@ EventEmitter.prototype.removeAllListeners = function (name) {
 /**
  * Gets all listeners for a certain event.
  *
- * @api public
+ * @api_1_0 public
  */
 
 EventEmitter.prototype.listeners = function (name) {
@@ -563,7 +563,7 @@ EventEmitter.prototype.listeners = function (name) {
 /**
  * Emits an event.
  *
- * @api public
+ * @api_1_0 public
  */
 
 EventEmitter.prototype.emit = function (name) {
@@ -626,7 +626,7 @@ function Progress() {
  *
  * @param {Number} n
  * @return {Progress} for chaining
- * @api public
+ * @api_1_0 public
  */
 
 Progress.prototype.size = function(n){
@@ -639,7 +639,7 @@ Progress.prototype.size = function(n){
  *
  * @param {String} str
  * @return {Progress} for chaining
- * @api public
+ * @api_1_0 public
  */
 
 Progress.prototype.text = function(str){
@@ -652,7 +652,7 @@ Progress.prototype.text = function(str){
  *
  * @param {Number} n
  * @return {Progress} for chaining
- * @api public
+ * @api_1_0 public
  */
 
 Progress.prototype.fontSize = function(n){
@@ -760,7 +760,7 @@ module.exports = Context;
 /**
  * Initialize a new `Context`.
  *
- * @api private
+ * @api_1_0 private
  */
 
 function Context(){}
@@ -770,7 +770,7 @@ function Context(){}
  *
  * @param {Runnable} runnable
  * @return {Context}
- * @api private
+ * @api_1_0 private
  */
 
 Context.prototype.runnable = function(runnable){
@@ -784,7 +784,7 @@ Context.prototype.runnable = function(runnable){
  *
  * @param {Number} ms
  * @return {Context} self
- * @api private
+ * @api_1_0 private
  */
 
 Context.prototype.timeout = function(ms){
@@ -797,7 +797,7 @@ Context.prototype.timeout = function(ms){
  *
  * @param {Number} ms
  * @return {Context} self
- * @api private
+ * @api_1_0 private
  */
 
 Context.prototype.slow = function(ms){
@@ -809,7 +809,7 @@ Context.prototype.slow = function(ms){
  * Inspect the context void of `._runnable`.
  *
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 Context.prototype.inspect = function(){
@@ -841,7 +841,7 @@ module.exports = Hook;
  *
  * @param {String} title
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 function Hook(title, fn) {
@@ -864,7 +864,7 @@ Hook.prototype.constructor = Hook;
  *
  * @param {Error} err
  * @return {Error}
- * @api public
+ * @api_1_0 public
  */
 
 Hook.prototype.error = function(err){
@@ -1400,7 +1400,7 @@ exports.Test = require('./test');
  *
  * @param {String} name
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function image(name) {
@@ -1422,7 +1422,7 @@ function image(name) {
  *   - `grep` string or regexp to filter tests with
  *
  * @param {Object} options
- * @api public
+ * @api_1_0 public
  */
 
 function Mocha(options) {
@@ -1458,7 +1458,7 @@ function Mocha(options) {
  * Enable or disable bailing on the first failure.
  *
  * @param {Boolean} [bail]
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.bail = function(bail){
@@ -1471,7 +1471,7 @@ Mocha.prototype.bail = function(bail){
  * Add test `file`.
  *
  * @param {String} file
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.addFile = function(file){
@@ -1483,7 +1483,7 @@ Mocha.prototype.addFile = function(file){
  * Set reporter to `reporter`, defaults to "dot".
  *
  * @param {String|Function} reporter name or constructor
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.reporter = function(reporter){
@@ -1508,7 +1508,7 @@ Mocha.prototype.reporter = function(reporter){
  * Set test UI `name`, defaults to "bdd".
  *
  * @param {String} bdd
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.ui = function(name){
@@ -1523,7 +1523,7 @@ Mocha.prototype.ui = function(name){
 /**
  * Load registered files.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Mocha.prototype.loadFiles = function(fn){
@@ -1542,7 +1542,7 @@ Mocha.prototype.loadFiles = function(fn){
 /**
  * Enable growl support.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Mocha.prototype._growl = function(runner, reporter) {
@@ -1568,7 +1568,7 @@ Mocha.prototype._growl = function(runner, reporter) {
  *
  * @param {RegExp|String} re
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.grep = function(re){
@@ -1582,7 +1582,7 @@ Mocha.prototype.grep = function(re){
  * Invert `.grep()` matches.
  *
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.invert = function(){
@@ -1595,7 +1595,7 @@ Mocha.prototype.invert = function(){
  *
  * @param {Boolean} ignore
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.ignoreLeaks = function(ignore){
@@ -1607,7 +1607,7 @@ Mocha.prototype.ignoreLeaks = function(ignore){
  * Enable global leak checking.
  *
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.checkLeaks = function(){
@@ -1619,7 +1619,7 @@ Mocha.prototype.checkLeaks = function(){
  * Enable growl support.
  *
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.growl = function(){
@@ -1632,7 +1632,7 @@ Mocha.prototype.growl = function(){
  *
  * @param {Array|String} globals
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.globals = function(globals){
@@ -1645,7 +1645,7 @@ Mocha.prototype.globals = function(globals){
  *
  * @param {Boolean} colors
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.useColors = function(colors){
@@ -1660,7 +1660,7 @@ Mocha.prototype.useColors = function(colors){
  *
  * @param {Boolean} inlineDiffs
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.useInlineDiffs = function(inlineDiffs) {
@@ -1675,7 +1675,7 @@ Mocha.prototype.useInlineDiffs = function(inlineDiffs) {
  *
  * @param {Number} timeout
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.timeout = function(timeout){
@@ -1688,7 +1688,7 @@ Mocha.prototype.timeout = function(timeout){
  *
  * @param {Number} slow
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.slow = function(slow){
@@ -1700,7 +1700,7 @@ Mocha.prototype.slow = function(slow){
  * Makes all tests async (accepting a callback)
  *
  * @return {Mocha}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.asyncOnly = function(){
@@ -1713,7 +1713,7 @@ Mocha.prototype.asyncOnly = function(){
  *
  * @param {Function} fn
  * @return {Runner}
- * @api public
+ * @api_1_0 public
  */
 
 Mocha.prototype.run = function(fn){
@@ -1755,7 +1755,7 @@ var y = d * 365.25;
  * @param {String|Number} val
  * @param {Object} options
  * @return {String|Number}
- * @api public
+ * @api_1_0 public
  */
 
 module.exports = function(val, options){
@@ -1769,7 +1769,7 @@ module.exports = function(val, options){
  *
  * @param {String} str
  * @return {Number}
- * @api private
+ * @api_1_0 private
  */
 
 function parse(str) {
@@ -1808,7 +1808,7 @@ function parse(str) {
  *
  * @param {Number} ms
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function shortFormat(ms) {
@@ -1824,7 +1824,7 @@ function shortFormat(ms) {
  *
  * @param {Number} ms
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function longFormat(ms) {
@@ -1944,7 +1944,7 @@ if ('win32' == process.platform) {
  * @param {String} type
  * @param {String} str
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 var color = exports.color = function(type, str) {
@@ -2001,7 +2001,7 @@ exports.cursor = {
  * Outut the given `failures` as a list.
  *
  * @param {Array} failures
- * @api public
+ * @api_1_0 public
  */
 
 exports.list = function(failures){
@@ -2064,7 +2064,7 @@ exports.list = function(failures){
  * of tests passed / failed etc.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function Base(runner) {
@@ -2125,7 +2125,7 @@ function Base(runner) {
  * Output common epilogue used by many of
  * the bundled reporters.
  *
- * @api public
+ * @api_1_0 public
  */
 
 Base.prototype.epilogue = function(){
@@ -2172,7 +2172,7 @@ Base.prototype.epilogue = function(){
  * @param {String} str
  * @param {String} len
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function pad(str, len) {
@@ -2186,7 +2186,7 @@ function pad(str, len) {
  *
  * @param {Error} Error with actual/expected
  * @return {String} Diff
- * @api private
+ * @api_1_0 private
  */
 
 function inlineDiff(err, escape) {
@@ -2220,7 +2220,7 @@ function inlineDiff(err, escape) {
  *
  * @param {Error} Error with actual/expected
  * @return {String} Diff
- * @api private
+ * @api_1_0 private
  */
 
 function unifiedDiff(err, escape) {
@@ -2252,7 +2252,7 @@ function unifiedDiff(err, escape) {
  *
  * @param {Error} err
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function errorDiff(err, type, escape) {
@@ -2270,7 +2270,7 @@ function errorDiff(err, type, escape) {
  *
  * @param {String} line
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 function escapeInvisibles(line) {
     return line.replace(/\t/g, '<tab>')
@@ -2284,7 +2284,7 @@ function escapeInvisibles(line) {
  * @param {String} name
  * @param {String} str
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function colorLines(name, str) {
@@ -2298,7 +2298,7 @@ function colorLines(name, str) {
  *
  * @param {Object} obj
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function stringify(obj) {
@@ -2310,7 +2310,7 @@ function stringify(obj) {
  * Return a new object that has the keys in sorted order.
  * @param {Object} obj
  * @return {Object}
- * @api private
+ * @api_1_0 private
  */
 
  function canonicalize(obj, stack) {
@@ -2346,7 +2346,7 @@ function stringify(obj) {
  * @param {Object} a
  * @param {Object} b
  * @return {Boolean}
- * @api private
+ * @api_1_0 private
  */
 
 function sameType(a, b) {
@@ -2377,7 +2377,7 @@ exports = module.exports = Doc;
  * Initialize a new `Doc` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function Doc(runner) {
@@ -2437,7 +2437,7 @@ exports = module.exports = Dot;
  * Initialize a new `Dot` matrix test reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function Dot(runner) {
@@ -2506,7 +2506,7 @@ exports = module.exports = HTMLCov;
  * Initialize a new `JsCoverage` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function HTMLCov(runner) {
@@ -2530,7 +2530,7 @@ function HTMLCov(runner) {
  * Return coverage class for `n`.
  *
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function coverageClass(n) {
@@ -2583,7 +2583,7 @@ var statsTemplate = '<ul id="mocha-stats">'
  * Initialize a new `HTML` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function HTML(runner, root) {
@@ -2860,7 +2860,7 @@ exports = module.exports = JSONCov;
  *
  * @param {Runner} runner
  * @param {Boolean} output
- * @api public
+ * @api_1_0 public
  */
 
 function JSONCov(runner, output) {
@@ -2903,7 +2903,7 @@ function JSONCov(runner, output) {
  *
  * @param {Object} cov
  * @return {Object}
- * @api private
+ * @api_1_0 private
  */
 
 function map(cov) {
@@ -2942,7 +2942,7 @@ function map(cov) {
  * @param {String} filename name of the source file
  * @param {Object} data jscoverage coverage data
  * @return {Object}
- * @api private
+ * @api_1_0 private
  */
 
 function coverage(filename, data) {
@@ -2985,7 +2985,7 @@ function coverage(filename, data) {
  *
  * @param {Object} test
  * @return {Object}
- * @api private
+ * @api_1_0 private
  */
 
 function clean(test) {
@@ -3017,7 +3017,7 @@ exports = module.exports = List;
  * Initialize a new `List` test reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function List(runner) {
@@ -3050,7 +3050,7 @@ function List(runner) {
  *
  * @param {Object} test
  * @return {Object}
- * @api private
+ * @api_1_0 private
  */
 
 function clean(test) {
@@ -3082,7 +3082,7 @@ exports = module.exports = JSONReporter;
  * Initialize a new `JSON` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function JSONReporter(runner) {
@@ -3123,7 +3123,7 @@ function JSONReporter(runner) {
  *
  * @param {Object} test
  * @return {Object}
- * @api private
+ * @api_1_0 private
  */
 
 function clean(test) {
@@ -3173,7 +3173,7 @@ Base.colors.runway = 90;
  * Initialize a new `Landing` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function Landing(runner) {
@@ -3259,7 +3259,7 @@ exports = module.exports = List;
  * Initialize a new `List` test reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function List(runner) {
@@ -3329,7 +3329,7 @@ exports = module.exports = Markdown;
  * Initialize a new `Markdown` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function Markdown(runner) {
@@ -3423,7 +3423,7 @@ exports = module.exports = Min;
  * Initialize a new `Min` minimal test reporter (best used with --watch).
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function Min(runner) {
@@ -3469,7 +3469,7 @@ exports = module.exports = NyanCat;
  * Initialize a new `Dot` matrix test reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function NyanCat(runner) {
@@ -3514,7 +3514,7 @@ function NyanCat(runner) {
 /**
  * Draw the nyan cat
  *
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.draw = function(){
@@ -3529,7 +3529,7 @@ NyanCat.prototype.draw = function(){
  * Draw the "scoreboard" showing the number
  * of passes, failures and pending tests.
  *
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.drawScoreboard = function(){
@@ -3553,7 +3553,7 @@ NyanCat.prototype.drawScoreboard = function(){
 /**
  * Append the rainbow.
  *
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.appendRainbow = function(){
@@ -3570,7 +3570,7 @@ NyanCat.prototype.appendRainbow = function(){
 /**
  * Draw the rainbow.
  *
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.drawRainbow = function(){
@@ -3588,7 +3588,7 @@ NyanCat.prototype.drawRainbow = function(){
 /**
  * Draw the nyan cat
  *
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.drawNyanCat = function() {
@@ -3625,7 +3625,7 @@ NyanCat.prototype.drawNyanCat = function() {
  * Draw nyan cat face.
  *
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.face = function() {
@@ -3645,7 +3645,7 @@ NyanCat.prototype.face = function() {
  * Move cursor up `n`.
  *
  * @param {Number} n
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.cursorUp = function(n) {
@@ -3656,7 +3656,7 @@ NyanCat.prototype.cursorUp = function(n) {
  * Move cursor down `n`.
  *
  * @param {Number} n
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.cursorDown = function(n) {
@@ -3667,7 +3667,7 @@ NyanCat.prototype.cursorDown = function(n) {
  * Generate rainbow colors.
  *
  * @return {Array}
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.generateColors = function(){
@@ -3690,7 +3690,7 @@ NyanCat.prototype.generateColors = function(){
  *
  * @param {String} str
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 NyanCat.prototype.rainbowify = function(str){
@@ -3746,7 +3746,7 @@ Base.colors.progress = 90;
  *
  * @param {Runner} runner
  * @param {Object} options
- * @api public
+ * @api_1_0 public
  */
 
 function Progress(runner, options) {
@@ -3833,7 +3833,7 @@ exports = module.exports = Spec;
  * Initialize a new `Spec` test reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function Spec(runner) {
@@ -3924,7 +3924,7 @@ exports = module.exports = TAP;
  * Initialize a new `TAP` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function TAP(runner) {
@@ -3972,7 +3972,7 @@ function TAP(runner) {
  *
  * @param {Object} test
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function title(test) {
@@ -4011,7 +4011,7 @@ exports = module.exports = XUnit;
  * Initialize a new `XUnit` reporter.
  *
  * @param {Runner} runner
- * @api public
+ * @api_1_0 public
  */
 
 function XUnit(runner) {
@@ -4145,7 +4145,7 @@ module.exports = Runnable;
  *
  * @param {String} title
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 function Runnable(title, fn) {
@@ -4173,7 +4173,7 @@ Runnable.prototype.constructor = Runnable;
  *
  * @param {Number|String} ms
  * @return {Runnable|Number} ms or self
- * @api private
+ * @api_1_0 private
  */
 
 Runnable.prototype.timeout = function(ms){
@@ -4190,7 +4190,7 @@ Runnable.prototype.timeout = function(ms){
  *
  * @param {Number|String} ms
  * @return {Runnable|Number} ms or self
- * @api private
+ * @api_1_0 private
  */
 
 Runnable.prototype.slow = function(ms){
@@ -4206,7 +4206,7 @@ Runnable.prototype.slow = function(ms){
  * concatenating the parent's full title.
  *
  * @return {String}
- * @api public
+ * @api_1_0 public
  */
 
 Runnable.prototype.fullTitle = function(){
@@ -4216,7 +4216,7 @@ Runnable.prototype.fullTitle = function(){
 /**
  * Clear the timeout.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Runnable.prototype.clearTimeout = function(){
@@ -4227,7 +4227,7 @@ Runnable.prototype.clearTimeout = function(){
  * Inspect the runnable void of private properties.
  *
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 Runnable.prototype.inspect = function(){
@@ -4242,7 +4242,7 @@ Runnable.prototype.inspect = function(){
 /**
  * Reset the timeout.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Runnable.prototype.resetTimeout = function(){
@@ -4259,7 +4259,7 @@ Runnable.prototype.resetTimeout = function(){
 /**
  * Whitelist these globals for this test run
  *
- * @api private
+ * @api_1_0 private
  */
 Runnable.prototype.globals = function(arr){
   var self = this;
@@ -4270,7 +4270,7 @@ Runnable.prototype.globals = function(arr){
  * Run the test and invoke `fn(err)`.
  *
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runnable.prototype.run = function(fn){
@@ -4391,7 +4391,7 @@ module.exports = Runner;
  *   - `fail`  (test, err) test failed
  *   - `pending`  (test) test pending
  *
- * @api public
+ * @api_1_0 public
  */
 
 function Runner(suite) {
@@ -4411,7 +4411,7 @@ function Runner(suite) {
  * Wrapper for setImmediate, process.nextTick, or browser polyfill.
  *
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runner.immediately = global.setImmediate || process.nextTick;
@@ -4433,7 +4433,7 @@ Runner.prototype.constructor = Runner;
  * @param {RegExp} re
  * @param {Boolean} invert
  * @return {Runner} for chaining
- * @api public
+ * @api_1_0 public
  */
 
 Runner.prototype.grep = function(re, invert){
@@ -4450,7 +4450,7 @@ Runner.prototype.grep = function(re, invert){
  *
  * @param {Suite} suite
  * @return {Number}
- * @api public
+ * @api_1_0 public
  */
 
 Runner.prototype.grepTotal = function(suite) {
@@ -4470,7 +4470,7 @@ Runner.prototype.grepTotal = function(suite) {
  * Return a list of global properties.
  *
  * @return {Array}
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.globalProps = function() {
@@ -4490,7 +4490,7 @@ Runner.prototype.globalProps = function() {
  *
  * @param {Array} arr
  * @return {Runner} for chaining
- * @api public
+ * @api_1_0 public
  */
 
 Runner.prototype.globals = function(arr){
@@ -4503,7 +4503,7 @@ Runner.prototype.globals = function(arr){
 /**
  * Check for global variable leaks.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.checkGlobals = function(test){
@@ -4536,7 +4536,7 @@ Runner.prototype.checkGlobals = function(test){
  *
  * @param {Test} test
  * @param {Error} err
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.fail = function(test, err){
@@ -4568,7 +4568,7 @@ Runner.prototype.fail = function(test, err){
  *
  * @param {Hook} hook
  * @param {Error} err
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.failHook = function(hook, err){
@@ -4583,7 +4583,7 @@ Runner.prototype.failHook = function(hook, err){
  *
  * @param {String} name
  * @param {Function} function
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.hook = function(name, fn){
@@ -4634,7 +4634,7 @@ Runner.prototype.hook = function(name, fn){
  * @param {String} name
  * @param {Array} suites
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.hooks = function(name, suites, fn){
@@ -4668,7 +4668,7 @@ Runner.prototype.hooks = function(name, suites, fn){
  *
  * @param {String} name
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.hookUp = function(name, fn){
@@ -4681,7 +4681,7 @@ Runner.prototype.hookUp = function(name, fn){
  *
  * @param {String} name
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.hookDown = function(name, fn){
@@ -4694,7 +4694,7 @@ Runner.prototype.hookDown = function(name, fn){
  * closest to furthest.
  *
  * @return {Array}
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.parents = function(){
@@ -4708,7 +4708,7 @@ Runner.prototype.parents = function(){
  * Run the current test and callback `fn(err)`.
  *
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.runTest = function(fn){
@@ -4733,7 +4733,7 @@ Runner.prototype.runTest = function(fn){
  *
  * @param {Suite} suite
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.runTests = function(suite, fn){
@@ -4826,7 +4826,7 @@ Runner.prototype.runTests = function(suite, fn){
  *
  * @param {Suite} suite
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.runSuite = function(suite, fn){
@@ -4879,7 +4879,7 @@ Runner.prototype.runSuite = function(suite, fn){
  * Handle uncaught exceptions.
  *
  * @param {Error} err
- * @api private
+ * @api_1_0 private
  */
 
 Runner.prototype.uncaught = function(err){
@@ -4907,7 +4907,7 @@ Runner.prototype.uncaught = function(err){
  *
  * @param {Function} fn
  * @return {Runner} for chaining
- * @api public
+ * @api_1_0 public
  */
 
 Runner.prototype.run = function(fn){
@@ -4944,7 +4944,7 @@ Runner.prototype.run = function(fn){
  * Cleanly abort execution
  *
  * @return {Runner} for chaining
- * @api public
+ * @api_1_0 public
  */
 Runner.prototype.abort = function(){
   debug('aborting');
@@ -4957,7 +4957,7 @@ Runner.prototype.abort = function(){
  * @param {Array} ok
  * @param {Array} globals
  * @return {Array}
- * @api private
+ * @api_1_0 private
  */
 
 function filterLeaks(ok, globals) {
@@ -4989,7 +4989,7 @@ function filterLeaks(ok, globals) {
  * Array of globals dependent on the environment.
  *
  * @return {Array}
- * @api private
+ * @api_1_0 private
  */
 
  function extraGlobals() {
@@ -5040,7 +5040,7 @@ exports = module.exports = Suite;
  * @param {Suite} parent
  * @param {String} title
  * @return {Suite}
- * @api public
+ * @api_1_0 public
  */
 
 exports.create = function(parent, title){
@@ -5058,7 +5058,7 @@ exports.create = function(parent, title){
  *
  * @param {String} title
  * @param {Context} ctx
- * @api private
+ * @api_1_0 private
  */
 
 function Suite(title, ctx) {
@@ -5091,7 +5091,7 @@ Suite.prototype.constructor = Suite;
  * Return a clone of this `Suite`.
  *
  * @return {Suite}
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.clone = function(){
@@ -5109,7 +5109,7 @@ Suite.prototype.clone = function(){
  *
  * @param {Number|String} ms
  * @return {Suite|Number} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.timeout = function(ms){
@@ -5125,7 +5125,7 @@ Suite.prototype.timeout = function(ms){
  *
  * @param {Number|String} ms
  * @return {Suite|Number} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.slow = function(ms){
@@ -5141,7 +5141,7 @@ Suite.prototype.slow = function(ms){
  *
  * @parma {Boolean} bail
  * @return {Suite|Number} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.bail = function(bail){
@@ -5156,7 +5156,7 @@ Suite.prototype.bail = function(bail){
  *
  * @param {Function} fn
  * @return {Suite} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.beforeAll = function(fn){
@@ -5176,7 +5176,7 @@ Suite.prototype.beforeAll = function(fn){
  *
  * @param {Function} fn
  * @return {Suite} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.afterAll = function(fn){
@@ -5196,7 +5196,7 @@ Suite.prototype.afterAll = function(fn){
  *
  * @param {Function} fn
  * @return {Suite} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.beforeEach = function(fn){
@@ -5216,7 +5216,7 @@ Suite.prototype.beforeEach = function(fn){
  *
  * @param {Function} fn
  * @return {Suite} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.afterEach = function(fn){
@@ -5236,7 +5236,7 @@ Suite.prototype.afterEach = function(fn){
  *
  * @param {Suite} suite
  * @return {Suite} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.addSuite = function(suite){
@@ -5254,7 +5254,7 @@ Suite.prototype.addSuite = function(suite){
  *
  * @param {Test} test
  * @return {Suite} for chaining
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.addTest = function(test){
@@ -5272,7 +5272,7 @@ Suite.prototype.addTest = function(test){
  * concatenating the parent's full title.
  *
  * @return {String}
- * @api public
+ * @api_1_0 public
  */
 
 Suite.prototype.fullTitle = function(){
@@ -5287,7 +5287,7 @@ Suite.prototype.fullTitle = function(){
  * Return the total number of tests.
  *
  * @return {Number}
- * @api public
+ * @api_1_0 public
  */
 
 Suite.prototype.total = function(){
@@ -5303,7 +5303,7 @@ Suite.prototype.total = function(){
  *
  * @param {Function} fn
  * @return {Suite}
- * @api private
+ * @api_1_0 private
  */
 
 Suite.prototype.eachTest = function(fn){
@@ -5335,7 +5335,7 @@ module.exports = Test;
  *
  * @param {String} title
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 function Test(title, fn) {
@@ -5377,7 +5377,7 @@ var ignore = ['node_modules', '.git'];
  *
  * @param  {String} html
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 exports.escape = function(html){
@@ -5394,7 +5394,7 @@ exports.escape = function(html){
  * @param {Array} array
  * @param {Function} fn
  * @param {Object} scope
- * @api private
+ * @api_1_0 private
  */
 
 exports.forEach = function(arr, fn, scope){
@@ -5408,7 +5408,7 @@ exports.forEach = function(arr, fn, scope){
  * @param {Array} array
  * @param {Function} fn
  * @param {Object} scope
- * @api private
+ * @api_1_0 private
  */
 
 exports.map = function(arr, fn, scope){
@@ -5424,7 +5424,7 @@ exports.map = function(arr, fn, scope){
  * @parma {Array} arr
  * @param {Object} obj to find index of
  * @param {Number} start
- * @api private
+ * @api_1_0 private
  */
 
 exports.indexOf = function(arr, obj, start){
@@ -5441,7 +5441,7 @@ exports.indexOf = function(arr, obj, start){
  * @param {Array} array
  * @param {Function} fn
  * @param {Object} initial value
- * @api private
+ * @api_1_0 private
  */
 
 exports.reduce = function(arr, fn, val){
@@ -5459,7 +5459,7 @@ exports.reduce = function(arr, fn, val){
  *
  * @param {Array} array
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 exports.filter = function(arr, fn){
@@ -5478,7 +5478,7 @@ exports.filter = function(arr, fn){
  *
  * @param {Object} obj
  * @return {Array} keys
- * @api private
+ * @api_1_0 private
  */
 
 exports.keys = Object.keys || function(obj) {
@@ -5500,7 +5500,7 @@ exports.keys = Object.keys || function(obj) {
  *
  * @param {Array} files
  * @param {Function} fn
- * @api private
+ * @api_1_0 private
  */
 
 exports.watch = function(files, fn){
@@ -5525,7 +5525,7 @@ function ignored(path){
  * Lookup files in the given `dir`.
  *
  * @return {Array}
- * @api private
+ * @api_1_0 private
  */
 
 exports.files = function(dir, ret){
@@ -5550,7 +5550,7 @@ exports.files = function(dir, ret){
  *
  * @param {String} str
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 exports.slug = function(str){
@@ -5585,7 +5585,7 @@ exports.clean = function(str) {
  *
  * @param {String} str
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 exports.escapeRegexp = function(str){
@@ -5597,7 +5597,7 @@ exports.escapeRegexp = function(str){
  *
  * @param {String} str
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 exports.trim = function(str){
@@ -5609,7 +5609,7 @@ exports.trim = function(str){
  *
  * @param {String} qs
  * @return {Object}
- * @api private
+ * @api_1_0 private
  */
 
 exports.parseQuery = function(qs){
@@ -5628,7 +5628,7 @@ exports.parseQuery = function(qs){
  *
  * @param {String} js
  * @return {String}
- * @api private
+ * @api_1_0 private
  */
 
 function highlight(js) {
@@ -5647,7 +5647,7 @@ function highlight(js) {
  * Highlight the contents of tag `name`.
  *
  * @param {String} name
- * @api private
+ * @api_1_0 private
  */
 
 exports.highlightTags = function(name) {

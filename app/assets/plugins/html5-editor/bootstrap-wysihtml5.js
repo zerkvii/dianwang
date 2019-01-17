@@ -332,7 +332,7 @@
         }
     };
 
-    // these define our public api
+    // these define our public api_1_0
     var methods = {
         resetDefaults: function() {
             $.fn.wysihtml5.defaultOptions = $.extend(true, {}, $.fn.wysihtml5.defaultOptionsCache);

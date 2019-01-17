@@ -3,7 +3,7 @@
  * DOM. You will likely want to call fnDraw() after this function.
  *
  * DataTables 1.10+ has this ability built-in through the
- * `dt-api row().invalidate()` method. As such this method is marked deprecated,
+ * `dt-api_1_0 row().invalidate()` method. As such this method is marked deprecated,
  * but is available for use with legacy version of DataTables. Please use the
  * new API if you are used DataTables 1.10 or newer.
  * 

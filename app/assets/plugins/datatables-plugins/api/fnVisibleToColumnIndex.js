@@ -5,7 +5,7 @@
  * column index (i.e. all columns regardless of visibility).
  *
  * DataTables 1.10+ has this ability built-in through the
- * `dt-api column.index()` method. As such this method is marked deprecated, but
+ * `dt-api_1_0 column.index()` method. As such this method is marked deprecated, but
  * is available for use with legacy version of DataTables.
  *
  *  @name fnVisibleToColumnIndex

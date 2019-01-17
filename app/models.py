@@ -1,5 +1,6 @@
 import os
 
+from flask import jsonify
 from flask_login import UserMixin
 
 from . import db, login_manager
@@ -42,6 +43,22 @@ class User(db.Model, UserMixin):
     # 类型
     toggle = db.Column(db.Integer, default=0)
     # posted_records = db.relationship('Record', backref='record_applicant', lazy=True)
+
+
+class Fuser(db.Model):
+    __tablename__ = 'fusers'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(30), unique=True, nullable=False)
+    password = db.Column(db.String(128), nullable=False)
+
+    # register_time = db.Column(db.String(40), default=get_current_time)
+    def get_user(self):
+        user = {
+            'username': self.username,
+            'password': self.password
+        }
+        return user
+
 
 #
 # class Staff(db.Model):
@@ -94,7 +111,6 @@ class Record(db.Model):
     record_inspector = db.Column(db.String(32), nullable=False)
 
     record_test = db.Column(db.Integer, default=0)
-
 
 # manufacturer = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 # librarian = db.Column(db.Integer, db.ForeignKey('staffs.id'), nullable=False)

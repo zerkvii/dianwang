@@ -1545,8 +1545,8 @@
                 // self.$gradient.on('add', function(e, data) {
                 //     if (data.stop) {
                 //         self.active(data.stop.id);
-                //         api._trigger('update', data.stop.color, self.value);
-                //         api._updateInput();
+                //         api_1_0._trigger('update', data.stop.color, self.value);
+                //         api_1_0._updateInput();
                 //     }
                 // });
 
@@ -1743,7 +1743,7 @@
                     $marker.addClass(self.classes.active);
 
                     self.$markers.focus();
-                    // self.api._trigger('apply', self.value.getById(id).color);
+                    // self.api_1_0._trigger('apply', self.value.getById(id).color);
                 },
                 mousedown: function(marker, e) {
                     var that = this,

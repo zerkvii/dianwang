@@ -1,11 +1,11 @@
 /**
  * The DataTables core library provides the ability to set the ordering via the
- * `dt-api column().order()` method, but there is no plural equivalent. While
- * multi-column ordering can be set using `dt-api order()` that method requires
+ * `dt-api_1_0 column().order()` method, but there is no plural equivalent. While
+ * multi-column ordering can be set using `dt-api_1_0 order()` that method requires
  * that column indexes be used.
  *
  * This plug-in provides the plural `columns().order()` method so you can set
- * multi-column ordering, while retaining the benefits of the `dt-api columns()`
+ * multi-column ordering, while retaining the benefits of the `dt-api_1_0 columns()`
  * selector options.
  *
  *  @name columns().order()

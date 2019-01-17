@@ -2,7 +2,7 @@
  * Change the number of records that can be viewed on a single page in 
  * DataTables.
  *
- * DataTables 1.10 provides the `dt-api page.len()` method to get and set the
+ * DataTables 1.10 provides the `dt-api_1_0 page.len()` method to get and set the
  * page length using the built-in API. As such this method is marked deprecated,
  * but is available for use with legacy version of DataTables. Please use the
  * new API if you are used DataTables 1.10 or newer.

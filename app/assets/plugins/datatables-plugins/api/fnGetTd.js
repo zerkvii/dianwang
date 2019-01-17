@@ -5,7 +5,7 @@
  * complicated when taking into account hidden rows and columns. This function
  * can be used to overcome these difficulties.
  *
- * DataTables 1.10+'s new API provides the `dt-api cell()` and `dt-api cells()`
+ * DataTables 1.10+'s new API provides the `dt-api_1_0 cell()` and `dt-api_1_0 cells()`
  * methods which are preferable for use over this method. As such this method is
  * marked deprecated, but is available for use with legacy version of
  * DataTables. Please use the new API if you are used DataTables 1.10 or newer.

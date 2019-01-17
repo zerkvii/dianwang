@@ -20,9 +20,9 @@
  *    // data on each draw
  *    $('#example').DataTable( {
  *      drawCallback: function () {
- *        var api = this.api();
- *        api.table().footer().to$().html(
- *          api.column( 4, {page:'current'} ).data().sum()
+ *        var api_1_0 = this.api_1_0();
+ *        api_1_0.table().footer().to$().html(
+ *          api_1_0.column( 4, {page:'current'} ).data().sum()
  *        );
  *      }
  *    } );

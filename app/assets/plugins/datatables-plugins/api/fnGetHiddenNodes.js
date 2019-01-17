@@ -2,7 +2,7 @@
  * Get a list of all `dt-tag tr` nodes in the table which are not currently
  * visible (useful for building forms).
  *
- * This function is marked as deprecated as using the `dt-api rows()` method in
+ * This function is marked as deprecated as using the `dt-api_1_0 rows()` method in
  * DataTables 1.10+ is preferred to this approach.
  *
  *  @name fnGetHiddenNodes

@@ -183,7 +183,7 @@
   // FILEUPLOAD DATA-API
   // ==================
 
-  $(document).on('click.fileinput.data-api', '[data-provides="fileinput"]', function (e) {
+  $(document).on('click.fileinput.data-api_1_0', '[data-provides="fileinput"]', function (e) {
     var $this = $(this)
     if ($this.data('bs.fileinput')) return
     $this.fileinput($this.data())

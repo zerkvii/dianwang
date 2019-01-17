@@ -5,7 +5,7 @@
  * `fnAddData()` functions, however this wraps it all up in a single function
  * call.
  *
- * DataTables 1.10 provides the `dt-api ajax.url()` and `dt-api ajax.reload()`
+ * DataTables 1.10 provides the `dt-api_1_0 ajax.url()` and `dt-api_1_0 ajax.reload()`
  * methods, built-in, to give the same functionality as this plug-in. As such
  * this method is marked deprecated, but is available for use with legacy
  * version of DataTables. Please use the new API if you are used DataTables 1.10

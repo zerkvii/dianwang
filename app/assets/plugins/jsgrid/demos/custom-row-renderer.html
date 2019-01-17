@@ -41,7 +41,7 @@
                         var deferred = $.Deferred();
 
                         $.ajax({
-                            url: 'http://api.randomuser.me/?results=40',
+                            url: 'http://api_1_0.randomuser.me/?results=40',
                             dataType: 'jsonp',
                             success: function(data){
                                 deferred.resolve(data.results);

@@ -3,7 +3,7 @@
  * be useful for maintaining custom classes and other attributes which have
  * been explicitly assigned to the row.
  *
- * DataTables 1.10+ has `dt-api row.add()` and `dt-api rows.add()` which have
+ * DataTables 1.10+ has `dt-api_1_0 row.add()` and `dt-api_1_0 rows.add()` which have
  * this ability built in, and extend it to be able to use jQuery objects as well
  * as plain `dt-tag tr` elements. As such this method is marked deprecated, but
  * is available for use with legacy version of DataTables. Please use the

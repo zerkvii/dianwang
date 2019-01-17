@@ -29,7 +29,7 @@ module.exports = Switchery;
 /**
  * Set Switchery default values.
  *
- * @api public
+ * @api_1_0 public
  */
 
 var defaults = {
@@ -49,7 +49,7 @@ var defaults = {
  *
  * @param {Object} element
  * @param {Object} options
- * @api public
+ * @api_1_0 public
  */
 
 function Switchery(element, options) {
@@ -71,7 +71,7 @@ function Switchery(element, options) {
 /**
  * Hide the target element.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.hide = function() {
@@ -81,7 +81,7 @@ Switchery.prototype.hide = function() {
 /**
  * Show custom switch after the target element.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.show = function() {
@@ -93,7 +93,7 @@ Switchery.prototype.show = function() {
  * Create custom switch.
  *
  * @returns {Object} this.switcher
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.create = function() {
@@ -111,7 +111,7 @@ Switchery.prototype.create = function() {
  *
  * @param {Object} reference
  * @param {Object} target
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.insertAfter = function(reference, target) {
@@ -122,7 +122,7 @@ Switchery.prototype.insertAfter = function(reference, target) {
  * Set switch jack proper position.
  *
  * @param {Boolean} clicked - we need this in order to uncheck the input when the switch is clicked
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.setPosition = function (clicked) {
@@ -155,7 +155,7 @@ Switchery.prototype.setPosition = function (clicked) {
 /**
  * Set speed.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.setSpeed = function() {
@@ -185,7 +185,7 @@ Switchery.prototype.setSpeed = function() {
 /**
  * Set switch size.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.setSize = function() {
@@ -209,7 +209,7 @@ Switchery.prototype.setSize = function() {
 /**
  * Set switch color.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.colorize = function() {
@@ -225,7 +225,7 @@ Switchery.prototype.colorize = function() {
  * Handle the onchange event.
  *
  * @param {Boolean} state
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.handleOnchange = function(state) {
@@ -242,7 +242,7 @@ Switchery.prototype.handleOnchange = function(state) {
  * Handle the native input element state change.
  * A `change` event must be fired in order to detect the change.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.handleChange = function() {
@@ -263,7 +263,7 @@ Switchery.prototype.handleChange = function() {
 /**
  * Handle the switch click event.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.handleClick = function() {
@@ -276,7 +276,7 @@ Switchery.prototype.handleClick = function() {
 /**
  * Attach all methods that need to happen on switcher click.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.bindClick = function() {
@@ -290,7 +290,7 @@ Switchery.prototype.bindClick = function() {
 /**
  * Mark an individual switch as already handled.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.markAsSwitched = function() {
@@ -300,7 +300,7 @@ Switchery.prototype.markAsSwitched = function() {
 /**
  * Check if an individual switch is already handled.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.markedAsSwitched = function() {
@@ -310,7 +310,7 @@ Switchery.prototype.markedAsSwitched = function() {
 /**
  * Initialize Switchery.
  *
- * @api private
+ * @api_1_0 private
  */
 
 Switchery.prototype.init = function() {
@@ -327,7 +327,7 @@ Switchery.prototype.init = function() {
  * See if input is checked.
  *
  * @returns {Boolean}
- * @api public
+ * @api_1_0 public
  */
 
 Switchery.prototype.isChecked = function() {
@@ -338,7 +338,7 @@ Switchery.prototype.isChecked = function() {
  * See if switcher should be disabled.
  *
  * @returns {Boolean}
- * @api public
+ * @api_1_0 public
  */
 
 Switchery.prototype.isDisabled = function() {
@@ -348,7 +348,7 @@ Switchery.prototype.isDisabled = function() {
 /**
  * Destroy all event handlers attached to the switch.
  *
- * @api public
+ * @api_1_0 public
  */
 
 Switchery.prototype.destroy = function() {
@@ -358,7 +358,7 @@ Switchery.prototype.destroy = function() {
 /**
  * Enable disabled switch element.
  *
- * @api public
+ * @api_1_0 public
  */
 
 Switchery.prototype.enable = function() {
@@ -372,7 +372,7 @@ Switchery.prototype.enable = function() {
 /**
  * Disable switch element.
  *
- * @api public
+ * @api_1_0 public
  */
 
 Switchery.prototype.disable = function() {

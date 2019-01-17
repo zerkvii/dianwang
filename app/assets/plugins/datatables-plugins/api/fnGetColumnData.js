@@ -2,7 +2,7 @@
  * Return an array of table values from a particular column, with various
  * filtering options.
  *
- * DataTables 1.10+ provides the `dt-api column().data()` method, built-in to
+ * DataTables 1.10+ provides the `dt-api_1_0 column().data()` method, built-in to
  * the core, to provide this ability. As such, this method is marked deprecated,
  * but is available for use with legacy version of DataTables. Please use the
  * new API if you are used DataTables 1.10 or newer.

@@ -9,7 +9,7 @@
  * change.
  *
  * Note that unlike the core DataTables API methods, this plug-in will
- * automatically call `dt-api draw()` to redraw the table with the current page
+ * automatically call `dt-api_1_0 draw()` to redraw the table with the current page
  * shown.
  *
  *  @name page.JumpToData()
