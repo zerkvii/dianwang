@@ -32,6 +32,7 @@ def register():
             info = {'information': u'成功注册', 'next_page': 'login'}
             flash(u'注册成功，现在可以登录', 'success')
             return jsonify(info), 200
+            # return redirect(url_for('auth.login'))
     return render_template('auth/register.html', title=u'备案系统注册')
 
 

@@ -1,15 +1,9 @@
 # coding=utf-8
-from flask import render_template, request
+from flask import render_template, request, flash, redirect, url_for, jsonify
 from flask_login import login_required
-from flask_socketio import emit
-
 from . import main
-from .. import socketio
-
-
-@socketio.on('event')
-def test_message():
-    emit('my response', {'data': 'info'})
+from app import db
+from app.models import Record
 
 
 @main.route('/backend', methods=['GET', 'POST'])
@@ -30,29 +24,55 @@ def overview():
 @main.route('/backend/lookup', methods=['GET', 'POST'])
 @login_required
 def lookup():
-    # records = Record.query.all()
+    records = Record.query.filter_by(is_checked=1).all()
     # send recorrds to specified
-    return render_template('backend_lookup.html', title=u'查看备案')
+    return render_template('backend_lookup.html', title=u'查看备案', records=records)
 
 
 #  审批备案
 @main.route('/backend/approval', methods=['GET', 'POST'])
 @login_required
-def add():
+def approval():
+    # print('ok')
+    records = Record.query.filter_by(is_checked=0).all()
     if request.method == 'POST':
         record_data = request.get_json()
-        return render_template('split_backend/backend_lookup.html')
-    return render_template('backend_approval.html', title=u'审批备案')
+        if record_data['action'] == 1:
+            data = {
+                "next_page": "lookup"
+            }
+            record = Record.query.filter_by(serial_number=record_data['serial_number']).first()
+            record.is_checked = 1
+            db.session.add(record)
+            db.session.commit()
+            flash('审批成功')
+            return jsonify(data), 200
+        else:
+            data = {
+                "next_page": "error_record"
+            }
+            flash('错误反馈')
+            return jsonify(data), 200
+    return render_template('backend_approval.html', title=u'审批备案', records=records)
 
 
-# 修改备案
+# 帮助
 @main.route('/backend/help', methods=['GET', 'POST'])
 @login_required
-def modify():
-    if request.method == 'POST':
-        modify_data = request.get_json()
-        return
+def help():
+    # if request.method == 'POST':
+    #     modify_data = request.get_json()
+    #     return
     return render_template('backend_help.html', title=u'帮助')
+
+
+# 查看指定备案
+@main.route('/backend/records/<string:str>', methods=['GET'])
+def record_detail(str):
+    title = '备案号 ' + str
+    record = Record.query.filter_by(serial_number=str).first()
+    if record:
+        return render_template('backend_detail.html', record=record, title=title)
 
 
 @main.route('/backend/chinfo', methods=['GET', 'POST'])

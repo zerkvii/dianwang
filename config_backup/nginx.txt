@@ -39,7 +39,7 @@ http {
        client_max_body_size 5M;
    }
    		#nginx前端文件指向本地服务
-		        location ~^/assets.*\.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
+		location ~^/assets.*\.(css|doc|eip|exe|gif|ico|jpg|js|mp3|png|swf|xml|txt|otf|eot|svg|ttf|woff|woff2|map)$ {
 
 		root    /home/zerk/Desktop/dianwang/app;
 				expires 7d;

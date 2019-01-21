@@ -30,7 +30,9 @@ class Config:
     # RECAPTCHA_THEME = "dark"
     RECAPTCHA_TYPE = 'image'
     ENV = "DEBUG"
+    threaded = True
     DEBUG = True
     JSON_AS_ASCII = False
+    STATIC_FOLDER = 'templates/auth'
     # RECAPTCHA_SIZE = "compact"
     # RECAPTCHA_RTABINDEX = 10

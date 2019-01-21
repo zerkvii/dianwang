@@ -12,23 +12,25 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/state_grid.png">
     <title>{{ title }}</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
-    <link href="css/googlefonts.css">
-    <link href="../assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="/static/css/googlefonts.css">
+    <link href="/static/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="/static/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="/static/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css"
+          rel="stylesheet">
     <!--This page css - Morris CSS -->
-    <link href="../assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+    <link href="/static/assets/plugins/c3-master/c3.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="css/colors/zcolor.css" id="theme" rel="stylesheet">
+    <link href="/static/css/colors/zcolor.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
 <![endif]-->
 </head>
 
@@ -60,6 +62,7 @@
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
 
+
     <header class="topbar">
         <nav class="navbar top-navbar navbar-expand-md navbar-light">
             <!-- ============================================================== -->
@@ -69,7 +72,8 @@
                 <a class="navbar-brand" href="index.html">
                     <!-- Logo icon --><b>
                     <!-- Dark Logo icon -->
-                    <img src="../assets/images/state_grid.png" alt="homepage" class="light-logo" style="width: 50px"/>
+                    <img src="/static/assets/images/state_grid.png" alt="homepage" class="light-logo"
+                         style="width: 50px"/>
                     <!-- Light Logo icon -->
                 </b>
                     <!--End Logo icon -->
@@ -77,7 +81,7 @@
                                     <b></b>
                     <!-- dark Logo text -->
                     <!-- Light Logo text -->
-                         <img src="../assets/images/logo.png" class="light-logo img-responsive" alt="homepage"
+                         <img src="/static/assets/images/logo.png" class="light-logo img-responsive" alt="homepage"
                               style="width: 80%"/></span> </a>
             </div>
             <!-- ============================================================== -->
@@ -142,12 +146,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                src="../assets/images/users/1.jpg" alt="user" class="profile-pic"/></a>
+                                src="/static/assets/images/users/1.jpg" alt="user" class="profile-pic"/></a>
                         <div class="dropdown-menu dropdown-menu-right scale-up">
                             <ul class="dropdown-user">
                                 <li>
                                     <div class="dw-user-box">
-                                        <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                        <div class="u-img"><img src="/static/assets/images/users/1.jpg" alt="user">
+                                        </div>
                                         <div class="u-text">
                                             <h4>{{ current_user.username }}</h4>
                                             <p class="text-muted">{{ current_user.email }}</p><a href="profile.html"
@@ -270,6 +275,7 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
             <!-- Row -->
+
             <div class="row">
                 <!-- Column -->
                 <div class="col-12">
@@ -281,32 +287,54 @@
                                 <table class="table table-bordered">
                                     <thead>
                                     <tr>
-                                        <th >备案序列号</th>
-                                        <th >备案文件大小</th>
-                                        <th>备案详细信息</th>
-                                        <th>备案申请日期</th>
+                                        <th>备案号</th>
+                                        <th>备案种类</th>
+                                        <th>生产厂家</th>
+                                        <th>备案申请时间</th>
+                                        <th>备案联系人</th>
+                                        <th>电能表型号</th>
                                         <th class="text-nowrap">审批操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>GZ20190201</td>
-                                        <td>
-                                            <div class="progress progress-xs margin-vertical-10 ">
-                                                <div class="progress-bar bg-info"
-                                                     style="width: 35%; height:6px;"></div>
-                                            </div>
-                                        </td>
-                                        <td><a href="" data-toggle="tooltip" data-original-title="点击查看完整信息">&nbsp;国网，带操作系统...</a></td>
-                                        <td>2019-1-1</td>
-                                        <td class="text-nowrap" align="center">
-                                            <a href="#" data-toggle="tooltip" data-original-title="审批通过"> <i
-                                                    class="fa fa-check text-inverse m-r-10"></i> </a>
-                                            <a href="#" data-toggle="tooltip" data-original-title="审批驳回"> <i
-                                                    class="fa fa-close text-danger"></i> </a>
-                                        </td>
-                                    </tr>
+                                    {% for record in records %}
+                                        <tr>
+                                            <td>
+                                                <a href="/backend/records/{{ record.serial_number }}">{{ record.serial_number }}</a>
+                                            </td>
+                                            <td>{{ record.type }}
+                                                {#                                            <div class="progress progress-xs margin-vertical-10 ">#}
+                                                {#                                                <div class="progress-bar bg-info"#}
+                                                {#                                                     style="width: 35%; height:6px;"></div>#}
+                                                {#                                            </div>#}
+                                            </td>
+                                            <td>{{ record.producer }}
+                                                {#                                            <a href="" data-toggle="tooltip" data-original-title="点击查看完整信息">&nbsp;国网，带操作系统...</a>#}
+                                            </td>
+                                            <td>{{ record.date }}</td>
 
+                                            <td>{{ record.contact_person }}</td>
+
+                                            <td>{{ record.em_version }}</td>
+                                            <td class="text-nowrap" align="center">
+                                                <button id="{{ record.serial_number }}" onclick="agree(this)"
+                                                        type="button"
+                                                        class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                                        data-toggle="tooltip" data-original-title="审批通过"><i
+                                                        class="fa fa-check text-info" aria-hidden="true"></i>
+                                                </button>
+                                                <button id="{{ record.serial_number }}" onclick="cancel(this)"
+                                                        type="button"
+                                                        class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                                        data-toggle="tooltip" data-original-title="审批驳回">
+                                                    <i class="fa fa-close text-danger" aria-hidden="true"></i></button>
+                                                {#                                                <a onclick="agree()" id="{{ record.serial_number }}"  data-toggle="tooltip" data-original-title="审批通过"> <i#}
+                                                {#                                                        class="fa fa-check text-inverse m-r-10"></i> </a>#}
+                                                {#                                                <a  onclick="cancel()" id="{{ record.serial_number }}" data-toggle="tooltip" data-original-title="审批驳回"> <i#}
+                                                {#                                                        class="fa fa-close text-danger"></i> </a>#}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
@@ -390,32 +418,44 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
-<script src="../assets/plugins/jquery/jquery.min.js"></script>
+<script src="/static/assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
-<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
-<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
-<script src="js/jquery.slimscroll.js"></script>
+<script src="/static/js/jquery.slimscroll.js"></script>
 <!--Wave Effects -->
-<script src="js/waves.js"></script>
+<script src="/static/js/waves.js"></script>
 <!--Menu sidebar -->
-<script src="js/sidebarmenu.js"></script>
+<script src="/static/js/sidebarmenu.js"></script>
 <!--stickey kit -->
-<script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-<script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-<script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="/static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<script src="/static/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="/static/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
 <!--Custom JavaScript -->
-<script src="js/custom.min.js"></script>
+<script src="/static/js/custom.min.js"></script>
 <!-- ============================================================== -->
 <!-- This page plugins -->
 <!-- ============================================================== -->
 <!-- chartist chart -->
-<script src="../assets/plugins/chartist-js/dist/chartist.min.js"></script>
-<script src="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="/static/assets/plugins/chartist-js/dist/chartist.min.js"></script>
+<script src="/static/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
 <!--c3 JavaScript -->
-<script src="../assets/plugins/d3/d3.min.js"></script>
-<script src="../assets/plugins/c3-master/c3.min.js"></script>
+<script src="/static/assets/plugins/d3/d3.min.js"></script>
+<script src="/static/assets/plugins/c3-master/c3.min.js"></script>
 <!-- Chart JS -->
+{#<script src="js/dashboard1.js"></script>#}
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- Style switcher -->
+<!-- ============================================================== -->
+<!-- Style switcher -->
+
+<!-- ============================================================== -->
+<script src="/static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="/static/js/socketio.js"></script>
+Chart JS -->
 {#<script src="js/dashboard1.js"></script>#}
 <!-- ============================================================== -->
 <!-- ============================================================== -->
@@ -424,8 +464,6 @@
 <!-- Style switcher -->
 
 <!-- ============================================================== -->
-<script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-<script src="js/socketio.js"></script>
 {#<script type="text/javascript" charset="utf-8">#}
 {#    $(document).ready(function () {#}
 {#        const namespace = '/backend'; // change to an empty string to use the global namespace#}
@@ -443,6 +481,37 @@
 {##}
 {#    });#}
 {#</script>#}
+<script>
+    function agree(e) {
+        let id = $(e).attr("id");
+        $.ajax({
+            type: 'POST',
+            contentType: "application/json",
+            dataType: 'json',
+            url: window.location.search,
+            data: JSON.stringify({"serial_number": id, "action":1}),
+            success: function (data) {
+                window.location.href = data['next_page'];
+            },
+        });
+        {#alert($(e).attr("id"));#}
+    }
+
+    function cancel() {
+        let id = $(e).attr("id");
+        $.ajax({
+            type: 'POST',
+            contentType: "application/json",
+            dataType: 'json',
+            url: window.location.search,
+            data: JSON.stringify({"serial_number": id, "action":0}),
+            success: function (data) {
+                window.location.href = data['next_page'];
+            },
+        });
+    }
+
+</script>
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         <script>
@@ -457,79 +526,5 @@
         </script>
     {% endif %}
 {% endwith %}
-// flot moving chart
-<script>
-    var data = []
-        , totalPoints = 300;
-
-    function getRandomData() {
-        if (data.length > 0) data = data.slice(1);
-        // Do a random walk
-        while (data.length < totalPoints) {
-            var prev = data.length > 0 ? data[data.length - 1] : 50
-                , y = prev + Math.random() * 10 - 5;
-            if (y < 0) {
-                y = 0;
-            } else if (y > 100) {
-                y = 100;
-            }
-            data.push(y);
-        }
-        // Zip the generated y values with the x values
-        var res = [];
-        for (var i = 0; i < data.length; ++i) {
-            res.push([i, data[i]])
-        }
-        return res;
-    }
-
-    // Set up the control widget
-    var updateInterval = 30;
-    $("#updateInterval").val(updateInterval).change(function () {
-        var v = $(this).val();
-        if (v && !isNaN(+v)) {
-            updateInterval = +v;
-            if (updateInterval < 1) {
-                updateInterval = 1;
-            } else if (updateInterval > 3000) {
-                updateInterval = 3000;
-            }
-            $(this).val("" + updateInterval);
-        }
-    });
-    var plot = $.plot("#placeholder", [getRandomData()], {
-        series: {
-            shadowSize: 0 // Drawing is faster without shadows
-        }
-        , yaxis: {
-            min: 0
-            , max: 100
-        }
-        , xaxis: {
-            show: false
-        }
-        , colors: ["#26c6da"]
-        , grid: {
-            color: "#AFAFAF"
-            , hoverable: true
-            , borderWidth: 0
-            , backgroundColor: '#FFF'
-        }
-        , tooltip: true
-        , tooltipOpts: {
-            content: "Y: %y"
-            , defaultTheme: false
-        }
-    });
-
-    function update() {
-        plot.setData([getRandomData()]);
-        // Since the axes don't change, we don't need to call plot.setupGrid()
-        plot.draw();
-        setTimeout(update, updateInterval);
-    }
-
-    update();
-</script>
 </body>
 </html>

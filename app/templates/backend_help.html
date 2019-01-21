@@ -9,26 +9,29 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/state_grid.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/state_grid.png">
     <title>{{ title }}</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
-    <link href="css/googlefonts.css">
-    <link href="../assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="/static/css/googlefonts.css">
+    <link href="/static/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="/static/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
+    <link href="/static/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css"
+          rel="stylesheet">
     <!--This page css - Morris CSS -->
-    <link href="../assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+    <link href="/static/assets/plugins/c3-master/c3.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="css/colors/zcolor.css" id="theme" rel="stylesheet">
+    <link href="/static/css/colors/zcolor.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+{#    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>#}
+{#    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>#}
 <![endif]-->
 </head>
 
@@ -69,7 +72,7 @@
                 <a class="navbar-brand" href="index.html">
                     <!-- Logo icon --><b>
                     <!-- Dark Logo icon -->
-                    <img src="../assets/images/state_grid.png" alt="homepage" class="light-logo" style="width: 50px"/>
+                    <img src="/static/assets/images/state_grid.png" alt="homepage" class="light-logo" style="width: 50px"/>
                     <!-- Light Logo icon -->
                 </b>
                     <!--End Logo icon -->
@@ -77,7 +80,7 @@
                                     <b></b>
                     <!-- dark Logo text -->
                     <!-- Light Logo text -->
-                         <img src="../assets/images/logo.png" class="light-logo img-responsive" alt="homepage"
+                         <img src="/static/assets/images/logo.png" class="light-logo img-responsive" alt="homepage"
                               style="width: 80%"/></span> </a>
             </div>
             <!-- ============================================================== -->
@@ -142,12 +145,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                src="../assets/images/users/1.jpg" alt="user" class="profile-pic"/></a>
+                                src="/static/assets/images/users/1.jpg" alt="user" class="profile-pic"/></a>
                         <div class="dropdown-menu dropdown-menu-right scale-up">
                             <ul class="dropdown-user">
                                 <li>
                                     <div class="dw-user-box">
-                                        <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                        <div class="u-img"><img src="/static/assets/images/users/1.jpg" alt="user"></div>
                                         <div class="u-text">
                                             <h4>{{ current_user.username }}</h4>
                                             <p class="text-muted">{{ current_user.email }}</p><a href="profile.html"
@@ -360,42 +363,50 @@
 <!-- ============================================================== -->
 <!-- All Jquery -->
 <!-- ============================================================== -->
-<script src="../assets/plugins/jquery/jquery.min.js"></script>
+<script src="/static/assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap tether Core JavaScript -->
-<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
-<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!-- slimscrollbar scrollbar JavaScript -->
-<script src="js/jquery.slimscroll.js"></script>
+<script src="/static/js/jquery.slimscroll.js"></script>
 <!--Wave Effects -->
-<script src="js/waves.js"></script>
+<script src="/static/js/waves.js"></script>
 <!--Menu sidebar -->
-<script src="js/sidebarmenu.js"></script>
+<script src="/static/js/sidebarmenu.js"></script>
 <!--stickey kit -->
-<script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-<script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-<script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="/static/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<script src="/static/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="/static/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
 <!--Custom JavaScript -->
-<script src="js/custom.min.js"></script>
+<script src="/static/js/custom.min.js"></script>
 <!-- ============================================================== -->
 <!-- This page plugins -->
 <!-- ============================================================== -->
 <!-- chartist chart -->
-<script src="../assets/plugins/chartist-js/dist/chartist.min.js"></script>
-<script src="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="/static/assets/plugins/chartist-js/dist/chartist.min.js"></script>
+<script src="/static/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
 <!--c3 JavaScript -->
-<script src="../assets/plugins/d3/d3.min.js"></script>
-<script src="../assets/plugins/c3-master/c3.min.js"></script>
+<script src="/static/assets/plugins/d3/d3.min.js"></script>
+<script src="/static/assets/plugins/c3-master/c3.min.js"></script>
 <!-- Chart JS -->
 {#<script src="js/dashboard1.js"></script>#}
 <!-- ============================================================== -->
+<script src="/static/assets/plugins/flot/excanvas.js"></script>
+<script src="/static/assets/plugins/flot/jquery.flot.js"></script>
+<script src="/static/assets/plugins/flot/jquery.flot.pie.js"></script>
+<script src="/static/assets/plugins/flot/jquery.flot.time.js"></script>
+<script src="/static/assets/plugins/flot/jquery.flot.stack.js"></script>
+<script src="/static/assets/plugins/flot/jquery.flot.crosshair.js"></script>
+<script src="/static/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script src="/static/js/flot-data.js"></script>
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->
 <!-- Style switcher -->
 
 <!-- ============================================================== -->
-<script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-<script src="js/socketio.js"></script>
+<script src="/static/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="/static/js/socketio.js"></script>
 {#<script type="text/javascript" charset="utf-8">#}
 {#    $(document).ready(function () {#}
 {#        const namespace = '/backend'; // change to an empty string to use the global namespace#}

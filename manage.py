@@ -1,7 +1,6 @@
 # -*- coding=utf-8 -*-
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager, Server
-
 from app import create_app
 from app.models import *
 

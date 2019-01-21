@@ -4,7 +4,7 @@ from flask import jsonify
 from flask_login import UserMixin
 
 from . import db, login_manager
-from .utils.date_util import get_current_time
+from .utils.date_util import get_today_date,get_current_time
 
 
 class Permission:
@@ -39,7 +39,7 @@ class User(db.Model, UserMixin):
     # 厂商序列号
     # manufacturer_number = db.Column(db.String(4))
     # 注册时间
-    register_time = db.Column(db.String(40), default=get_current_time)
+    register_time = db.Column(db.String(40), default=get_today_date)
     # 类型
     toggle = db.Column(db.Integer, default=0)
     # posted_records = db.relationship('Record', backref='record_applicant', lazy=True)
@@ -79,38 +79,64 @@ class Fuser(db.Model):
 class Record(db.Model):
     __tablename__ = 'records'
     id = db.Column(db.Integer, primary_key=True)
+    serial_number = db.Column(db.String(128), unique=True)
+    md5_name = db.Column(db.String(128), unique=True)
+    json_name = db.Column(db.String(128), unique=True)
+    rar_name = db.Column(db.String(128), unique=True)
 
-    # 备案序列号
-    record_serial_number = db.Column(db.String(16), nullable=False, default='AAAAAAAAAAAAAAAA')
+    is_checked = db.Column(db.Integer, default=0)
+    date = db.Column(db.String(128), default=get_current_time)
 
-    # 备案类型,带系统/不带系统
-    record_type = db.Column(db.Boolean, nullable=False, default=False)
+    backup_version = db.Column(db.String(64))
+    producer = db.Column(db.String(64))
+    producer_id = db.Column(db.String(64))
+    contact_person = db.Column(db.String(64))
+    em_version = db.Column(db.String(64))
 
-    # 备案申请日期
-    record_post_date = db.Column(db.String(64), nullable=False, default=get_current_time)
+    type = db.Column(db.Integer, default=0)
+    details = db.Column(db.Text)
 
-    # 备案软件版本号
-    record_software_version = db.Column(db.String(16), nullable=False)
+    def get_type(self):
+        if self.type == 0:
+            return '省网'
+        else:
+            return '国网'
 
-    # 备案软件送检顺序
-    record_order = db.Column(db.Integer, nullable=False)
-
-    # 备案厂商
-    record_manufacturer = db.Column(db.String(4), nullable=False)
-
-    # 备案审批状态
-    record_state = db.Column(db.Integer, nullable=False, default=0)
-
-    # 备案文件路径
-    record_file_uri = db.Column(db.String(128), nullable=False, default=os.getcwd() + os.sep + 'files')
-
-    # 备案文件名（文件夹）
-    record_file_name = db.Column(db.String(64), default='None')
-
-    # 备案审批人
-    record_inspector = db.Column(db.String(32), nullable=False)
-
-    record_test = db.Column(db.Integer, default=0)
+# class Record(db.Model):
+#     __tablename__ = 'records'
+#     id = db.Column(db.Integer, primary_key=True)
+#
+#     # 备案序列号
+#     record_serial_number = db.Column(db.String(16), nullable=False, default='AAAAAAAAAAAAAAAA')
+#
+#     # 备案类型,带系统/不带系统
+#     record_type = db.Column(db.Boolean, nullable=False, default=False)
+#
+#     # 备案申请日期
+#     record_post_date = db.Column(db.String(64), nullable=False, default=get_current_time)
+#
+#     # 备案软件版本号
+#     record_software_version = db.Column(db.String(16), nullable=False)
+#
+#     # 备案软件送检顺序
+#     record_order = db.Column(db.Integer, nullable=False)
+#
+#     # 备案厂商
+#     record_manufacturer = db.Column(db.String(4), nullable=False)
+#
+#     # 备案审批状态
+#     record_state = db.Column(db.Integer, nullable=False, default=0)
+#
+#     # 备案文件路径
+#     record_file_uri = db.Column(db.String(128), nullable=False, default=os.getcwd() + os.sep + 'files')
+#
+#     # 备案文件名（文件夹）
+#     record_file_name = db.Column(db.String(64), default='None')
+#
+#     # 备案审批人
+#     record_inspector = db.Column(db.String(32), nullable=False)
+#
+#     record_test = db.Column(db.Integer, default=0)
 
 # manufacturer = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 # librarian = db.Column(db.Integer, db.ForeignKey('staffs.id'), nullable=False)

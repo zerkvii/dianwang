@@ -6,15 +6,14 @@ from flask_jwt_extended import (
 )
 from flask_login import LoginManager
 from flask_recaptcha import ReCaptcha
-from flask_socketio import SocketIO
+# from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
-
 from .config import Config
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
 recaptcha = ReCaptcha()
-socketio = SocketIO()
+# socketio = SocketIO()
 jwt = JWTManager()
 login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
@@ -29,7 +28,7 @@ def create_app():
     bcrypt.init_app(app)
     login_manager.init_app(app)
     recaptcha.init_app(app)
-    socketio.init_app(app)
+    # socketio.init_app(app)
     jwt.init_app(app)
     # pagedown = PageDown(app)
     from .api import api as api_blueprint
