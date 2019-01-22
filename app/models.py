@@ -4,7 +4,7 @@ from flask import jsonify
 from flask_login import UserMixin
 
 from . import db, login_manager
-from .utils.date_util import get_today_date,get_current_time
+from .utils.date_util import get_today_date, get_current_time
 
 
 class Permission:
@@ -58,6 +58,13 @@ class Fuser(db.Model):
             'password': self.password
         }
         return user
+
+
+class Notice(db.Model):
+    __tablename__ = 'notices'
+    id = db.Column(db.Integer, primary_key=True)
+    is_checked = db.Column(db.Integer, default=0)
+    time = db.Column(db.String(64), default=get_current_time)
 
 
 #

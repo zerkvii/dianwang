@@ -3,6 +3,9 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager, Server
 from app import create_app
 from app.models import *
+from flask import url_for
+
+# from app import socketio
 
 app = create_app()
 migrate = Migrate(app, db)
@@ -22,6 +25,8 @@ manager.add_command("runserver", server)
 @manager.command
 def create_db():
     db.create_all()
+
+
 
 
 if __name__ == '__main__':

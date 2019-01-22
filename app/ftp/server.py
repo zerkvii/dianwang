@@ -31,37 +31,56 @@ class MyHandler(FTPHandler):
 
     def on_file_received(self, file):
         # do something when a file has been received
-        sio = socketio.Client()
-        sio.connect('http://localhost:8080', namespaces=['/upload'])
 
         match = re.findall(r'[^(\\\\)]*\.json', file)
-        serial = ''
+        list = ''
         if len(match) > 0:
             json_file = 'json/' + match[0]
-            with open(json_file, 'r') as f:
+            with open(json_file, 'r', encoding='utf-8') as f:
                 json_data = json.load(f)
-                serial = json_data['serial']
-        create_app().app_context().push()
-        from app.models import Record
-        loc = Record.query.filter_by(serial_number=serial).all()
-        sio.send('ok')
-        if len(loc) == 0:
-            print('ok')
-            location = Record(serial_number=serial, md5_name=serial, json_name=serial, rar_name=serial)
-            db.session.add(location)
-            db.session.commit()
+                list = json_data['采集终端软件备案明细表']
+            for item in list:
+                print((item))
+            try:
+                print(type(list))
+                serial = list['number']
+                producer = list['厂家名称']
+                producer_id = list['厂家代码']
+                backup_type = list['备案种类']
+                contact_person = list['联系人姓名']
+                em_version = list['电能表型号']
+                details = list['详细信息']
+                backup_version = list['程序版本号']
+                date = list['填写日期']
+            except:
+                print("err:")
+                print(list)
+            # print([serial, producer_id, producer, backup_type, contact_person, em_version, details, backup_version, date])
+            # print(type(details))
+            create_app().app_context().push()
+            from app.models import Record
+            details=str(details)
+            loc = Record.query.filter_by(serial_number=serial).first()
+            if not loc:
+                print('添加备案')
+                location = Record(serial_number=serial, md5_name=serial, json_name=serial, rar_name=serial,
+                                  producer=producer, producer_id=producer_id, type=backup_type,
+                                  contact_person=contact_person, date=date,
+                                  em_version=em_version, backup_version=backup_version, details=details)
+                db.session.add(location)
+                db.session.commit()
 
-        else:
+            else:
+                pass
+
+        def on_incomplete_file_sent(self, file):
+            # do something when a file is partially sent
             pass
 
-    def on_incomplete_file_sent(self, file):
-        # do something when a file is partially sent
-        pass
-
-    def on_incomplete_file_received(self, file):
-        # remove partially uploaded files
-        import os
-        os.remove(file)
+        def on_incomplete_file_received(self, file):
+            # remove partially uploaded files
+            import os
+            os.remove(file)
 
 
 def start_serve():
