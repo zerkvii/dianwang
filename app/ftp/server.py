@@ -39,10 +39,10 @@ class MyHandler(FTPHandler):
             with open(json_file, 'r', encoding='utf-8') as f:
                 json_data = json.load(f)
                 list = json_data['采集终端软件备案明细表']
-            for item in list:
-                print((item))
+            # for item in list:
+            #     print((item))
             try:
-                print(type(list))
+                # print(type(list))
                 serial = list['number']
                 producer = list['厂家名称']
                 producer_id = list['厂家代码']
@@ -59,7 +59,7 @@ class MyHandler(FTPHandler):
             # print(type(details))
             create_app().app_context().push()
             from app.models import Record
-            details=str(details)
+            details = str(details)
             loc = Record.query.filter_by(serial_number=serial).first()
             if not loc:
                 print('添加备案')
