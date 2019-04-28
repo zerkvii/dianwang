@@ -1,3 +1,4 @@
+mongoengine
 alembic==0.9.10
 amqp==2.4.0
 asn1crypto==0.24.0

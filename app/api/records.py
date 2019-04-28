@@ -1,20 +1,16 @@
-from flask import jsonify, render_template, request
-from app.models import Record
+from flask import jsonify, request, g
+
+from app.repository import *
 from . import api
-# from app import socketio
-#
-#
-# @socketio.on('connect', namespace='upload')
-# def on_connect():
-#     print('info')
+
+
 
 
 @api.route('/records/post', methods=['POST'])
 def post_record():
     json_data = request.get_json()
-    # print(json_data)
     serial_number = json_data['serial']
-    record = Record.query.filter_by(serial_number=serial_number).first()
+    record = Record.objects(serial_number=serial_number).first()
     if not record:
         data = {
             "information": "not exist"

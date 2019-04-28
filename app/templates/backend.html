@@ -70,7 +70,8 @@
                 <a class="navbar-brand" href="index.html">
                     <!-- Logo icon --><b>
                     <!-- Dark Logo icon -->
-                    <img src="/static/assets/images/state_grid.png" alt="homepage" class="light-logo" style="width: 50px"/>
+                    <img src="/static/assets/images/state_grid.png" alt="homepage" class="light-logo"
+                         style="width: 50px"/>
                     <!-- Light Logo icon -->
                 </b>
                     <!--End Logo icon -->
@@ -148,7 +149,8 @@
                             <ul class="dropdown-user">
                                 <li>
                                     <div class="dw-user-box">
-                                        <div class="u-img"><img src="/static/assets/images/state_grid.png" alt="user"></div>
+                                        <div class="u-img"><img src="/static/assets/images/state_grid.png" alt="user">
+                                        </div>
                                         <div class="u-text">
                                             <h4>{{ current_user.username }}</h4>
                                             <p class="text-muted">{{ current_user.email }}</p><a href="profile.html"
@@ -451,9 +453,9 @@
 {#        // this is specially important when using the global namespace#}
 {#        let socket = io.connect('http://' + document.domain + ':' + location.port + namespace);#}
 {##}
-{#        // socket.on('connect', function(msg) {#}
-{#        //   socket.emit('my event', {data: 'I\'m connected!'});#}
-{#        //});#}
+{#         socket.on('connect', function(msg) {#}
+{#           console.log(msg)#}
+{#        });#}
 {##}
 {#        socket.on('event', function (msg) {#}
 {#            alert(msg)#}
@@ -461,6 +463,7 @@
 {##}
 {#    });#}
 {#</script>#}
+
 {% with messages = get_flashed_messages() %}
     {% if messages %}
         <script>
@@ -475,6 +478,30 @@
         </script>
     {% endif %}
 {% endwith %}
+
+<script>
+    $('document').ready(function () {
+        setInterval(function () {
+            getRealData()
+        }, 1000);//request every x seconds
+
+    });
+
+    function getRealData() {
+        $.ajax({
+            url: "/apis/notice",
+            type: "POST",
+            data: {
+                type: 0
+            },
+            cache: false,
+            success: function (data) {
+                console.log(data['urls'])
+                /// some code to get result
+            }
+        })
+    }
+</script>
 </body>
 
 </html>

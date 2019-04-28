@@ -1,15 +1,28 @@
-from flask import jsonify, render_template, request, Response,request
-from app.models import Record, Notice
+from flask import request, jsonify
+
+from app.repository import *
 from . import api
+
+# thread = None
+# thread_lock = Lock()
+
+
+# async def notice():
+global NOTICE_LIST, FLAG
+NOTICE_LIST = []
+FLAG = False
 
 
 @api.route('/notice', methods=['GET', 'POST'])
 def notice():
-    # if request.method=='POST':
-
-    notices = Notice.query.filter_by(is_checked=0).all()
-    time_lists = [x.time for x in notices]
-    data = {
-        'notices': time_lists
-    }
+    global NOTICE_LIST, FLAG
+    data = None
+    print(NOTICE_LIST)
+    if request.method == 'POST':
+        new_records = Record.objects(status_flag=False)
+        if request.form['type'] == '0' and new_records.count() > 0:
+            url_list = [x for x in new_records if x not in NOTICE_LIST]
+            print(url_list, len(NOTICE_LIST))
+            NOTICE_LIST.append(url_list)
+            data = {'urls': [x.serial_number for x in url_list]}
     return jsonify(data), 200

@@ -2,8 +2,8 @@
 from flask import render_template, url_for, redirect, request, jsonify, flash
 from flask_login import logout_user, login_user, current_user
 
-from app import bcrypt, db
-from app.models import User
+from app import bcrypt
+from app.repository import *
 from . import auth
 
 
@@ -18,17 +18,18 @@ def register():
         email = register_data['email']
         password = register_data['password']
         toggle = register_data['toggle']
+
         hashed_pwd = bcrypt.generate_password_hash(password).decode('utf-8')
-        user = User.query.filter_by(username=username).first() or User.query.filter_by(email=email).first()
+        user = User.objects(username=username).first() or User.objects(email=email).first()
         if user:
             info = {
                 'information': '用户名或邮件已经存在'
             }
             return jsonify(info), 400
         else:
-            user = User(username=username, email=email, password=hashed_pwd, toggle=toggle)
-            db.session.add(user)
-            db.session.commit()
+            user = User(username=username, email=email, password=hashed_pwd, user_type=toggle)
+            print(user.to_dict())
+            user.save()
             info = {'information': u'成功注册', 'next_page': 'login'}
             flash(u'注册成功，现在可以登录', 'success')
             return jsonify(info), 200
@@ -46,7 +47,7 @@ def login():
         login_data = request.get_json()
         username = login_data['username']
         password = login_data['password']
-        user = User.query.filter_by(username=username).first() or User.query.filter_by(email=username).first()
+        user = User.objects(username=username).first() or User.objects(email=username).first()
         if user and bcrypt.check_password_hash(user.password, password):
             login_user(user)
             info = {}
@@ -77,7 +78,3 @@ def forgot():
 def logout():
     logout_user()
     return redirect(url_for('auth.login'))
-
-# @login_manager.user_loader
-# def load_user(user_id):
-#     return None

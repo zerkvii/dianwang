@@ -2,8 +2,7 @@
 from flask import render_template, request, flash, redirect, url_for, jsonify
 from flask_login import login_required
 from . import main
-from app import db
-from app.models import Record
+from app.repository import *
 
 
 @main.route('/backend', methods=['GET', 'POST'])
@@ -24,7 +23,7 @@ def overview():
 @main.route('/backend/lookup', methods=['GET', 'POST'])
 @login_required
 def lookup():
-    records = Record.query.filter_by(is_checked=1).all()
+    records = Record.objects(status_flag=True).all()
     # send recorrds to specified
     return render_template('backend_lookup.html', title=u'查看备案', records=records)
 
@@ -34,7 +33,7 @@ def lookup():
 @login_required
 def approval():
     # print('ok')
-    records = Record.query.filter_by(is_checked=0).all()
+    records = Record.objects(status_flag=False).all()
     if request.method == 'POST':
         record_data = request.get_json()
         if record_data['action'] == 1:
@@ -42,9 +41,8 @@ def approval():
                 "next_page": "lookup"
             }
             record = Record.query.filter_by(serial_number=record_data['serial_number']).first()
-            record.is_checked = 1
-            db.session.add(record)
-            db.session.commit()
+            record.status_flag = True
+            record.save()
             flash('审批成功')
             return jsonify(data), 200
         else:
@@ -70,7 +68,7 @@ def help():
 @main.route('/backend/records/<string:str>', methods=['GET'])
 def record_detail(str):
     title = '备案号 ' + str
-    record = Record.query.filter_by(serial_number=str).first()
+    record = Record.objects(serial_number=str).first()
     if record:
         return render_template('backend_detail.html', record=record, title=title)
 

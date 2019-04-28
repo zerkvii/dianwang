@@ -3,7 +3,7 @@ from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 import re
 import json
-from app import create_app, db
+from app import create_app
 import os
 import socketio
 
@@ -55,8 +55,6 @@ class MyHandler(FTPHandler):
             except:
                 print("err:")
                 print(list)
-            # print([serial, producer_id, producer, backup_type, contact_person, em_version, details, backup_version, date])
-            # print(type(details))
             create_app().app_context().push()
             from app.models import Record
             details = str(details)

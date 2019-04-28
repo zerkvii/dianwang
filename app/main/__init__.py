@@ -2,4 +2,4 @@ from flask import Blueprint
 
 main = Blueprint('main', __name__)
 
-from . import split_routes
+from . import routes
