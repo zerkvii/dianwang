@@ -40,6 +40,15 @@ class Record(Document):
     backup_type = IntField(default=0)
     details = DictField()
 
+    def to_strftime(self):
+        return self.back_date.strftime("%Y-%m-%d %H:%M:%S")
+
+    def get_back_type(self):
+        if self.status_flag:
+            return '不带系统'
+        else:
+            return '带系统'
+
 
 @login_manager.user_loader
 def load_user(user_id):

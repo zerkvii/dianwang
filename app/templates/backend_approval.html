@@ -15,6 +15,8 @@
     <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- chartist CSS -->
     <link href="/static/css/googlefonts.css">
+    <link href="/static/assets/plugins/footable/css/footable.core.css" rel="stylesheet">
+    <link href="/static/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet"/>
     <link href="/static/assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
     <link href="/static/assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
     <link href="/static/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css"
@@ -126,7 +128,7 @@
                                     <div class="drop-title">通知</div>
                                 </li>
                                 <li>
-                                    <div class="message-center">
+                                    <div id="notices" class="message-center">
                                         <!-- Message -->
                                         <a href="#">
                                             <div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div>
@@ -275,89 +277,78 @@
             <!-- Start Page Content -->
             <!-- ============================================================== -->
             <!-- Row -->
+            <div class="card">
+                <div class="card-body">
 
-            <div class="row">
-                <!-- Column -->
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">待审批备案</h4>
-                            {#                                <h6 class="card-subtitle"></h6>#}
-                            <div class="table-responsive">
-                                <table class="table table-bordered">
-                                    <thead>
-                                    <tr>
-                                        <th>备案号</th>
-                                        <th>备案种类</th>
-                                        <th>生产厂家</th>
-                                        <th>备案申请时间</th>
-                                        <th>备案联系人</th>
-                                        <th>电能表型号</th>
-                                        <th class="text-nowrap">审批操作</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for record in records %}
-                                        <tr>
-                                            <td>
-                                                <a href="/backend/records/{{ record.serial_number }}">{{ record.serial_number }}</a>
-                                            </td>
-                                            <td>{{ record.type }}
-                                                {#                                            <div class="progress progress-xs margin-vertical-10 ">#}
-                                                {#                                                <div class="progress-bar bg-info"#}
-                                                {#                                                     style="width: 35%; height:6px;"></div>#}
-                                                {#                                            </div>#}
-                                            </td>
-                                            <td>{{ record.producer }}
-                                                {#                                            <a href="" data-toggle="tooltip" data-original-title="点击查看完整信息">&nbsp;国网，带操作系统...</a>#}
-                                            </td>
-                                            <td>{{ record.date }}</td>
+                    <table id="demo-foo-addrow2" class="table table-bordered table-hover toggle-circle"
+                           data-page-size="7">
+                        <thead>
+                        <tr>
+                            <th data-sort-initial="true" data-toggle="true">备案号</th>
+                            <th>备案种类</th>
+                            <th data-hide="phone, tablet">生产厂家</th>
+                            <th data-hide="phone, tablet">备案申请时间</th>
+                            <th data-hide="phone, tablet">备案联系人</th>
+                            <th data-sort-ignore="true" class="min-width">电能表型号</th>
+                            <th class="text-nowrap">审批操作</th>
 
-                                            <td>{{ record.contact_person }}</td>
+                        </tr>
+                        </thead>
 
-                                            <td>{{ record.em_version }}</td>
-                                            <td class="text-nowrap" align="center">
-                                                <button id="{{ record.serial_number }}" onclick="agree(this)"
-                                                        type="button"
-                                                        class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
-                                                        data-toggle="tooltip" data-original-title="审批通过"><i
-                                                        class="fa fa-check text-info" aria-hidden="true"></i>
-                                                </button>
-                                                <button id="{{ record.serial_number }}" onclick="cancel(this)"
-                                                        type="button"
-                                                        class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
-                                                        data-toggle="tooltip" data-original-title="审批驳回">
-                                                    <i class="fa fa-close text-danger" aria-hidden="true"></i></button>
-                                                {#                                                <a onclick="agree()" id="{{ record.serial_number }}"  data-toggle="tooltip" data-original-title="审批通过"> <i#}
-                                                {#                                                        class="fa fa-check text-inverse m-r-10"></i> </a>#}
-                                                {#                                                <a  onclick="cancel()" id="{{ record.serial_number }}" data-toggle="tooltip" data-original-title="审批驳回"> <i#}
-                                                {#                                                        class="fa fa-close text-danger"></i> </a>#}
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                        <tbody>
+                        {% for record in records %}
+                            <tr>
+                                <td>
+                                    <a href="/backend/records/{{ record.serial_number }}">{{ record.serial_number }}</a>
+                                </td>
+                                <td>{{ record.get_back_type() }}
+                                    {#                                            <div class="progress progress-xs margin-vertical-10 ">#}
+                                    {#                                                <div class="progress-bar bg-info"#}
+                                    {#                                                     style="width: 35%; height:6px;"></div>#}
+                                    {#                                            </div>#}
+                                </td>
+                                <td>{{ record.producer_name }}
+                                    {#                                            <a href="" data-toggle="tooltip" data-original-title="点击查看完整信息">&nbsp;国网，带操作系统...</a>#}
+                                </td>
+                                <td>{{ record.to_strftime() }}</td>
+
+                                <td>{{ record.contact_person }}</td>
+
+                                <td>{{ record.dianbiao_version }}</td>
+                                <td class="text-nowrap" align="center">
+                                    <button id="{{ record.serial_number }}" onclick="agree(this)"
+                                            type="button"
+                                            class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                            data-toggle="tooltip" data-original-title="审批通过"><i
+                                            class="fa fa-check text-info" aria-hidden="true"></i>
+                                    </button>
+                                    <button id="{{ record.serial_number }}" onclick="cancel(this)"
+                                            type="button"
+                                            class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                            data-toggle="tooltip" data-original-title="审批驳回">
+                                        <i class="fa fa-close text-danger" aria-hidden="true"></i></button>
+                                    {#                                                <a onclick="agree()" id="{{ record.serial_number }}"  data-toggle="tooltip" data-original-title="审批通过"> <i#}
+                                    {#                                                        class="fa fa-check text-inverse m-r-10"></i> </a>#}
+                                    {#                                                <a  onclick="cancel()" id="{{ record.serial_number }}" data-toggle="tooltip" data-original-title="审批驳回"> <i#}
+                                    {#                                                        class="fa fa-close text-danger"></i> </a>#}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                        <tfoot>
+                        <tr>
+
+                            <td colspan="12">
+                                            <div class="text-right pull-right">
+                                                <ul class="pagination"></ul>
+                                            </div>
+                                        </td>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </div>
-            <!-- Row -->
-            {#            <div class="row">#}
-            {#                <!-- column -->#}
-            {#                <div class="col-lg-6">#}
-            {#                    <div class="card">#}
-            {#                        <div class="card-body">#}
-            {#                            <h4 class="card-title">系统容量</h4>#}
-            {#                            <div class="flot-chart">#}
-            {#                                <div class="flot-chart-content" id="flot-pie-chart"></div>#}
-            {#                            </div>#}
-            {#                        </div>#}
-            {#                    </div>#}
-            {#                </div>#}
-            {#                <!-- column -->#}
-            {#            </div>#}
-            <!-- Row -->
+
 
             <!-- ============================================================== -->
             <!-- End PAge Content -->
@@ -492,7 +483,7 @@ Chart JS -->
             contentType: "application/json",
             dataType: 'json',
             url: window.location.search,
-            data: JSON.stringify({"serial_number": id, "action":1}),
+            data: JSON.stringify({"serial_number": id, "action": 1}),
             success: function (data) {
                 window.location.href = data['next_page'];
             },
@@ -507,12 +498,13 @@ Chart JS -->
             contentType: "application/json",
             dataType: 'json',
             url: window.location.search,
-            data: JSON.stringify({"serial_number": id, "action":0}),
+            data: JSON.stringify({"serial_number": id, "action": 0}),
             success: function (data) {
                 window.location.href = data['next_page'];
             },
         });
     }
+
 
 </script>
 {% with messages = get_flashed_messages() %}
@@ -529,5 +521,40 @@ Chart JS -->
         </script>
     {% endif %}
 {% endwith %}
+
+<script>
+    $('document').ready(function () {
+        getRealData(0);
+        setInterval(function () {
+            getRealData(1)
+        }, 10000);//request every x seconds
+
+    });
+
+    function getRealData(first) {
+        $.ajax({
+            url: "/apis/notice",
+            type: "POST",
+            data: {
+                type: 0,
+                first: first
+            },
+            cache: false,
+            success: function (data) {
+
+                appendNotice(data['urls'], data['date']);
+            }
+        })
+    }
+
+    function appendNotice(data, date) {
+        for (x in data) {
+            let liNode = $.parseHTML('<a href=' + data[x] + '><div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div><div class="mail-contnet"><h6>通知</h6><span class="mail-desc">新的备案申请</span><span class="time">' + date[x] + '</span></div></a>')
+            {#console.log(liNode)#}
+            $("#notices").append(liNode)
+        }
+    }
+
+</script>
 </body>
 </html>

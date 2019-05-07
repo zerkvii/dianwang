@@ -509,5 +509,40 @@
 
     update();
 </script>
+
+<script>
+    $('document').ready(function () {
+        getRealData(0);
+        setInterval(function () {
+            getRealData(1)
+        }, 10000);//request every x seconds
+
+    });
+
+    function getRealData(first) {
+        $.ajax({
+            url: "/apis/notice",
+            type: "POST",
+            data: {
+                type: 0,
+                first: first
+            },
+            cache: false,
+            success: function (data) {
+
+                appendNotice(data['urls'], data['date']);
+            }
+        })
+    }
+
+    function appendNotice(data, date) {
+        for (x in data) {
+            let liNode = $.parseHTML('<a href=' + data[x] + '><div class="btn btn-danger btn-circle"><i class="fa fa-link"></i></div><div class="mail-contnet"><h6>通知</h6><span class="mail-desc">新的备案申请</span><span class="time">' + date[x] + '</span></div></a>')
+            {#console.log(liNode)#}
+            $("#notices").append(liNode)
+        }
+    }
+
+</script>
 </body>
 </html>

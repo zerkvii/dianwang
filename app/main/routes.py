@@ -1,8 +1,9 @@
 # coding=utf-8
-from flask import render_template, request, flash, redirect, url_for, jsonify
+from flask import render_template, request, flash, jsonify
 from flask_login import login_required
-from . import main
+
 from app.repository import *
+from . import main
 
 
 @main.route('/backend', methods=['GET', 'POST'])
@@ -40,7 +41,7 @@ def approval():
             data = {
                 "next_page": "lookup"
             }
-            record = Record.query.filter_by(serial_number=record_data['serial_number']).first()
+            record = Record.objects(serial_number=record_data['serial_number']).first()
             record.status_flag = True
             record.save()
             flash('审批成功')
@@ -65,10 +66,10 @@ def help():
 
 
 # 查看指定备案
-@main.route('/backend/records/<string:str>', methods=['GET'])
-def record_detail(str):
-    title = '备案号 ' + str
-    record = Record.objects(serial_number=str).first()
+@main.route('/backend/records/<string>', methods=['GET'])
+def record_detail(string):
+    title = '备案号 ' + string
+    record = Record.objects(serial_number=string).first()
     if record:
         return render_template('backend_detail.html', record=record, title=title)
 
