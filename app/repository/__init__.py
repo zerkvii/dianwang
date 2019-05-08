@@ -49,6 +49,9 @@ class Record(Document):
         else:
             return '带系统'
 
+    def get_details(self):
+        return dict(self.details)
+
 
 @login_manager.user_loader
 def load_user(user_id):

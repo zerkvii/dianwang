@@ -34,7 +34,6 @@
 
 <![endif]-->
 </head>
-
 <body class="fix-header fix-sidebar card-no-border logo-center">
 
 <!-- alert flash -->
@@ -274,30 +273,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card card-body printableArea">
-                        <h3><b>INVOICE</b> <span class="pull-right">#5669626</span></h3>
+                        <h3><b>详细备案信息</b> <span class="pull-right">{{ record.serial_number }}</span><span
+                                class="pull-right">备案号 :</span></h3>
                         <hr>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="pull-left">
                                     <address>
-                                        <h3> &nbsp;<b class="text-danger">Monster Admin</b></h3>
-                                        <p class="text-muted m-l-5">E 104, Dharti-2,
-                                            <br/> Nr' Viswakarma Temple,
-                                            <br/> Talaja Road,
-                                            <br/> Bhavnagar - 364002</p>
+                                        {#                                        <h3><b class="text-info">{{ record.get_back_type() }}</b></h3>#}
+                                        {#                                        <p class="text-muted m-l-5">E 104, Dharti-2,#}
+                                        {#                                            <br/> Nr' Viswakarma Temple,#}
+                                        {#                                            <br/> Talaja Road,#}
+                                        {#                                            <br/> Bhavnagar - 364002</p>#}
                                     </address>
                                 </div>
                                 <div class="pull-right text-right">
                                     <address>
-                                        <h3>To,</h3>
-                                        <h4 class="font-bold">Gaala & Sons,</h4>
-                                        <p class="text-muted m-l-30">E 104, Dharti-2,
-                                            <br/> Nr' Viswakarma Temple,
-                                            <br/> Talaja Road,
-                                            <br/> Bhavnagar - 364002</p>
-                                        <p class="m-t-30"><b>Invoice Date :</b> <i class="fa fa-calendar"></i> 23rd Jan
-                                            2017</p>
-                                        <p><b>Due Date :</b> <i class="fa fa-calendar"></i> 25th Jan 2017</p>
+                                        <h3>备案日期</h3>
+
+                                        <p><b></b> <i class="fa fa-calendar"></i>&nbsp{{ record.to_strftime() }}</p>
                                     </address>
                                 </div>
                             </div>
@@ -306,58 +300,53 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th class="text-center">#</th>
-                                            <th>Description</th>
-                                            <th class="text-right">Quantity</th>
-                                            <th class="text-right">Unit Cost</th>
-                                            <th class="text-right">Total</th>
+                                            <th class="text-center">条目</th>
+                                            <th>描述</th>
+
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td>Milk Powder</td>
-                                            <td class="text-right">2</td>
-                                            <td class="text-right"> $24</td>
-                                            <td class="text-right"> $48</td>
+                                            <td class="text-center">代码版本</td>
+                                            <td>{{ record.code_version }}</td>
+
                                         </tr>
                                         <tr>
-                                            <td class="text-center">2</td>
-                                            <td>Air Conditioner</td>
-                                            <td class="text-right"> 3</td>
-                                            <td class="text-right"> $500</td>
-                                            <td class="text-right"> $1500</td>
+                                            <td class="text-center">电表版本</td>
+                                            <td>{{ record.dianbiao_version }}</td>
+
                                         </tr>
                                         <tr>
-                                            <td class="text-center">3</td>
-                                            <td>RC Cars</td>
-                                            <td class="text-right"> 20</td>
-                                            <td class="text-right"> %600</td>
-                                            <td class="text-right"> $12000</td>
+                                            <td class="text-center">是否携带操作系统</td>
+                                            <td>{{ record.get_back_type() }}</td>
+
                                         </tr>
-                                        <tr>
-                                            <td class="text-center">4</td>
-                                            <td>Down Coat</td>
-                                            <td class="text-right"> 60</td>
-                                            <td class="text-right">$5</td>
-                                            <td class="text-right"> $300</td>
-                                        </tr>
+                                        {% with details=record.get_details() %}
+                                            {% for detail in details %}
+                                                <tr>
+                                                    <td class="text-center">{{ detail }}</td>
+                                                    <td>{{ details[detail] }}</td>
+
+                                                </tr>
+                                            {% endfor %}
+                                        {% endwith %}
+
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="pull-right m-t-30 text-right">
-                                    <p>Sub - Total amount: $13,848</p>
-                                    <p>vat (10%) : $138 </p>
+                                    <p>厂家：{{ record.producer_name }}</p>
+                                    <p>联系人：{{ record.contact_person }}</p>
                                     <hr>
-                                    <h3><b>Total :</b> $13,986</h3>
+                                    <h5><b>联系电话:</b>{{ record.contact_number }}</h5>
                                 </div>
                                 <div class="clearfix"></div>
                                 <hr>
                                 <div class="text-right">
-                                    <button class="btn btn-danger" type="submit"> Proceed to payment</button>
-                                    <button id="print" class="btn btn-default btn-outline" type="button"><span><i
+                                    {#                                    <button class="btn btn-danger" type="submit"> Proceed to payment</button>#}
+                                    <button id="print" class="btn btn-primary" type="button"><span><i
                                             class="fa fa-print"></i> Print</span></button>
                                 </div>
                             </div>
