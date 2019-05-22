@@ -53,6 +53,11 @@ class Record(Document):
         return dict(self.details)
 
 
+class FileUser(Document):
+    username = StringField(unique=True)
+    password = StringField()
+
+
 @login_manager.user_loader
 def load_user(user_id):
     user = User.objects(id=user_id).first()

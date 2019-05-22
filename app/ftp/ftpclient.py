@@ -34,7 +34,7 @@ def uploadfile(ftp, remotepath, localpath):
 
 if __name__ == "__main__":
     # host,port, username, password
-    ftp = ftpconnect("127.0.0.1", 2021, "sg", "sg123456")
+    ftp = ftpconnect("127.0.0.1", 2021, "sg", "123456")
     print(ftp)
     # 获取当前路径
     pwd_path = ftp.pwd()

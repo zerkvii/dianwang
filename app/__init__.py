@@ -4,6 +4,7 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_socketio import SocketIO
 # from celery import Celery
+from flask_apscheduler import APScheduler
 from .config import Config
 
 socketio = SocketIO()

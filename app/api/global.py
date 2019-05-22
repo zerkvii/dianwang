@@ -1,1 +1,0 @@
-NOTICE_LIST = []

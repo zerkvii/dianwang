@@ -3,7 +3,8 @@ from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 import re
 import json
-from app import create_app
+# from app import create_app
+from app.repository import *
 import os
 import socketio
 
@@ -33,42 +34,28 @@ class MyHandler(FTPHandler):
         # do something when a file has been received
 
         match = re.findall(r'[^(\\\\)]*\.json', file)
-        list = ''
+        record_dict = ''
         if len(match) > 0:
             json_file = 'json/' + match[0]
             with open(json_file, 'r', encoding='utf-8') as f:
                 json_data = json.load(f)
-                list = json_data['采集终端软件备案明细表']
+                record_dict = json_data['record']
+
             # for item in list:
             #     print((item))
             try:
                 # print(type(list))
-                serial = list['number']
-                producer = list['厂家名称']
-                producer_id = list['厂家代码']
-                backup_type = list['备案种类']
-                contact_person = list['联系人姓名']
-                em_version = list['电能表型号']
-                details = list['详细信息']
-                backup_version = list['程序版本号']
-                date = list['填写日期']
-            except:
-                print("err:")
-                print(list)
-            create_app().app_context().push()
-            from app.models import Record
-            details = str(details)
-            loc = Record.query.filter_by(serial_number=serial).first()
-            if not loc:
-                print('添加备案')
-                location = Record(serial_number=serial, md5_name=serial, json_name=serial, rar_name=serial,
-                                  producer=producer, producer_id=producer_id, type=backup_type,
-                                  contact_person=contact_person, date=date,
-                                  em_version=em_version, backup_version=backup_version, details=details)
-                db.session.add(location)
-                db.session.commit()
+                serial = record_dict['serial_number']
+            except Exception as e:
+                print(e)
+            # create_app().app_context().push()
 
+            loc = Record.objects(serial_number=serial).first()
+            if not loc:
+                record = Record.from_json(json.dumps(record_dict))
+                record.save()
             else:
+                record = Record.f
                 pass
 
         def on_incomplete_file_sent(self, file):
@@ -83,15 +70,14 @@ class MyHandler(FTPHandler):
 
 def start_serve():
     authorizer = DummyAuthorizer()
-    create_app().app_context().push()
-    from app.models import Fuser
+    # create_app().app_context().push()
     # from app.models import Record_location
     # Define a new user having full r/w permissions and a read-only
     # anonymous user
-    fusers = Fuser.query.all()
-    for user in fusers:
-        user_map = user.get_user()
-        authorizer.add_user(user_map['username'], user_map['password'], '.', perm='elradfmwM')
+    print('start')
+    users = FileUser.objects
+    for user in users:
+        authorizer.add_user(user.username, user.password, '.', perm='elradfmwM')
     # authorizer.add_anonymous(os.getcwd())
 
     # Instantiate FTP handler class
