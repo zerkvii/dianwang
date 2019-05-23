@@ -4,11 +4,17 @@ import re
 import os
 from werkzeug.utils import secure_filename
 from flask import request, abort, jsonify, send_from_directory
+import json
 
 UPLOAD_DIRECTORY = os.path.join(os.getcwd(), 'api_uploaded_files')
 
 if not os.path.exists(UPLOAD_DIRECTORY):
     os.makedirs(UPLOAD_DIRECTORY)
+
+
+def get_dirs_files(dir):
+    return os.listdir(os.path.join(UPLOAD_DIRECTORY, 'json')), os.listdir(
+        os.path.join(UPLOAD_DIRECTORY, 'md5')), os.listdir(os.path.join(UPLOAD_DIRECTORY, 'rar'))
 
 
 @api.route("/files")
@@ -18,31 +24,48 @@ def list_files():
     print(os.getcwd())
     print(UPLOAD_DIRECTORY)
 
-    for filename in os.listdir(UPLOAD_DIRECTORY):
-        path = os.path.join(UPLOAD_DIRECTORY, filename)
-        if os.path.isfile(path):
-            files.append(filename)
+    for (json_file, md5_file, rar_file) in zip(os.listdir(os.path.join(UPLOAD_DIRECTORY, 'json')), os.listdir(
+            os.path.join(UPLOAD_DIRECTORY, 'md5')), os.listdir(os.path.join(UPLOAD_DIRECTORY, 'rar'))):
+        if json_file and md5_file and rar_file:
+            files.append([json_file, md5_file, rar_file])
     return jsonify(files)
 
 
-@api.route("/files/<path:path>")
-def get_file(path):
+@api.route("/files/download", methods=['GET', 'POST'])
+def get_file():
     """Download a file."""
-    return send_from_directory(UPLOAD_DIRECTORY, path, as_attachment=True)
+    print(request.json)
+    return '', 200
+    # return send_from_directory(UPLOAD_DIRECTORY, as_attachment=True)
 
 
-@api.route('/files/all', methods=['POST'])
-def upload_all():
-    filename = ''
+@api.route('/files/all/<string:s_number>', methods=['POST'])
+def upload_all(s_number):
     for x in request.files:
-        serial_number = re.findall(r'.*\.', x)[0]
-        path = re.findall(r'\.(.*)', x)[0]
-        print(path)
+        serial_number = re.findall(r'(.*)\.', x)[0]
+        if serial_number != s_number:
+            info = {
+                'information': '序列号与文件不一致'
+            }
+            return jsonify(info), 400
+
+    for x in request.files:
         file = request.files[x]
         filename = secure_filename(file.filename)
-        print(filename)
+        path = re.findall(r'\.(.*)', x)[0]
         file.save('./api_uploaded_files/' + path + '/' + filename)
-    return "", 200
+    json_file = open('./api_uploaded_files/json/' + s_number + '.json', 'rb')
+    f = json.load(json_file)
+    record_dict = f['record']
+    if serial_number == record_dict['serial_number']:
+        if len(Record.objects(serial_number=serial_number)) < 1:
+            record = Record.from_json(json.dumps(record_dict))
+            record.save()
+    info = {
+        'information': '上传成功'
+    }
+    print(f)
+    return jsonify(info), 200
 
 
 # @api.route("/files/<filename>", methods=["POST"])
