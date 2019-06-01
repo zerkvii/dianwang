@@ -1,57 +1,108 @@
 # coding=utf-8
-from flask import render_template, request, redirect, url_for, flash, current_app
-from flask_login import login_required, current_user
-from ..utils.save_profile_image import save_picture
-from app import bcrypt, db
-from .forms import UpdateAccountForm, TestForm
+from flask import render_template, request, flash, jsonify
+from flask_login import login_required
+
+from app.repository import *
 from . import main
 
 
-@main.route('/user_manage', methods=['GET', 'POST'])
+@main.route('/backend', methods=['GET', 'POST'])
 @login_required
-def user_manage():
-    return render_template('backend/user_manage.html')
+def backend():
+    # socketio.emit('message', {'data': 'T'}, namespace='/backend')
+    return render_template('backend.html', title=u'系统信息')
 
 
-@main.route('/record_info', methods=['GET', 'POST'])
+# 备案概览
+@main.route('/backend/overview', methods=['GET', 'POST'])
 @login_required
-def record_info():
-    return render_template('backend/record_info.html')
+def overview():
+    return render_template('backend_overview.html', title=u'备案概览')
 
 
-@main.route('/add_info', methods=['GET', 'POST'])
+# 查看备案
+@main.route('/backend/lookup', methods=['GET', 'POST'])
 @login_required
-def add_info():
-    return render_template('backend/add_info.html')
+def lookup():
+    records = Record.objects(status_flag=True).all()
+    # send recorrds to specified
+    return render_template('backend_lookup.html', title=u'查看备案', records=records)
 
 
-@main.route('/user_settings', methods=['GET', 'POST'])
+#  审批备案
+@main.route('/backend/approval', methods=['GET', 'POST'])
 @login_required
-def user_settings():
-    form = UpdateAccountForm()
-    form.corpname.data = current_user.corpname
-    form.username.data = current_user.username
-    form.email.data = current_user.email
-    if form.validate_on_submit():
-        current_user.corpname = form.corpname.data
-        current_user.username = form.username.data
-        current_user.email = form.email.data
-        # current_user.password=/
-        if form.image.data:
-            print(current_app.root_path)
-            current_user.image = save_picture(form.image.data)
-        db.session.add(current_user._get_current_object())
-        db.session.commit()
-        flash(u'修改已完成', 'alert')
-        return redirect(url_for('main.user_manage'))
-    return render_template('backend/user_settings.html', form=form)
+def approval():
+    # print('ok')
+    records = Record.objects(status_flag=False).all()
+    if request.method == 'POST':
+        record_data = request.get_json()
+        if record_data['action'] == 1:
+            data = {
+                "next_page": "lookup"
+            }
+            record = Record.objects(serial_number=record_data['serial_number']).first()
+            record.status_flag = True
+            record.save()
+            flash('审批成功')
+            return jsonify(data), 200
+        else:
+            data = {
+                "next_page": "error_record"
+            }
+            flash('错误反馈')
+            return jsonify(data), 200
+    return render_template('backend_approval.html', title=u'审批备案', records=records)
 
 
-@main.route('/test', methods=['GET', 'POST'])
+# 帮助
+@main.route('/backend/help', methods=['GET', 'POST'])
 @login_required
-def test():
-    form = TestForm()
-    if form.validate_on_submit():
-        print(form.picture.data)
-        return redirect(test)
-    return render_template('backend/test.html', form=form)
+def help():
+    # if request.method == 'POST':
+    #     modify_data = request.get_json()
+    #     return
+    return render_template('backend_help.html', title=u'帮助')
+
+
+# 查看指定备案
+@main.route('/backend/records/<string>', methods=['GET'])
+def record_detail(string):
+    title = '备案号 ' + string
+    record = Record.objects(serial_number=string).first()
+    if record:
+        return render_template('backend_detail.html', record=record, title=title)
+
+
+@main.route('/backend/chinfo', methods=['GET', 'POST'])
+@login_required
+def chinfo():
+    return render_template('split_backend/backend_chinfo.html')
+
+
+@main.route('/backend/dash', methods=['GET', 'POST'])
+@login_required
+def dash():
+    return render_template('split_backend/backend_dash.html')
+
+
+# @main.route('/test', methods=['GET', 'POST'])
+# @login_required
+# def test():
+#     form = TestForm()
+#     if form.validate_on_submit():
+#         print(form.picture.data)
+#         return redirect(test)
+#     return render_template('backend/test.html', form=form)
+
+
+@main.route('/user_help', methods=['GET', 'POST'])
+@login_required
+def user_help():
+    return render_template('backend/user_help.html')
+
+
+@main.route('/files_upload', methods=['POST'])
+@login_required
+def files_upload():
+    pass

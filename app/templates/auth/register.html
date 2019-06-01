@@ -1,107 +1,177 @@
-{% extends 'base/auth.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/static/assets/images/state_grid.png"/>
 
-{% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/static/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
 
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('/static/images/bg-01.jpg');">
+        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+            <form class="login100-form validate-form" id="register_form">
+					<span class="login100-form-title p-b-49">
+						{{ title }}
+					</span>
 
-                <!-- Start Sign In Form -->
-                <form method="POST" action="" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
-                    <div class="form-group" style="text-align: center;color: #4e342e;font-size: larger">
-                        <span>电表备案系统注册面板</span>
+                <div class="wrap-input100 validate-input m-b-23" data-validate="用户名不为空">
+                    <span class="label-input100">用户名</span>
+                    <input class="input100" type="text" name="username" placeholder="输入用户名">
+                    <span class="focus-input100" data-symbol="&#xf206;"></span>
+                </div>
+                <div class="wrap-input100 validate-input m-b-23" data-validate="邮箱格式不合法">
+                    <span class="label-input100">邮箱</span>
+                    <input class="input100" type="text" name="email" placeholder="输入电子邮箱">
+                    <span class="focus-input100" data-symbol="&#xf15a;"></span>
+                </div>
+                <div class="wrap-input100 validate-input m-b-23" data-validate="邮箱格式不合法">
+                    <span class="label-input100">用户类型</span>
+                    {#                    <input class="input100" type="text" name="email" placeholder="输入电子邮箱">#}
+                    <select class="input100" name="toggle"
+                            style="border: 1px solid #fff;background-color: transparent;">
+                        <option class="input100" value="0">省网中心</option>
+                        <option class="input100" value="1">国网中心</option>
+                    </select>
+
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input m-b-23" data-validate="密码至少为六位">
+                    <span class="label-input100">密码</span>
+                    <input class="input100" type="password" name="password" placeholder="输入密码">
+                    <span class="focus-input100" data-symbol="&#xf191;"></span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="两次输入不一致">
+                    <span class="label-input100">确认密码</span>
+                    <input class="input100" type="password" name="confirm_password" placeholder="确认密码">
+                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                </div>
+                <div class="text-right p-t-8 p-b-31">
+                    <a href="#">
+                    </a>
+                </div>
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button id="register_btn" class="login100-form-btn">
+                            注册
+                        </button>
+
                     </div>
-                    <div class="form-group">
-                        <label for="corpname" class="sr-only">CorpName</label>
-                        {{ form.csrf_token }}
-                        {% if form.corpname.errors %}
-                            {{ form.corpname(class="form-control",id="corpname",placeholder="公司名") }}
-                            <div class="error-display">
-                                {% for error in form.corpname.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            {{ form.corpname(class="form-control",id="corpname",placeholder="公司名") }}
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <label for="username" class="sr-only">Name</label>
-                        {{ form.csrf_token }}
-                        {% if form.username.errors %}
-                            {{ form.username(class="form-control",id="username",placeholder="用户名") }}
-                            <div class="error-display">
-                                {% for error in form.username.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            {{ form.username(class="form-control",id="username",placeholder="用户名") }}
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="sr-only">Email</label>
-                        {{ form.csrf_token }}
-                        {% if form.email.errors %}
-                            {{ form.email(class="form-control",id="email",placeholder="邮箱") }}
-                            <div class="error-display">
-                                {% for error in form.email.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            {{ form.email(class="form-control",id="email",placeholder="邮箱") }}
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="sr-only">Password</label>
-                        {{ form.csrf_token }}
-                        {% if form.password.errors %}
-                            <img id="demo_img" onclick="hideShowPsw()" src="/static/auth/images/visible.png">
-                            {{ form.password(class="form-control",id="password",placeholder="密码") }}
-                            <div class="error-display">
-                                {% for error in form.password.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <img id="demo_img" onclick="hideShowPsw()" src="/static/auth/images/visible.png">
-                            {{ form.password(class="form-control",id="password",placeholder="密码") }}
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <label for="re-password" class="sr-only">Re-type Password</label>
-                        {{ form.csrf_token }}
-                        {% if form.confirm_password.errors %}
-                            {{ form.confirm_password(class="form-control",id="re-password",placeholder="重复密码") }}
-                            <div class="error-display">
-                                {% for error in form.confirm_password.errors %}
-                                    <span>{{ error }}</span>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            {{ form.confirm_password(class="form-control",id="re-password",placeholder="重复密码") }}
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <p>已经注册过? <a href="{{ url_for('auth.login') }}">登录</a></p>
-                    </div>
-                    <div class="form-group">
-                        {{ form.submit(class="btn btn-block",value="注册") }}
-                    </div>
-                </form>
-                <!-- END Sign In Form -->
+                </div>
+
+                <div class="txt1 text-center p-t-30 p-b-20">
+						<span>
+                            <a href="/login">登录</a>
+						</span>
+                </div>
 
 
-            </div>
-        </div>
-        <div class="row" style="padding-top: 60px; clear: both;">
-            <div class="col-md-12 text-center">
-                <p>
-                    <small>©2018-2028 cse.whu All Rights Reserved.</small>
-                </p>
-            </div>
+            </form>
         </div>
     </div>
+</div>
 
-{% endblock %}
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/vendor/bootstrap/js/popper.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/vendor/daterangepicker/moment.min.js"></script>
+<script src="/static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="/static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="/static/js/swal.js"></script>
+
+<script src="/static/js/main.js"></script>
+
+{#<script>#}
+{#    function getFormData($form) {#}
+{#        let unindexed_array = $form.serializeArray();#}
+{#        let indexed_array = {};#}
+{#        $.map(unindexed_array, function (n) {#}
+{#            indexed_array[n['name']] = n['value'];#}
+{#        });#}
+{#        return indexed_array;#}
+{#    }#}
+{##}
+{#    let input = $('.validate-input .input100');#}
+{#    #}
+{##}
+{#    function checkFormData() {#}
+{#        let check = true;#}
+{##}
+{#        for (let i = 0; i < input.length; i++) {#}
+{#        #}
+{#            if (validate(input[i]) == false) {#}
+{#                alert(input[i]);#}
+{#                showValidate(input[i]);#}
+{#                check = false;#}
+{#            }#}
+{#        }#}
+{##}
+{#        return check;#}
+{#    }#}
+{##}
+{#    $(function () {#}
+{#        $("#register_btn").click(#}
+{#            function (e) {#}
+{#                e.preventDefault();#}
+{#                checkFormData();#}
+{#                $.ajax({#}
+{#                    type: 'POST',#}
+{#                    contentType: "application/json",#}
+{#                    dataType: 'json',#}
+{#                    url: window.location.search,#}
+{#                    data: JSON.stringify(getFormData($('#register_form'))),#}
+{#                    success: function (data) {#}
+{#                        window.location.href = data['next_page'];#}
+{#                    },#}
+{#                    error: function (xhr) {#}
+{#                        let information = $.parseJSON(xhr.responseText);#}
+{#                        swal({#}
+{#                            title: "错误",#}
+{#                            text: information['information'],#}
+{#                            icon: "error",#}
+{#                            button: "确定"#}
+{#                        },)#}
+{#                    }#}
+{#                })#}
+{#            }#}
+{#        );#}
+{#    })#}
+{#</script>#}
+</body>
+</html>

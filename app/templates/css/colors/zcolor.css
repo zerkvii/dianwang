@@ -1,0 +1,219 @@
+/*
+Template Name: Monster Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*
+Template Name: Monster Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*Theme Colors*/
+/*bootstrap Color*/
+/*Light colors*/
+/*Normal Color*/
+/*Extra Variable*/
+/*Preloader*/
+.preloader {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 99999;
+    background: #fff;
+}
+
+.preloader .cssload-speeding-wheel {
+    position: absolute;
+    top: calc(50% - 3.5px);
+    left: calc(50% - 3.5px);
+}
+
+/*******************
+/*Top bar
+*******************/
+.topbar {
+    background: white;
+    /*!* Old browsers *!*/
+    /*background: -moz-linear-gradient(left, #00706B 0%, #660fb5 100%);*/
+    /*!* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(left, #00706B 0%, #660fb5 100%);*/
+    /*!* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to right, #00706B 0%, #660fb5 100%);*/
+/*background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0.41) 99%, rgba(0,0,0,0.4) 100%);*/
+/*background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(0,0,0,0.41) 99%,rgba(0,0,0,0.4) 100%);*/
+/*background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(0,0,0,0.41) 99%,rgba(0,0,0,0.4) 100%);*/
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#66000000',GradientType=1 );*/
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.topbar .top-navbar .navbar-header .navbar-brand .dark-logo {
+    display: none;
+}
+
+.topbar .top-navbar .navbar-header .navbar-brand .light-logo {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.topbar .navbar-light .navbar-nav .nav-item > a.nav-link {
+    /*color: rgba(255, 255, 255, 0.8) !important;*/
+
+    color: #00706B !important;
+
+}
+
+.topbar .navbar-light .navbar-nav .nav-item > a.nav-link:hover, .topbar .navbar-light .navbar-nav .nav-item > a.nav-link:focus {
+    color: darkgreen !important;
+}
+
+/*******************
+/*General Elements
+*******************/
+a {
+
+    color: #00706B;
+}
+
+a.link:hover, a.link:focus {
+
+    color: #00706B !important;
+}
+
+.bg-theme {
+
+    color: #00706B !important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+    background-color: #00706B;
+    border-color: #00706B;
+}
+
+.right-sidebar .rpanel-title {
+    background: #00706B;
+}
+
+.stylish-table tbody tr:hover, .stylish-table tbody tr.active {
+    border-left: 4px solid #00706B;
+}
+
+.text-themecolor {
+    color: #00706B !important;
+}
+
+.profile-tab li a.nav-link.active,
+.customtab li a.nav-link.active {
+    border-bottom: 2px solid #00706B;
+    color: #00706B;
+}
+
+.profile-tab li a.nav-link:hover,
+.customtab li a.nav-link:hover {
+    color: #00706B;
+}
+
+/*******************
+/*Buttons
+*******************/
+.btn-themecolor,
+.btn-themecolor.disabled {
+    background: #00706B;
+    color: #ffffff;
+    border: 1px solid #00706B;
+}
+
+.btn-themecolor:hover,
+.btn-themecolor.disabled:hover {
+    background: #00706B;
+    opacity: 0.7;
+    border: 1px solid #00706B;
+}
+
+.btn-themecolor.active, .btn-themecolor:focus,
+.btn-themecolor.disabled.active,
+.btn-themecolor.disabled:focus {
+    background: #028ee1;
+}
+
+/*******************
+/*sidebar navigation
+*******************/
+.card-no-border .left-sidebar, .card-no-border .sidebar-nav {
+    background: transparent;
+}
+
+.mini-sidebar .sidebar-nav {
+    background: white;
+}
+
+@media (min-width: 768px) {
+    .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
+        background: #181c22;
+    }
+}
+
+.sidebar-nav {
+    background: #272c33;
+}
+
+.sidebar-nav ul li a {
+    /*color: #798699;*/
+    color: #0A0A0A;
+}
+
+.sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
+    color: #00706B;
+    opacity: 0.7;
+}
+
+.sidebar-nav ul li a.active {
+    color: #ffffff;
+}
+
+.sidebar-nav ul li.nav-small-cap {
+    color: #99abb4;
+}
+
+.sidebar-nav > ul > li.active > a, .sidebar-nav > ul > li.active:hover > a {
+    color: #ffffff;
+    background: #00706B;
+}
+
+.sidebar-nav > ul > li.active > a i, .sidebar-nav > ul > li.active:hover > a i {
+    color: #ffffff;
+}
+
+.sidebar-nav > ul > li.active > a:after, .sidebar-nav > ul > li.active:hover > a:after {
+    border-color: #ffffff;
+}
+
+.sidebar-nav > ul > li > a.active i, .sidebar-nav > ul > li > a:hover i {
+    color: #00706B;
+}
+
+.sidebar-nav > ul > li > a i {
+    /*color: #798699;*/
+    color: #00706B;
+}
+
+.sidebar-nav > ul > li > a.active {
+    font-weight: 400;
+    background: #ffffff;
+    color: #00706B;
+}
+
+.user-profile .profile-text a {
+    color: black !important;
+}
+
+.card-no-border .sidebar-footer {
+    background: #181c22;
+}
