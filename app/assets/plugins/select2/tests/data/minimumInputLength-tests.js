@@ -35,7 +35,7 @@ test('0 never displays the notice', function (assert) {
   data = new MinimumData(null, zeroOptions);
 
   data.query({
-    term: 'test'
+    term: 'upload.py'
   });
 
   assert.ok(data.called);
@@ -61,7 +61,7 @@ test('< 0 never displays the notice', function (assert) {
   data = new MinimumData(null, negativeOptions);
 
   data.query({
-    term: 'test'
+    term: 'upload.py'
   });
 
   assert.ok(data.called);

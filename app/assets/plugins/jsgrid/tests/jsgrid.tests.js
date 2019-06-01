@@ -11,7 +11,7 @@ $(function() {
 
     test("default creation", function() {
         var gridOptions = {
-                simpleOption: "test",
+                simpleOption: "upload.py",
                 complexOption: {
                     a: "subtest",
                     b: 1,
@@ -22,13 +22,13 @@ $(function() {
             grid = new Grid("#jsGrid", gridOptions);
 
         equal(grid._container[0], $("#jsGrid")[0], "container saved");
-        equal(grid.simpleOption, "test", "primitive option extended");
+        equal(grid.simpleOption, "upload.py", "primitive option extended");
         equal(grid.complexOption, gridOptions.complexOption, "non-primitive option extended");
     });
 
     test("jquery adapter creation", function() {
         var gridOptions = {
-                option: "test"
+                option: "upload.py"
             },
             $element = $("#jsGrid"),
             result = $element.jsGrid(gridOptions),
@@ -36,7 +36,7 @@ $(function() {
 
         equal(result, $element, "jquery fn returned source jQueryElement");
         ok(grid instanceof Grid, "jsGrid saved to jquery data");
-        equal(grid.option, "test", "options provided");
+        equal(grid.option, "upload.py", "options provided");
     });
 
     test("destroy", function() {
@@ -55,7 +55,7 @@ $(function() {
     test("jquery adapter second call changes option value", function() {
         var $element = $("#jsGrid"),
             gridOptions = {
-                option: "test"
+                option: "upload.py"
             },
             grid;
 
@@ -124,11 +124,11 @@ $(function() {
 
         $element.jsGrid(gridOptions);
 
-        testOption = $element.jsGrid("option", "test");
+        testOption = $element.jsGrid("option", "upload.py");
         equal(testOption, "value", "read option value");
 
-        $element.jsGrid("option", "test", "new_value");
-        testOption = $element.jsGrid("option", "test");
+        $element.jsGrid("option", "upload.py", "new_value");
+        testOption = $element.jsGrid("option", "upload.py");
         equal(testOption, "new_value", "set option value");
     });
 
@@ -187,8 +187,8 @@ $(function() {
 
         $element.jsGrid(gridOptions);
 
-        $element.jsGrid("option", "test", "newTestValue");
-        equal(optionChangingEventArgs.option, "test", "option name is provided in args of optionChanging");
+        $element.jsGrid("option", "upload.py", "newTestValue");
+        equal(optionChangingEventArgs.option, "upload.py", "option name is provided in args of optionChanging");
         equal(optionChangingEventArgs.oldValue, "testValue", "old option value is provided in args of optionChanging");
         equal(optionChangingEventArgs.newValue, "newTestValue", "new option value is provided in args of optionChanging");
 
@@ -232,12 +232,12 @@ $(function() {
 
     test("set default options with setDefaults", function() {
         jsGrid.setDefaults({
-            defaultOption: "test"
+            defaultOption: "upload.py"
         });
 
         var $element = $("#jsGrid").jsGrid({});
 
-        equal($element.jsGrid("option", "defaultOption"), "test", "default option set");
+        equal($element.jsGrid("option", "defaultOption"), "upload.py", "default option set");
     });
 
 
@@ -283,7 +283,7 @@ $(function() {
             gridOptions = {
                 controller: {
                     loadData: function() {
-                        return $.Deferred().reject({ value: 1 }, "test").promise();
+                        return $.Deferred().reject({ value: 1 }, "upload.py").promise();
                     }
                 },
                 onError: function(args) {
@@ -297,7 +297,7 @@ $(function() {
         grid.loadData();
 
         equal(errorFired, 1, "onError handler fired");
-        deepEqual(errorArgs, { grid: grid, args: [{ value: 1 }, "test"] }, "error has correct params");
+        deepEqual(errorArgs, { grid: grid, args: [{ value: 1 }, "upload.py"] }, "error has correct params");
     });
 
     asyncTest("autoload should call loadData after render", 1, function() {
@@ -319,10 +319,10 @@ $(function() {
             loadedArgs,
             $element = $("#jsGrid"),
             data = [
-                { field: "test" },
+                { field: "upload.py" },
                 { field: "test_another" },
                 { field: "test_another" },
-                { field: "test" }
+                { field: "upload.py" }
             ],
 
             gridOptions = {
@@ -331,7 +331,7 @@ $(function() {
                     {
                         name: "field",
                         filterValue: function(value) {
-                            return "test";
+                            return "upload.py";
                         }
                     }
                 ],
@@ -355,7 +355,7 @@ $(function() {
 
         grid.loadData();
 
-        equal(loadingArgs.filter.field, "test");
+        equal(loadingArgs.filter.field, "upload.py");
         equal(grid.option("data").length, 2, "filtered data loaded");
         deepEqual(loadedArgs.data, filteredData);
     });
@@ -458,10 +458,10 @@ $(function() {
     test("search", function() {
         var $element = $("#jsGrid"),
             data = [
-                { field: "test" },
+                { field: "upload.py" },
                 { field: "test_another" },
                 { field: "test_another" },
-                { field: "test" }
+                { field: "upload.py" }
             ],
 
             gridOptions = {
@@ -473,7 +473,7 @@ $(function() {
                     {
                         name: "field",
                         filterValue: function(value) {
-                            return "test";
+                            return "upload.py";
                         }
                     }
                 ],
@@ -541,7 +541,7 @@ $(function() {
                 filtering: true,
                 fields: [
                     {
-                        name: "test",
+                        name: "upload.py",
                         align: "right",
                         filtercss: "filter-class",
                         filterTemplate: function() {
@@ -583,8 +583,8 @@ $(function() {
             },
             grid = new Grid($element, gridOptions);
 
-        grid.fields[0].filterControl.val("test");
-        deepEqual(grid.getFilter(), { field: "test" }, "get filter");
+        grid.fields[0].filterControl.val("upload.py");
+        deepEqual(grid.getFilter(), { field: "upload.py" }, "get filter");
 
         grid.clearFilter();
         deepEqual(grid.getFilter(), { field: "" }, "filter cleared");
@@ -629,10 +629,10 @@ $(function() {
     test("search with filter", function() {
         var $element = $("#jsGrid"),
             data = [
-                { field: "test" },
+                { field: "upload.py" },
                 { field: "test_another" },
                 { field: "test_another" },
-                { field: "test" }
+                { field: "upload.py" }
             ],
 
             gridOptions = {
@@ -653,7 +653,7 @@ $(function() {
 
             grid = new Grid($element, gridOptions);
 
-        grid.search({ field: "test" });
+        grid.search({ field: "upload.py" });
         equal(grid.option("data").length, 2, "data filtered");
     });
 
@@ -951,7 +951,7 @@ $(function() {
     });
 
     test("grid field cellRenderer", function() {
-        var testItem = { text: "test" },
+        var testItem = { text: "upload.py" },
             args;
 
         var $grid = $("#jsGrid");
@@ -976,8 +976,8 @@ $(function() {
         var $customCell = $grid.find(".custom-class");
 
         equal($customCell.length, 1, "custom cell rendered");
-        equal($customCell.text(), "test");
-        deepEqual(args, { value: "test", item: testItem }, "cellRenderer args provided");
+        equal($customCell.text(), "upload.py");
+        deepEqual(args, { value: "upload.py", item: testItem }, "cellRenderer args provided");
     });
 
     test("grid field 'visible' option", function() {
@@ -987,7 +987,7 @@ $(function() {
             editing: true,
             fields: [
                 { name: "id", visible: false },
-                { name: "test" }
+                { name: "upload.py" }
             ]
         };
 
@@ -1015,7 +1015,7 @@ $(function() {
                 inserting: true,
                 fields: [
                     {
-                        name: "test",
+                        name: "upload.py",
                         align: "right",
                         insertcss: "insert-class",
                         insertTemplate: function() {
@@ -1103,19 +1103,19 @@ $(function() {
 
             grid = new Grid($element, gridOptions);
 
-        grid.fields[0].insertControl.val("test");
+        grid.fields[0].insertControl.val("upload.py");
         grid.insertItem();
 
-        equal(insertingArgs.item.field, "test", "field is provided in inserting args");
+        equal(insertingArgs.item.field, "upload.py", "field is provided in inserting args");
         equal(grid.option("data").length, 1, "data is inserted");
         ok(inserted, "controller insertItem was called");
-        deepEqual(grid.option("data")[0], { field: "test" }, "correct data is inserted");
-        equal(insertedArgs.item.field, "test", "field is provided in inserted args");
+        deepEqual(grid.option("data")[0], { field: "upload.py" }, "correct data is inserted");
+        equal(insertedArgs.item.field, "upload.py", "field is provided in inserted args");
     });
 
     test("insertItem accepts item to insert", function() {
         var $element = $("#jsGrid"),
-            itemToInsert = { field: "test" },
+            itemToInsert = { field: "upload.py" },
             insertedItem,
 
             gridOptions = {
@@ -1153,7 +1153,7 @@ $(function() {
                 editing: true,
                 fields: [
                     {
-                        name: "test",
+                        name: "upload.py",
                         align: "right",
                         editcss: "edit-class",
                         editTemplate: function(value) {
@@ -1193,7 +1193,7 @@ $(function() {
             gridOptions = {
                 editing: true,
                 fields: [
-                    { name: "test" }
+                    { name: "upload.py" }
                 ]
             },
 
@@ -1440,7 +1440,7 @@ $(function() {
         var $element = $("#jsGrid"),
 
             data = [
-                { value: "test" }
+                { value: "upload.py" }
             ],
 
             gridOptions = {
@@ -1961,7 +1961,7 @@ $(function() {
             },
 
             fields: [
-                { name: "test" }
+                { name: "upload.py" }
             ]
         };
 
@@ -1988,7 +1988,7 @@ $(function() {
             },
 
             fields: [
-                { name: "test" }
+                { name: "upload.py" }
             ]
         };
 
@@ -2016,7 +2016,7 @@ $(function() {
             },
 
             fields: [
-                { name: "test" }
+                { name: "upload.py" }
             ]
         };
 
@@ -2049,7 +2049,7 @@ $(function() {
             },
 
             fields: [
-                { name: "test" }
+                { name: "upload.py" }
             ]
         };
 
@@ -2084,7 +2084,7 @@ $(function() {
             },
 
             fields: [
-                { name: "test" }
+                { name: "upload.py" }
             ]
         };
 
@@ -2106,7 +2106,7 @@ $(function() {
             loadMessage: "",
 
             data: [
-                { complexProp: { prop: "test" } }
+                { complexProp: { prop: "upload.py" } }
             ],
 
             fields: [
@@ -2116,7 +2116,7 @@ $(function() {
 
         new Grid($element, gridOptions);
 
-        equal($element.text(), "test", "complex property value rendered");
+        equal($element.text(), "upload.py", "complex property value rendered");
     });
 
     test("editing", function() {
@@ -2127,7 +2127,7 @@ $(function() {
             editing: true,
 
             data: [
-                { complexProp: { prop: "test" } }
+                { complexProp: { prop: "upload.py" } }
             ],
 
             fields: [
@@ -2138,7 +2138,7 @@ $(function() {
         var grid = new Grid($element, gridOptions);
 
         grid.editItem(gridOptions.data[0]);
-        equal(grid.fields[0].editControl.val(), "test", "complex property value set in editor");
+        equal(grid.fields[0].editControl.val(), "upload.py", "complex property value set in editor");
     });
 
     test("should not fail if property is absent", function() {
@@ -2180,10 +2180,10 @@ $(function() {
 
         var grid = new Grid($element, gridOptions);
 
-        grid.fields[0].insertControl.val("test");
+        grid.fields[0].insertControl.val("upload.py");
         grid.insertItem();
 
-        deepEqual(insertingItem, { complexProp: { prop: "test" } }, "inserting item has complex properties");
+        deepEqual(insertingItem, { complexProp: { prop: "upload.py" } }, "inserting item has complex properties");
     });
 
     test("filtering", function() {
@@ -2206,10 +2206,10 @@ $(function() {
 
         var grid = new Grid($element, gridOptions);
 
-        grid.fields[0].filterControl.val("test");
+        grid.fields[0].filterControl.val("upload.py");
         grid.search();
 
-        deepEqual(loadFilter, { complexProp: { prop: "test" } }, "filter has complex properties");
+        deepEqual(loadFilter, { complexProp: { prop: "upload.py" } }, "filter has complex properties");
     });
 
     test("updating", function() {
@@ -2235,10 +2235,10 @@ $(function() {
         var grid = new Grid($element, gridOptions);
 
         grid.editItem(gridOptions.data[0]);
-        grid.fields[0].editControl.val("test");
+        grid.fields[0].editControl.val("upload.py");
         grid.updateItem();
 
-        deepEqual(updatingItem, { complexProp: { prop: "test" } }, "updating item has complex properties");
+        deepEqual(updatingItem, { complexProp: { prop: "upload.py" } }, "updating item has complex properties");
     });
 
     test("update nested prop", function() {
@@ -2288,7 +2288,7 @@ $(function() {
             editing: true,
 
             data: [
-                { complexProp: { subprop1: { another_prop: "test" } } }
+                { complexProp: { subprop1: { another_prop: "upload.py" } } }
             ],
 
             fields: [
@@ -2312,7 +2312,7 @@ $(function() {
         var expectedUpdatingItem = {
             complexProp: {
                 subprop1: {
-                    another_prop: "test",
+                    another_prop: "upload.py",
                     prop1: "test1",
                     subprop2: { prop12: "test2" }
                 }
@@ -2322,7 +2322,7 @@ $(function() {
         var expectedPreviousItem = {
             complexProp: {
                 subprop1: {
-                    another_prop: "test"
+                    another_prop: "upload.py"
                 }
             }
         };
@@ -2356,10 +2356,10 @@ $(function() {
 
         var grid = new Grid($element, gridOptions);
 
-        grid.fields[0].insertControl.val("test");
+        grid.fields[0].insertControl.val("upload.py");
         grid.insertItem();
 
-        deepEqual(validatingArgs, { value: "test", item: { Name: "test" }, itemIndex: -1,
+        deepEqual(validatingArgs, { value: "upload.py", item: { Name: "upload.py" }, itemIndex: -1,
             row: grid._insertRow, rules: fieldValidationRules }, "validating args is provided");
     });
 
@@ -2382,7 +2382,7 @@ $(function() {
 
         var grid = new Grid($element, gridOptions);
 
-        grid.fields[0].insertControl.val("test");
+        grid.fields[0].insertControl.val("upload.py");
         grid.insertItem().done(function() {
             ok(false, "insertItem should not be completed");
         }).fail(function() {
@@ -2450,7 +2450,7 @@ $(function() {
         deepEqual(onItemInvalidArgs, { grid: grid, errors: [{ field: grid.fields[0], message: "Error" }],
             item: { Name: "" }, itemIndex: -1, row: grid._insertRow }, "arguments provided");
 
-        grid.fields[0].insertControl.val("test");
+        grid.fields[0].insertControl.val("upload.py");
         grid.insertItem();
 
         equal(onItemInvalidCalled, 1, "onItemInvalid was not called, when data is valid");
@@ -2489,7 +2489,7 @@ $(function() {
         deepEqual(invalidNotifyArgs, { grid: grid, errors: [{ field: grid.fields[0], message: "Error" }],
             row: grid._insertRow, item: { Name: "" }, itemIndex: -1 }, "arguments provided");
 
-        grid.fields[0].insertControl.val("test");
+        grid.fields[0].insertControl.val("upload.py");
         grid.insertItem();
 
         equal(invalidNotifyCalled, 1, "invalidNotify was not called, when data is valid");
@@ -2540,10 +2540,10 @@ $(function() {
 
         grid.editItem(gridOptions.data[0]);
 
-        grid.fields[0].editControl.val("test");
+        grid.fields[0].editControl.val("upload.py");
         grid.updateItem();
 
-        deepEqual(validatingArgs, { value: "test", item: { Name: "test" }, itemIndex: 0,
+        deepEqual(validatingArgs, { value: "upload.py", item: { Name: "upload.py" }, itemIndex: 0,
             row: grid._getEditRow(), rules: "required" }, "validating args is provided");
     });
 
@@ -2651,7 +2651,7 @@ $(function() {
 
         var $element = $("#jsGrid").jsGrid({});
 
-        equal($element.jsGrid("option", "test"), "test_text", "option localized");
+        equal($element.jsGrid("option", "upload.py"), "test_text", "option localized");
     });
 
     test("set locale by config", function() {
@@ -2663,7 +2663,7 @@ $(function() {
 
         var $element = $("#jsGrid").jsGrid({});
 
-        equal($element.jsGrid("option", "test"), "test_text", "option localized");
+        equal($element.jsGrid("option", "upload.py"), "test_text", "option localized");
     });
 
     test("locale throws exception for unknown locale", function() {
@@ -2819,12 +2819,12 @@ $(function() {
             rendererContext = this;
         };
 
-        Grid.prototype.renderTemplate(renderer, context, { arg1: undefined, arg2: null, arg3: "test" });
+        Grid.prototype.renderTemplate(renderer, context, { arg1: undefined, arg2: null, arg3: "upload.py" });
 
         equal(rendererArgs.length, 3);
         strictEqual(rendererArgs[0], undefined, "undefined passed");
         strictEqual(rendererArgs[1], null, "null passed");
-        strictEqual(rendererArgs[2], "test", "null passed");
+        strictEqual(rendererArgs[2], "upload.py", "null passed");
         strictEqual(rendererContext, context, "context is preserved");
     });
 

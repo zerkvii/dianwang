@@ -44,7 +44,7 @@ $(function() {
                 return;
 
             var item = {
-                field: "test"
+                field: "upload.py"
             };
             var args;
 
@@ -56,15 +56,15 @@ $(function() {
                 }
             });
 
-            var itemTemplate = field.itemTemplate("test", item);
-            var editTemplate = field.editTemplate("test", item);
+            var itemTemplate = field.itemTemplate("upload.py", item);
+            var editTemplate = field.editTemplate("upload.py", item);
 
             var editTemplateContent = editTemplate instanceof jQuery ? editTemplate[0].outerHTML : editTemplate;
             var itemTemplateContent = itemTemplate instanceof jQuery ? itemTemplate[0].outerHTML : itemTemplate;
 
             equal(editTemplateContent, itemTemplateContent, "item template is rendered instead of edit template for " + name);
             equal(args.length, 2, "passed both arguments for " + name);
-            equal(args[0], "test", "field value passed as a first argument for " + name);
+            equal(args[0], "upload.py", "field value passed as a first argument for " + name);
             equal(args[1], item, "item passed as a second argument for " + name);
         });
     });
@@ -109,14 +109,14 @@ $(function() {
 
     test("set default field options with setDefaults", function() {
         jsGrid.setDefaults("text", {
-            defaultOption: "test"
+            defaultOption: "upload.py"
         });
 
         var $element = $("#jsGrid").jsGrid({
             fields: [{ type: "text" }]
         });
 
-        equal($element.jsGrid("option", "fields")[0].defaultOption, "test", "default field option set");
+        equal($element.jsGrid("option", "fields")[0].defaultOption, "upload.py", "default field option set");
     });
 
 

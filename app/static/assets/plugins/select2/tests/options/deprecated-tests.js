@@ -172,7 +172,7 @@ test('converted into dataAdapter.query automatically', function (assert) {
       params.callback({
         results: [
           {
-            id: 'test',
+            id: 'upload.py',
             text: params.term
           }
         ]
@@ -203,7 +203,7 @@ test('converted into dataAdapter.query automatically', function (assert) {
 
     assert.equal(
       item.id,
-      'test',
+      'upload.py',
       'The id should have been returned from the query function'
     );
 

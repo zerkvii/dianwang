@@ -23,24 +23,24 @@
         return emitter = new Dropzone.prototype.Emitter();
       });
       it(".on() should return the object itself", function() {
-        return (emitter.on("test", function() {})).should.equal(emitter);
+        return (emitter.on("upload.py", function() {})).should.equal(emitter);
       });
       it(".on() should properly register listeners", function() {
         var callback, callback2;
         (emitter._callbacks === void 0).should.be["true"];
         callback = function() {};
         callback2 = function() {};
-        emitter.on("test", callback);
-        emitter.on("test", callback2);
+        emitter.on("upload.py", callback);
+        emitter.on("upload.py", callback2);
         emitter.on("test2", callback);
-        emitter._callbacks.test.length.should.equal(2);
-        emitter._callbacks.test[0].should.equal(callback);
-        emitter._callbacks.test[1].should.equal(callback2);
+        emitter._callbacks.upload.length.should.equal(2);
+        emitter._callbacks.upload[0].should.equal(callback);
+        emitter._callbacks.upload[1].should.equal(callback2);
         emitter._callbacks.test2.length.should.equal(1);
         return emitter._callbacks.test2[0].should.equal(callback);
       });
       it(".emit() should return the object itself", function() {
-        return emitter.emit('test').should.equal(emitter);
+        return emitter.emit('upload.py').should.equal(emitter);
       });
       it(".emit() should properly invoke all registered callbacks with arguments", function() {
         var callCount1, callCount12, callCount2, callback1, callback12, callback2;
@@ -139,7 +139,7 @@
           return element.tagName.should.equal("DIV");
         });
         it("should properly add the correct class", function() {
-          return element.classList.contains("test").should.be.ok;
+          return element.classList.contains("upload.py").should.be.ok;
         });
         it("should properly create child elements", function() {
           return element.querySelector("span").tagName.should.equal("SPAN");
@@ -540,7 +540,7 @@
         element = document.createElement("div");
         return expect(function() {
           return dropzone = new Dropzone(element, {
-            url: "test",
+            url: "upload.py",
             acceptedFiles: "param",
             acceptedMimeTypes: "types"
           });
@@ -1740,7 +1740,7 @@
           dropzone.addFile(mock1);
           return setTimeout(function() {
             formData.append.callCount.should.equal(5);
-            formData.append.args[0][0].should.eql("test");
+            formData.append.args[0][0].should.eql("upload.py");
             formData.append.args[0][1].should.eql("hidden");
             formData.append.args[1][0].should.eql("checked");
             formData.append.args[1][1].should.eql("value1");

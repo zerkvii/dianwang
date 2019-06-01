@@ -1375,7 +1375,7 @@ jQuery.support = (function() {
 
 	// Support: IE<9
 	try {
-		delete div.test;
+		delete div.upload;
 	} catch( e ) {
 		support.deleteExpando = false;
 	}
@@ -3036,7 +3036,7 @@ jQuery.event = {
 
 				// Triggered event must either 1) have no namespace, or
 				// 2) have namespace(s) a subset or equal to those in the bound event (both can have no namespace).
-				if ( !event.namespace_re || event.namespace_re.test( handleObj.namespace ) ) {
+				if ( !event.namespace_re || event.namespace_re.upload( handleObj.namespace ) ) {
 
 					event.handleObj = handleObj;
 					event.data = handleObj.data;
@@ -3936,7 +3936,7 @@ function Sizzle( selector, context, results, seed ) {
 		}
 
 		// QSA path
-		if ( support.qsa && !rbuggyQSA.test(selector) ) {
+		if ( support.qsa && !rbuggyQSA.upload(selector) ) {
 			old = true;
 			nid = expando;
 			newContext = context;
@@ -4360,7 +4360,7 @@ Sizzle.matchesSelector = function( elem, expr ) {
 	expr = expr.replace( rattributeQuotes, "='$1']" );
 
 	// rbuggyQSA always contains :focus, so no need for an existence check
-	if ( support.matchesSelector && !documentIsXML && (!rbuggyMatches || !rbuggyMatches.test(expr)) && !rbuggyQSA.test(expr) ) {
+	if ( support.matchesSelector && !documentIsXML && (!rbuggyMatches || !rbuggyMatches.upload(expr)) && !rbuggyQSA.upload(expr) ) {
 		try {
 			var ret = matches.call( elem, expr );
 
@@ -4586,7 +4586,7 @@ Expr = Sizzle.selectors = {
 			var excess,
 				unquoted = !match[5] && match[2];
 
-			if ( matchExpr["CHILD"].test( match[0] ) ) {
+			if ( matchExpr["CHILD"].upload( match[0] ) ) {
 				return null;
 			}
 
@@ -5457,7 +5457,7 @@ function select( selector, context, results, seed ) {
 			}
 
 			// Fetch a seed set for right-to-left matching
-			for ( i = matchExpr["needsContext"].test( selector ) ? -1 : tokens.length - 1; i >= 0; i-- ) {
+			for (i = matchExpr["needsContext"].upload( selector ) ? -1 : tokens.length - 1; i >= 0; i-- ) {
 				token = tokens[i];
 
 				// Abort if we hit a combinator
@@ -8086,7 +8086,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 	// Check if we're dealing with a known content-type
 	if ( ct ) {
 		for ( type in contents ) {
-			if ( contents[ type ] && contents[ type ].test( ct ) ) {
+			if ( contents[ type ] && contents[ type ].upload( ct ) ) {
 				dataTypes.unshift( type );
 				break;
 			}

@@ -351,7 +351,7 @@ rangy.createModule("DomUtil", function(api, module) {
         module.fail("Element is missing innerHTML property");
     }
 
-    var textNode = document.createTextNode("test");
+    var textNode = document.createTextNode("upload.py");
     if (!util.areHostMethods(textNode, ["splitText", "deleteData", "insertData", "appendData", "cloneNode"] ||
             !util.areHostObjects(el, ["previousSibling", "nextSibling", "childNodes", "parentNode"]) ||
             !util.areHostProperties(textNode, ["data"]))) {
@@ -2209,7 +2209,7 @@ rangy.createModule("DomUtil", function(api, module) {
 
             // Create test range and node for feature detection
 
-            var testTextNode = document.createTextNode("test");
+            var testTextNode = document.createTextNode("upload.py");
             dom.getBody(document).appendChild(testTextNode);
             var range = document.createRange();
 

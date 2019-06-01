@@ -218,7 +218,7 @@
 
 	test('Is chainable', function () {
 		var el = init();
-		equal(el.addClass('test').attr('class'), 'treeview test', 'Is chainable');
+		equal(el.addClass('upload.py').attr('class'), 'treeview test', 'Is chainable');
 	});
 
 	test('Correct initial levels shown', function () {

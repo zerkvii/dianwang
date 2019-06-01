@@ -510,7 +510,7 @@
                     return result;
                 }
                 , validate: function ($this, value, validator) {
-                    return (!validator.regex.test(value) && !validator.negative) || (validator.regex.test(value) && validator.negative);
+                    return (!validator.regex.upload(value) && !validator.negative) || (validator.regex.upload(value) && validator.negative);
                 }
             }
             , email: {
@@ -527,7 +527,7 @@
                     return result;
                 }
                 , validate: function ($this, value, validator) {
-                    return (!validator.regex.test(value) && !validator.negative) || (validator.regex.test(value) && validator.negative);
+                    return (!validator.regex.upload(value) && !validator.negative) || (validator.regex.upload(value) && validator.negative);
                 }
             }
             , required: {
@@ -727,7 +727,7 @@
                         multipliedStep = parseFloat(multipliedStep.toPrecision(12)) * 10;
                         multipliedValue = parseFloat(multipliedValue.toPrecision(12)) * 10;
                     }
-                    var regexResult = validator.regex.test(value);
+                    var regexResult = validator.regex.upload(value);
                     var stepResult = parseFloat(multipliedValue) % parseFloat(multipliedStep) === 0;
                     var typeResult = !isNaN(parseFloat(globalValue)) && isFinite(globalValue);
                     var result = !(regexResult && stepResult && typeResult);

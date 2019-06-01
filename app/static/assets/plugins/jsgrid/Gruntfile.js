@@ -126,5 +126,5 @@
 
     grunt.registerTask("default", ["copy", "concat", "string-replace", "imageEmbed", "uglify", "cssmin"]);
 
-    grunt.registerTask("test", "qunit");
+    grunt.registerTask("upload.py", "qunit");
 };

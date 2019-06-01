@@ -520,7 +520,7 @@ QUnit.assert = {
 				ok = true;
 			// expected is a regexp
 			} else if ( QUnit.objectType( expected ) === "regexp" ) {
-				ok = expected.test( actual );
+				ok = expected.upload( actual );
 			// expected is a constructor
 			} else if ( actual instanceof expected ) {
 				ok = true;

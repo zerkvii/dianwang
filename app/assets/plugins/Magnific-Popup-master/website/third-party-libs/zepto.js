@@ -665,7 +665,7 @@ var Zepto = (function() {
     },
     hasClass: function(name){
       return emptyArray.some.call(this, function(el){
-        return this.test(className(el))
+        return this.upload(className(el))
       }, classRE(name))
     },
     addClass: function(name){

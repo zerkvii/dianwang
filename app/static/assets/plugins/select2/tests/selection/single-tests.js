@@ -25,12 +25,12 @@ test('display uses templateSelection', function (assert) {
   );
 
   var out = selection.display({
-    text: 'test'
+    text: 'upload.py'
   });
 
   assert.ok(called);
 
-  assert.equal(out, 'test');
+  assert.equal(out, 'upload.py');
 });
 
 test('templateSelection can addClass', function (assert) {
@@ -52,12 +52,12 @@ test('templateSelection can addClass', function (assert) {
   var $container = selection.selectionContainer();
   
   var out = selection.display({
-    text: 'test'
+    text: 'upload.py'
   }, $container);
 
   assert.ok(called);
 
-  assert.equal(out, 'test');
+  assert.equal(out, 'upload.py');
   
   assert.ok($container.hasClass('testclass'));
 });
@@ -88,10 +88,10 @@ test('update renders the data text', function (assert) {
   var $rendered = $selection.find('.select2-selection__rendered');
 
   selection.update([{
-    text: 'test'
+    text: 'upload.py'
   }]);
 
-  assert.equal($rendered.text(), 'test');
+  assert.equal($rendered.text(), 'upload.py');
 });
 
 test('escapeMarkup is being used', function (assert) {

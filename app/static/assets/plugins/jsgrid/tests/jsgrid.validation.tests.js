@@ -11,7 +11,7 @@ $(function() {
 
     test("as function", function() {
         var validateFunction = function(value) {
-            return value === "test";
+            return value === "upload.py";
         };
 
         deepEqual(this.validation.validate({
@@ -20,7 +20,7 @@ $(function() {
         }), [undefined]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: validateFunction
         }), []);
     });
@@ -28,7 +28,7 @@ $(function() {
     test("as rule config", function() {
         var validateRule = {
             validator: function(value) {
-                return value === "test";
+                return value === "upload.py";
             },
             message: "Error"
         };
@@ -39,7 +39,7 @@ $(function() {
         }), ["Error"]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: validateRule
         }), []);
     });
@@ -49,7 +49,7 @@ $(function() {
             validator: function(value, item, param) {
                 return value === param;
             },
-            param: "test",
+            param: "upload.py",
             message: "Error"
         };
 
@@ -59,7 +59,7 @@ $(function() {
         }), ["Error"]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: validateRule
         }), []);
     });
@@ -72,7 +72,7 @@ $(function() {
             }
         }, {
             validator: function(value) {
-                return value === "test";
+                return value === "upload.py";
             }
         }];
 
@@ -82,14 +82,14 @@ $(function() {
         }), ["Error", undefined]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: validateRules
         }), []);
     });
 
     test("as string", function() {
         validators.test_validator = function(value) {
-            return value === "test";
+            return value === "upload.py";
         };
 
         deepEqual(this.validation.validate({
@@ -98,7 +98,7 @@ $(function() {
         }), [undefined]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: "test_validator"
         }), []);
 
@@ -107,7 +107,7 @@ $(function() {
 
     test("as rule config with validator as string", function() {
         validators.test_validator = function(value) {
-            return value === "test";
+            return value === "upload.py";
         };
 
         var validateRule = {
@@ -121,7 +121,7 @@ $(function() {
         }), ["Error"]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: validateRule
         }), []);
 
@@ -130,7 +130,7 @@ $(function() {
 
     test("as array of mixed rules", function() {
         validators.test_validator = function(value) {
-            return value === "test";
+            return value === "upload.py";
         };
 
         var validationRules = [
@@ -139,7 +139,7 @@ $(function() {
                 return value !== "";
             }, {
                 validator: function(value) {
-                    return value === "test";
+                    return value === "upload.py";
                 },
                 message: "Error"
             }
@@ -156,7 +156,7 @@ $(function() {
         }), [undefined, "Error"]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: validationRules
         }), []);
 
@@ -169,7 +169,7 @@ $(function() {
                 return "Error: " + value;
             },
             validator: function(value) {
-                return value === "test";
+                return value === "upload.py";
             }
         };
 
@@ -183,7 +183,7 @@ $(function() {
         }), ["Error: not_test"]);
 
         deepEqual(this.validation.validate({
-            value: "test",
+            value: "upload.py",
             rules: validateRule
         }), []);
 
@@ -199,7 +199,7 @@ $(function() {
 
         throws(function() {
             validation.validate({
-                value: "test",
+                value: "upload.py",
                 rules: validateRule
             });
         }, /unknown validator "unknown_validator"/, "exception for unknown validator");
@@ -226,7 +226,7 @@ $(function() {
         equal(this.testValidator("required", undefined), false);
         equal(this.testValidator("required", null), false);
         equal(this.testValidator("required", 0), true);
-        equal(this.testValidator("required", "test"), true);
+        equal(this.testValidator("required", "upload.py"), true);
     });
 
     test("rangeLength", function() {

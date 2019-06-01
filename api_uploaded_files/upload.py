@@ -15,9 +15,9 @@ if __name__ == '__main__':
     files = {json_file: open(os.path.join(file_dir, json_file), 'rb'),
              md5_file: open(os.path.join(file_dir, md5_file), 'rb'),
              rar_file: open(os.path.join(file_dir, rar_file), 'rb')
-            }
+             }
 
-    response= requests.post(API_URL + '/files/all/gz2019012', files=files)
+    response = requests.post(API_URL + '/files/all/gz2019012', files=files)
     print(response.json)
     # response = requests.post(
     #     '{}/files'.format(API_URL),, data = content

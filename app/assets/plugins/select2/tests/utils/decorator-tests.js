@@ -173,17 +173,17 @@ test('inherited - three levels', function (assert) {
     DecoratorClass
   );
 
-  var inst = new DecoratedClass('test');
+  var inst = new DecoratedClass('upload.py');
 
   assert.ok(inst.baseCalled, 'The base class contructor was called');
   assert.ok(inst.middleCalled, 'The middle class constructor was called');
   assert.ok(inst.decoratorCalled, 'The decorator constructor was called');
 
-  assert.strictEqual(inst.baseTestArgument, 'test');
-  assert.strictEqual(inst.middleTestArgument, 'test');
-  assert.strictEqual(inst.decoratorTestArgument, 'test');
+  assert.strictEqual(inst.baseTestArgument, 'upload.py');
+  assert.strictEqual(inst.middleTestArgument, 'upload.py');
+  assert.strictEqual(inst.decoratorTestArgument, 'upload.py');
 
-  var out = inst.test('test');
+  var out = inst.upload('upload.py');
 
   assert.strictEqual(out, 'testabc');
 });

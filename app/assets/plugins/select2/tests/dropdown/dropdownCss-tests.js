@@ -19,7 +19,7 @@ test('all classes will be copied if :all: is used', function (assert) {
   var select = new DropdownCSS($element, options);
   var $dropdown = select.render();
 
-  assert.ok($dropdown.hasClass('test'));
+  assert.ok($dropdown.hasClass('upload.py'));
   assert.ok($dropdown.hasClass('copy'));
   assert.ok($dropdown.hasClass('works'));
   assert.ok(!$dropdown.hasClass(':all:'));
@@ -34,7 +34,7 @@ test(':all: can be used with other classes', function (assert) {
   var select = new DropdownCSS($element, options);
   var $dropdown = select.render();
 
-  assert.ok($dropdown.hasClass('test'));
+  assert.ok($dropdown.hasClass('upload.py'));
   assert.ok($dropdown.hasClass('copy'));
   assert.ok($dropdown.hasClass('works'));
   assert.ok($dropdown.hasClass('other'));
@@ -65,7 +65,7 @@ test('a function can be used based on the element', function (assert){
   var $dropdown = select.render();
 
   assert.ok($dropdown.hasClass('function'));
-  assert.ok(!$dropdown.hasClass('test'));
+  assert.ok(!$dropdown.hasClass('upload.py'));
 });
 
 test(':all: works around custom adapters', function (assert) {
@@ -82,7 +82,7 @@ test(':all: works around custom adapters', function (assert) {
 
   assert.ok($dropdown.hasClass('something'));
 
-  assert.ok($dropdown.hasClass('test'));
+  assert.ok($dropdown.hasClass('upload.py'));
   assert.ok($dropdown.hasClass('test-modified'));
 });
 

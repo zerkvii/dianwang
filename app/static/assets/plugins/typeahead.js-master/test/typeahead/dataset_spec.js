@@ -15,7 +15,7 @@ describe('Dataset', function() {
 
   beforeEach(function() {
     this.dataset = new Dataset({
-      name: 'test',
+      name: 'upload.py',
       node: $('<div>'),
       source: this.source = jasmine.createSpy('source')
     }, www);
@@ -75,7 +75,7 @@ describe('Dataset', function() {
 
     it('should allow custom display functions', function() {
       this.dataset = new Dataset({
-        name: 'test',
+        name: 'upload.py',
         node: $('<div>'),
         display: function(o) { return o.display; },
         source: this.source = jasmine.createSpy('source')
@@ -215,12 +215,12 @@ describe('Dataset', function() {
 
       this.dataset.update('woah');
       $test = this.dataset.$el.find('.tt-suggestion').first();
-      $test.addClass('test');
+      $test.addClass('upload.py');
 
       waits(100);
 
       runs(function() {
-        expect($test).toHaveClass('test');
+        expect($test).toHaveClass('upload.py');
       });
     });
 

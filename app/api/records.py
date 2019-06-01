@@ -34,9 +34,13 @@ def list_files():
 @api.route("/files/download", methods=['GET', 'POST'])
 def get_file():
     """Download a file."""
-    print(request.json)
-    return '', 200
-    # return send_from_directory(UPLOAD_DIRECTORY, as_attachment=True)
+    filename = request.json['file']
+    file_type = request.json['file_type']
+    print(filename)
+    directory = os.path.join(os.getcwd(), 'api_uploaded_files', file_type)
+    print(directory)
+    # return '', 200
+    return send_from_directory(directory, filename + '.' + file_type, as_attachment=True)
 
 
 @api.route('/files/all/<string:s_number>', methods=['POST'])

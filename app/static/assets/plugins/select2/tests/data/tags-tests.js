@@ -98,14 +98,14 @@ test('tags can be the only result', function (assert) {
   var data = new SelectTags($('#qunit-fixture .single'), options);
 
   data.query({
-    term: 'test'
+    term: 'upload.py'
   }, function (data) {
     assert.equal(data.results.length, 1);
 
     var item = data.results[0];
 
-    assert.equal(item.id, 'test');
-    assert.equal(item.text, 'test');
+    assert.equal(item.id, 'upload.py');
+    assert.equal(item.text, 'upload.py');
   });
 });
 
@@ -113,7 +113,7 @@ test('tags are injected as options', function (assert) {
   var data = new SelectTags($('#qunit-fixture .single'), options);
 
   data.query({
-    term: 'test'
+    term: 'upload.py'
   }, function (data) {
     assert.equal(data.results.length, 1);
 
@@ -123,8 +123,8 @@ test('tags are injected as options', function (assert) {
 
     var $tag = $children.last();
 
-    assert.equal($tag.val(), 'test');
-    assert.equal($tag.text(), 'test');
+    assert.equal($tag.val(), 'upload.py');
+    assert.equal($tag.text(), 'upload.py');
   });
 });
 
@@ -207,14 +207,14 @@ test('createTag controls the tag object', function (assert) {
   };
 
   data.query({
-    term: 'test'
+    term: 'upload.py'
   }, function (data) {
     assert.equal(data.results.length, 1);
 
     var item = data.results[0];
 
     assert.equal(item.id, 0);
-    assert.equal(item.text, 'test');
+    assert.equal(item.text, 'upload.py');
   });
 });
 
@@ -248,14 +248,14 @@ test('the createTag options customizes the function', function (assert) {
   );
 
   data.query({
-    term: 'test'
+    term: 'upload.py'
   }, function (data) {
     assert.equal(data.results.length, 1);
 
     var item = data.results[0];
 
-    assert.equal(item.id, 'test');
-    assert.equal(item.text, 'test');
+    assert.equal(item.id, 'upload.py');
+    assert.equal(item.text, 'upload.py');
     assert.equal(item.tag, true);
   });
 });

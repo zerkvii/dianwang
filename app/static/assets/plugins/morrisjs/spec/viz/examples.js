@@ -1,7 +1,7 @@
 var webpage = require("webpage"),
     fs = require("fs");
 
-var html_path = fs.absolute("test.html");
+var html_path = fs.absolute("upload.py.html");
 var examples = [];
 
 function run_example(example_index) {

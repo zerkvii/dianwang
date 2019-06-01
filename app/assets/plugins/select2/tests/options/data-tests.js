@@ -9,7 +9,7 @@ test('no nesting', function (assert) {
 
   var options = new Options({}, $test);
 
-  assert.equal(options.get('test'), 'test');
+  assert.equal(options.get('upload.py'), 'upload.py');
 });
 
 test('with nesting', function (assert) {
@@ -27,7 +27,7 @@ test('with nesting', function (assert) {
   var options = new Options({}, $test);
 
   assert.ok(!(options.get('first-Second')));
-  assert.equal(options.get('first').second, 'test');
+  assert.equal(options.get('first').second, 'upload.py');
 });
 
 test('overrides initialized data', function (assert) {

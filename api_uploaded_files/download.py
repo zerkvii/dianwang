@@ -5,20 +5,15 @@ API_URL = 'http://127.0.0.1:5000/apis'
 API_KEY = ''
 
 if __name__ == '__main__':
-    # response = requests.get('{}/files'.format(API_URL))
-    # file_dir = os.path.join(os.getcwd(), 'demo')
-    # filename = 'gz20190126'
-    # json_file = filename + '.json'
-    # rar_file = filename + '.rar'
-    # md5_file = filename + '.md5'
-    # files = {json_file: open(os.path.join(file_dir, json_file), 'rb'),
-    #          md5_file: open(os.path.join(file_dir, md5_file), 'rb'),
-    #          rar_file: open(os.path.join(file_dir, rar_file), 'rb')}
-    content={
-        'file':'gz20190126'
+    req_file = 'gz20190126'
+    file_type = 'rar'
+
+    content = {
+        'file': req_file,
+        'file_type': file_type
     }
-    requests.post(API_URL + '/files/download',json=content)
-    # response = requests.post(
-    #     '{}/files'.format(API_URL),, data = content
-    # )
-    # print(response.json())
+    response = requests.post(API_URL + '/files/download', json=content)
+    save_file = req_file + '.' + file_type
+    with open(save_file, 'wb') as f:
+        f.write(response.content)
+

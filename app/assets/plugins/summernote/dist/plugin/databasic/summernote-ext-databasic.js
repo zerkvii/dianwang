@@ -183,7 +183,7 @@
 
     self.updateNode = function (info) {
       self.setContent(info.node
-        .attr('data-test', info.test));
+        .attr('data-test', info.upload));
     };
 
     self.createNode = function (info) {
@@ -242,7 +242,7 @@
         ui.onDialogShown(self.$dialog, function () {
           context.triggerEvent('dialog.shown');
 
-          $inpTest.val(info.test).on('input', function () {
+          $inpTest.val(info.upload).on('input', function () {
             ui.toggleBtn($saveBtn, $inpTest.val());
           }).trigger('focus').on('keyup', onKeyup);
 

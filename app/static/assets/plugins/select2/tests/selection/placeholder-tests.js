@@ -23,7 +23,7 @@ test('normalizing placeholder ignores objects', function (assert) {
   );
 
   var original = {
-    id: 'test',
+    id: 'upload.py',
     text: 'testing'
   };
 

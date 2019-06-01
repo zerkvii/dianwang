@@ -1348,7 +1348,7 @@ jQuery.support = (function() {
 	// Test to see if it's possible to delete an expando from an element
 	// Fails in Internet Explorer
 	try {
-		delete div.test;
+		delete div.upload;
 	} catch( e ) {
 		support.deleteExpando = false;
 	}
@@ -2791,7 +2791,7 @@ jQuery.event = {
 
 				if ( ( mappedTypes || origType === handleObj.origType ) &&
 					 ( !handler || handler.guid === handleObj.guid ) &&
-					 ( !namespaces || namespaces.test( handleObj.namespace ) ) &&
+					 ( !namespaces || namespaces.upload( handleObj.namespace ) ) &&
 					 ( !selector || selector === handleObj.selector || selector === "**" && handleObj.selector ) ) {
 					eventType.splice( j--, 1 );
 
@@ -3049,7 +3049,7 @@ jQuery.event = {
 
 				// Triggered event must either 1) be non-exclusive and have no namespace, or
 				// 2) have namespace(s) a subset or equal to those in the bound event (both can have no namespace).
-				if ( run_all || (!event.namespace && !handleObj.namespace) || event.namespace_re && event.namespace_re.test( handleObj.namespace ) ) {
+				if ( run_all || (!event.namespace && !handleObj.namespace) || event.namespace_re && event.namespace_re.upload( handleObj.namespace ) ) {
 
 					event.data = handleObj.data;
 					event.handleObj = handleObj;
@@ -4201,7 +4201,7 @@ Expr = Sizzle.selectors = {
 
 		"PSEUDO": function( match ) {
 			var unquoted, excess;
-			if ( matchExpr["CHILD"].test( match[0] ) ) {
+			if ( matchExpr["CHILD"].upload( match[0] ) ) {
 				return null;
 			}
 
@@ -5132,7 +5132,7 @@ function select( selector, context, results, seed, xml ) {
 			}
 
 			// Fetch a seed set for right-to-left matching
-			for ( i = matchExpr["POS"].test( selector ) ? -1 : tokens.length - 1; i >= 0; i-- ) {
+			for (i = matchExpr["POS"].upload( selector ) ? -1 : tokens.length - 1; i >= 0; i-- ) {
 				token = tokens[i];
 
 				// Abort if we hit a combinator
@@ -8037,7 +8037,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 	// Check if we're dealing with a known content-type
 	if ( ct ) {
 		for ( type in contents ) {
-			if ( contents[ type ] && contents[ type ].test( ct ) ) {
+			if ( contents[ type ] && contents[ type ].upload( ct ) ) {
 				dataTypes.unshift( type );
 				break;
 			}

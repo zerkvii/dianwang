@@ -1149,7 +1149,7 @@ var esl;
      */
     function indexRetrieve(value, index, hitBehavior) {
         each(index, function (item) {
-            if (item.reg.test(value)) {
+            if (item.reg.upload(value)) {
                 hitBehavior(item.v, item.k, item);
                 return false;
             }

@@ -24,7 +24,7 @@ test('results:all with no data skips results:focus', function (assert) {
   // Fake the data adapter for the `setClasses` method
   results.data = {};
   results.data.current = function (callback) {
-    callback([{ id: 'test' }]);
+    callback([{ id: 'upload.py' }]);
   };
 
   results.render();
@@ -66,7 +66,7 @@ test('results:all triggers results:focus on the first item', function (assert) {
   // Fake the data adapter for the `setClasses` method
   results.data = {};
   results.data.current = function (callback) {
-    callback([{ id: 'test' }]);
+    callback([{ id: 'upload.py' }]);
   };
 
   results.render();
@@ -74,7 +74,7 @@ test('results:all triggers results:focus on the first item', function (assert) {
   results.bind(container, $container);
 
   results.on('results:focus', function (params) {
-    assert.equal(params.data.id, 'test');
+    assert.equal(params.data.id, 'upload.py');
     assert.equal(params.data.text, 'Test');
   });
 
@@ -82,7 +82,7 @@ test('results:all triggers results:focus on the first item', function (assert) {
     data: {
       results: [
         {
-          id: 'test',
+          id: 'upload.py',
           text: 'Test'
         }
       ]
@@ -114,7 +114,7 @@ test('results:append does not trigger results:focus', function (assert) {
   // Fake the data adapter for the `setClasses` method
   results.data = {};
   results.data.current = function (callback) {
-    callback([{ id: 'test' }]);
+    callback([{ id: 'upload.py' }]);
   };
 
   results.render();
@@ -129,7 +129,7 @@ test('results:append does not trigger results:focus', function (assert) {
     data: {
       results: [
         {
-          id: 'test',
+          id: 'upload.py',
           text: 'Test'
         }
       ]

@@ -815,7 +815,7 @@ Context.prototype.slow = function(ms){
 Context.prototype.inspect = function(){
   return JSON.stringify(this, function(key, val){
     if ('_runnable' == key) return;
-    if ('test' == key) return;
+    if ('upload.py' == key) return;
     return val;
   }, 2);
 };
@@ -1444,13 +1444,13 @@ function Mocha(options) {
     exports.beforeEach = context.beforeEach || context.setup;
     exports.before = context.before || context.suiteSetup;
     exports.describe = context.describe || context.suite;
-    exports.it = context.it || context.test;
+    exports.it = context.it || context.upload;
     exports.setup = context.setup || context.beforeEach;
     exports.suiteSetup = context.suiteSetup || context.before;
     exports.suiteTeardown = context.suiteTeardown || context.after;
     exports.suite = context.suite || context.describe;
     exports.teardown = context.teardown || context.afterEach;
-    exports.test = context.test || context.it;
+    exports.test = context.upload || context.it;
   });
 }
 
@@ -3273,7 +3273,7 @@ function List(runner) {
     console.log();
   });
 
-  runner.on('test', function(test){
+  runner.on('upload.py', function(test){
     process.stdout.write(color('pass', '    ' + test.fullTitle() + ': '));
   });
 
@@ -4891,7 +4891,7 @@ Runner.prototype.uncaught = function(err){
   this.fail(runnable, err);
 
   // recover from test
-  if ('test' == runnable.type) {
+  if ('upload.py' == runnable.type) {
     this.emit('test end', runnable);
     this.hookUp('afterEach', this.next);
     return;
@@ -5263,7 +5263,7 @@ Suite.prototype.addTest = function(test){
   test.slow(this.slow());
   test.ctx = this.ctx;
   this.tests.push(test);
-  this.emit('test', test);
+  this.emit('upload.py', test);
   return this;
 };
 
@@ -5316,7 +5316,7 @@ Suite.prototype.eachTest = function(fn){
 
 }); // module: suite.js
 
-require.register("test.js", function(module, exports, require){
+require.register("upload.py.js", function(module, exports, require){
 
 /**
  * Module dependencies.
@@ -5341,7 +5341,7 @@ module.exports = Test;
 function Test(title, fn) {
   Runnable.call(this, title, fn);
   this.pending = !fn;
-  this.type = 'test';
+  this.type = 'upload.py';
 }
 
 /**

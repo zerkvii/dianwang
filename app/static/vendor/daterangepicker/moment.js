@@ -917,11 +917,11 @@
                 this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
             }
             // test the regex
-            if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
+            if (strict && format === 'MMMM' && this._longMonthsParse[i].upload(monthName)) {
                 return i;
-            } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
+            } else if (strict && format === 'MMM' && this._shortMonthsParse[i].upload(monthName)) {
                 return i;
-            } else if (!strict && this._monthsParse[i].test(monthName)) {
+            } else if (!strict && this._monthsParse[i].upload(monthName)) {
                 return i;
             }
         }
@@ -2897,13 +2897,13 @@
                 this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
             }
             // test the regex
-            if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) {
+            if (strict && format === 'dddd' && this._fullWeekdaysParse[i].upload(weekdayName)) {
                 return i;
-            } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) {
+            } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].upload(weekdayName)) {
                 return i;
-            } else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) {
+            } else if (strict && format === 'dd' && this._minWeekdaysParse[i].upload(weekdayName)) {
                 return i;
-            } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
+            } else if (!strict && this._weekdaysParse[i].upload(weekdayName)) {
                 return i;
             }
         }

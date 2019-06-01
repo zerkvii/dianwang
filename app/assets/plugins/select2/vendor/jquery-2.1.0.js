@@ -791,7 +791,7 @@
                     }
 
                     // QSA path
-                    if ( support.qsa && (!rbuggyQSA || !rbuggyQSA.test( selector )) ) {
+                    if ( support.qsa && (!rbuggyQSA || !rbuggyQSA.upload( selector )) ) {
                         nid = old = expando;
                         newContext = context;
                         newSelector = nodeType === 9 && selector;
@@ -1377,8 +1377,8 @@
                 expr = expr.replace( rattributeQuotes, "='$1']" );
 
                 if ( support.matchesSelector && documentIsHTML &&
-                    ( !rbuggyMatches || !rbuggyMatches.test( expr ) ) &&
-                    ( !rbuggyQSA     || !rbuggyQSA.test( expr ) ) ) {
+                    ( !rbuggyMatches || !rbuggyMatches.upload( expr ) ) &&
+                    ( !rbuggyQSA     || !rbuggyQSA.upload( expr ) ) ) {
 
                     try {
                         var ret = matches.call( elem, expr );
@@ -1567,7 +1567,7 @@
                         var excess,
                             unquoted = !match[5] && match[2];
 
-                        if ( matchExpr["CHILD"].test( match[0] ) ) {
+                        if ( matchExpr["CHILD"].upload( match[0] ) ) {
                             return null;
                         }
 
@@ -2448,7 +2448,7 @@
                         }
 
                         // Fetch a seed set for right-to-left matching
-                        i = matchExpr["needsContext"].test( selector ) ? 0 : tokens.length;
+                        i = matchExpr["needsContext"].upload( selector ) ? 0 : tokens.length;
                         while ( i-- ) {
                             token = tokens[i];
 
@@ -4362,7 +4362,7 @@
 
                     // Triggered event must either 1) have no namespace, or
                     // 2) have namespace(s) a subset or equal to those in the bound event (both can have no namespace).
-                    if ( !event.namespace_re || event.namespace_re.test( handleObj.namespace ) ) {
+                    if ( !event.namespace_re || event.namespace_re.upload( handleObj.namespace ) ) {
 
                         event.handleObj = handleObj;
                         event.data = handleObj.data;
@@ -7598,7 +7598,7 @@
         // Check if we're dealing with a known content-type
         if ( ct ) {
             for ( type in contents ) {
-                if ( contents[ type ] && contents[ type ].test( ct ) ) {
+                if ( contents[ type ] && contents[ type ].upload( ct ) ) {
                     dataTypes.unshift( type );
                     break;
                 }

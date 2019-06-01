@@ -308,7 +308,7 @@ module.exports = function (grunt) {
         ],
         tasks: [
           'compile',
-          'test',
+          'upload.py',
           'minify'
         ]
       },
@@ -339,7 +339,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-saucelabs');
   grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('default', ['compile', 'test', 'minify']);
+  grunt.registerTask('default', ['compile', 'upload.py', 'minify']);
 
   grunt.registerTask('compile', [
     'requirejs:dist', 'requirejs:dist.full', 'requirejs:i18n',
@@ -347,7 +347,7 @@ module.exports = function (grunt) {
     'sass:dev'
   ]);
   grunt.registerTask('minify', ['uglify', 'sass:dist']);
-  grunt.registerTask('test', ['connect:tests', 'qunit', 'jshint']);
+  grunt.registerTask('upload.py', ['connect:tests', 'qunit', 'jshint']);
 
   var ciTasks = [];
 

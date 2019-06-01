@@ -14,7 +14,7 @@ test('test that options can be selected', function (assert) {
   var options = new Options({
     data: [
       {
-        id: 'test',
+        id: 'upload.py',
         text: 'Test'
       }
     ]
@@ -24,12 +24,12 @@ test('test that options can be selected', function (assert) {
   var adapter = new InputAdapter($element, options);
 
   adapter.select({
-    id: 'test'
+    id: 'upload.py'
   });
 
   assert.equal(
     $element.val(),
-    'test',
+    'upload.py',
     'The id of the item should be the value'
   );
 });
@@ -38,7 +38,7 @@ test('unselect the single selected option clears the value', function (assert) {
   var options = new Options({
     data: [
       {
-        id: 'test',
+        id: 'upload.py',
         text: 'Test',
         selected: true
       }
@@ -49,7 +49,7 @@ test('unselect the single selected option clears the value', function (assert) {
   var adapter = new InputAdapter($element, options);
 
   adapter.unselect({
-    id: 'test'
+    id: 'upload.py'
   });
 
   assert.equal(
@@ -63,7 +63,7 @@ test('options can be unselected individually', function (assert) {
   var options = new Options({
     data: [
       {
-        id: 'test',
+        id: 'upload.py',
         text: 'Test'
       },
       {
@@ -98,7 +98,7 @@ test('default values can be set', function (assert) {
   var options = new Options({
     data: [
       {
-        id: 'test',
+        id: 'upload.py',
         text: 'Test'
       }
     ]
@@ -116,13 +116,13 @@ test('default values can be set', function (assert) {
 
     var item = data[0];
 
-    assert.equal(item.id, 'test');
+    assert.equal(item.id, 'upload.py');
     assert.equal(item.text, 'Test');
   });
 
   assert.equal(
     $element.val(),
-    'test',
+    'upload.py',
     'The value should not have been altered'
   );
 });
@@ -133,7 +133,7 @@ test('no default value', function (assert) {
   var options = new Options({
     data: [
       {
-        id: 'test',
+        id: 'upload.py',
         text: 'Test'
       }
     ]

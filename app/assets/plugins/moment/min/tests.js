@@ -36850,7 +36850,7 @@
     test('month name callback function', function (assert) {
         function fakeReplace(m, format) {
             if (/test/.test(format)) {
-                return 'test';
+                return 'upload.py';
             }
             if (m.date() === 1) {
                 return 'date';

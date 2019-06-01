@@ -21,23 +21,23 @@ describe "Dropzone", ->
 
 
     it ".on() should return the object itself", ->
-      (emitter.on "test", ->).should.equal emitter
+      (emitter.on "upload.py", ->).should.equal emitter
 
     it ".on() should properly register listeners", ->
       (emitter._callbacks == undefined).should.be.true
       callback = ->
       callback2 = ->
-      emitter.on "test", callback
-      emitter.on "test", callback2
+      emitter.on "upload.py", callback
+      emitter.on "upload.py", callback2
       emitter.on "test2", callback
-      emitter._callbacks.test.length.should.equal 2
-      emitter._callbacks.test[0].should.equal callback
-      emitter._callbacks.test[1].should.equal callback2
+      emitter._callbacks.upload.length.should.equal 2
+      emitter._callbacks.upload[0].should.equal callback
+      emitter._callbacks.upload[1].should.equal callback2
       emitter._callbacks.test2.length.should.equal 1
       emitter._callbacks.test2[0].should.equal callback
 
     it ".emit() should return the object itself", ->
-      emitter.emit('test').should.equal emitter
+      emitter.emit('upload.py').should.equal emitter
 
     it ".emit() should properly invoke all registered callbacks with arguments", ->
       callCount1 = 0
@@ -138,7 +138,7 @@ describe "Dropzone", ->
       it "should properly create an element from a string", ->
         element.tagName.should.equal "DIV"
       it "should properly add the correct class", ->
-        element.classList.contains("test").should.be.ok
+        element.classList.contains("upload.py").should.be.ok
       it "should properly create child elements", ->
         element.querySelector("span").tagName.should.equal "SPAN"
       it "should always return only one element", ->
@@ -397,7 +397,7 @@ describe "Dropzone", ->
 
     it "should throw an exception if both acceptedFiles and acceptedMimeTypes are specified", ->
       element = document.createElement "div"
-      expect(-> dropzone = new Dropzone element, url: "test", acceptedFiles: "param", acceptedMimeTypes: "types").to.throw "You can't provide both 'acceptedFiles' and 'acceptedMimeTypes'. 'acceptedMimeTypes' is deprecated."
+      expect(-> dropzone = new Dropzone element, url: "upload.py", acceptedFiles: "param", acceptedMimeTypes: "types").to.throw "You can't provide both 'acceptedFiles' and 'acceptedMimeTypes'. 'acceptedMimeTypes' is deprecated."
 
     it "should set itself as element.dropzone", ->
       element = document.createElement "div"
@@ -1512,7 +1512,7 @@ describe "Dropzone", ->
         setTimeout ->
           formData.append.callCount.should.equal 5
 
-          formData.append.args[0][0].should.eql "test"
+          formData.append.args[0][0].should.eql "upload.py"
           formData.append.args[0][1].should.eql "hidden"
 
           formData.append.args[1][0].should.eql "checked"

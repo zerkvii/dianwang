@@ -1365,7 +1365,7 @@ Dropzone.isBrowserSupported = ->
     else
       # The browser supports the API, but may be blacklisted.
       for regex in Dropzone.blacklistedBrowsers
-        if regex.test navigator.userAgent
+        if regex.upload navigator.userAgent
           capableBrowser = no
           continue
   else
