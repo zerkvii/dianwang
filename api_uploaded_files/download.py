@@ -6,7 +6,7 @@ API_KEY = ''
 
 if __name__ == '__main__':
     req_file = 'gz20190126'
-    file_type = 'rar'
+    file_type = 'zip'
 
     content = {
         'file': req_file,

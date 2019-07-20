@@ -8,13 +8,21 @@ import json
 
 UPLOAD_DIRECTORY = os.path.join(os.getcwd(), 'api_uploaded_files')
 
-if not os.path.exists(UPLOAD_DIRECTORY):
-    os.makedirs(UPLOAD_DIRECTORY)
+
+@api.before_app_request
+def create_dir():
+    json_dir = os.path.join(UPLOAD_DIRECTORY, 'json')
+    md5_dir = os.path.join(UPLOAD_DIRECTORY, 'md5')
+    zip_dir = os.path.join(UPLOAD_DIRECTORY, 'zip')
+    dirs = [json_dir, md5_dir, zip_dir]
+    for folder in dirs:
+        if not os.path.exists(folder):
+            os.makedirs(folder)
 
 
 def get_dirs_files(dir):
     return os.listdir(os.path.join(UPLOAD_DIRECTORY, 'json')), os.listdir(
-        os.path.join(UPLOAD_DIRECTORY, 'md5')), os.listdir(os.path.join(UPLOAD_DIRECTORY, 'rar'))
+        os.path.join(UPLOAD_DIRECTORY, 'md5')), os.listdir(os.path.join(UPLOAD_DIRECTORY, 'zip'))
 
 
 @api.route("/files")
@@ -24,10 +32,10 @@ def list_files():
     print(os.getcwd())
     print(UPLOAD_DIRECTORY)
 
-    for (json_file, md5_file, rar_file) in zip(os.listdir(os.path.join(UPLOAD_DIRECTORY, 'json')), os.listdir(
-            os.path.join(UPLOAD_DIRECTORY, 'md5')), os.listdir(os.path.join(UPLOAD_DIRECTORY, 'rar'))):
-        if json_file and md5_file and rar_file:
-            files.append([json_file, md5_file, rar_file])
+    for (json_file, md5_file, zip_file) in zip(os.listdir(os.path.join(UPLOAD_DIRECTORY, 'json')), os.listdir(
+            os.path.join(UPLOAD_DIRECTORY, 'md5')), os.listdir(os.path.join(UPLOAD_DIRECTORY, 'zip'))):
+        if json_file and md5_file and zip_file:
+            files.append([json_file, md5_file, zip_file])
     return jsonify(files)
 
 
@@ -60,11 +68,22 @@ def upload_all(s_number):
         file.save('./api_uploaded_files/' + path + '/' + filename)
     json_file = open('./api_uploaded_files/json/' + s_number + '.json', 'rb')
     f = json.load(json_file)
-    record_dict = f['record']
+    try:
+        record_dict = f['record']
+    except Exception as e:
+        print(e)
     if serial_number == record_dict['serial_number']:
         if len(Record.objects(serial_number=serial_number)) < 1:
             record = Record.from_json(json.dumps(record_dict))
             record.save()
+        else:
+            try:
+                record = Record.objects(serial_number=serial_number).first()
+                record.from_json(json.dumps(record_dict))
+                print(record.to_json())
+                record.save()
+            except Exception as e:
+                print(e)
     info = {
         'information': '上传成功'
     }
@@ -92,6 +111,7 @@ def post_record():
     json_data = request.get_json()
     serial_number = json_data['serial']
     record = Record.objects(serial_number=serial_number).first()
+
     if not record:
         data = {
             "information": "not exist"

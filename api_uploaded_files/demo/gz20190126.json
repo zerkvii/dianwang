@@ -3,7 +3,7 @@
         "serial_number": "gz20190126",
         "producer_name": "河南许继仪表有限公司",
         "producer_id": "0053",
-        "backup_type": 1,
+        "backup_type": true,
         "dianbiao_version": "DJGZ23-XJ801",
         "code_version": "3.00-180913",
         "details": {

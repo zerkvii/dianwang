@@ -44,7 +44,7 @@ class Record(Document):
         return self.back_date.strftime("%Y-%m-%d %H:%M:%S")
 
     def get_back_type(self):
-        if self.status_flag:
+        if self.backup_type:
             return '不带系统'
         else:
             return '带系统'
