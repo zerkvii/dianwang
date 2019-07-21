@@ -289,7 +289,7 @@
                                         <th>备案时间</th>
                                         <th>备案联系人</th>
                                         <th>电能表型号</th>
-                                        <th>更多信息</th>
+                                        <th>更多操作</th>
                                         {#                                        <th>Salery</th>#}
                                         {#                                        <th>Action</th>#}
                                     </tr>
@@ -308,10 +308,11 @@
                                             <td>{{ record.contact_person }}</td>
                                             <td>{{ record.dianbiao_version }}</td>
                                             <td align="center">
-                                                <button type="button"
-                                                        class="btn btn-sm btn-icon btn-pure btn-outline"
-                                                        data-toggle="tooltip" data-original-title="查看详细信息"><i
-                                                        class="ti-more-alt" aria-hidden="true"></i></button>
+                                                <button id="{{ record.serial_number }}" onclick="cancel(this)"
+                                                        type="button"
+                                                        class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn"
+                                                        data-toggle="tooltip" data-original-title="删除备案">
+                                                    <i class="fa fa-close text-danger" aria-hidden="true"></i></button>
                                             </td>
                                         </tr>
                                     {% endfor %}
@@ -442,20 +443,20 @@
     {#        url: "http://127.0.0.1:5000/api/notice",#}
     {#        async: false,#}
     {#        success: function (data) {#}
-                {#data = JSON.parse(data);#}
+    {#data = JSON.parse(data);#}
     {#            data = JSON.stringify(data);#}
-                {#data=data.parseJSON();#}
+    {#data=data.parseJSON();#}
     {#            list = JSON.parse(data).notices;#}
     {#            temp = list.size;#}
     {#            if (len === 0)#}
     {#                list.forEach(function (element) {#}
     {#                    $('#notifications').append('<h6>通知样例</h6> <span class="mail-desc">新的备案申请</span> <span class="time">' + element + '</span>')#}
     {#                });#}
-                {#console.log(list);#}
-                {#$("body").append(JSON.stringify(data));#}
+    {#console.log(list);#}
+    {#$("body").append(JSON.stringify(data));#}
     {#        },#}
     {#        error: function (jqXHR, textStatus, errorThrown) {#}
-                {#alert(jqXHR.status);#}
+    {#alert(jqXHR.status);#}
     {#        },#}
     {#        dataType: "json"#}
     {#    });#}
@@ -511,6 +512,21 @@
             {#console.log(liNode)#}
             $("#notices").append(liNode)
         }
+    }
+
+    function cancel(e) {
+        let id = $(e).attr("id");
+        console.log(id);
+        $.ajax({
+            type: 'POST',
+            contentType: "application/json",
+            dataType: 'json',
+            url: window.location.search,
+            data: JSON.stringify({"serial_number": id, "action": 0}),
+            success: function (data) {
+                window.location.href = data['next_page'];
+            },
+        });
     }
 
 </script>

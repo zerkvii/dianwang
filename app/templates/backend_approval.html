@@ -492,7 +492,7 @@ Chart JS -->
         {#alert($(e).attr("id"));#}
     }
 
-    function cancel() {
+    function cancel(e) {
         let id = $(e).attr("id");
         $.ajax({
             type: 'POST',

@@ -1,7 +1,7 @@
 # coding=utf-8
 from flask import render_template, request, flash, jsonify
 from flask_login import login_required
-
+from app.utils.remove_record import remove_record
 from app.repository import *
 from . import main
 
@@ -25,6 +25,18 @@ def overview():
 @login_required
 def lookup():
     records = Record.objects(status_flag=True).all()
+    if request.method == 'POST':
+        record_data = request.get_json()
+        if record_data['action'] == 0:
+            record = Record.objects(serial_number=record_data['serial_number']).first()
+            record.delete()
+            data = {
+                "next_page": "approval"
+            }
+            remove_record(record_data['serial_number'])
+            flash('删除成功')
+            print('ok')
+            return jsonify(data), 200
     # send recorrds to specified
     return render_template('backend_lookup.html', title=u'查看备案', records=records)
 
@@ -45,6 +57,16 @@ def approval():
             record.status_flag = True
             record.save()
             flash('审批成功')
+            return jsonify(data), 200
+        elif record_data['action'] == 0:
+            record = Record.objects(serial_number=record_data['serial_number']).first()
+            record.delete()
+            remove_record(record_data['serial_number'])
+            data = {
+                "next_page": "approval"
+            }
+            flash('删除成功')
+            print('ok')
             return jsonify(data), 200
         else:
             data = {
